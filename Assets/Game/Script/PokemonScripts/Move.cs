@@ -10,10 +10,10 @@ public class Move
 
     public int PP { get; set; }
 
-    public Move(MoveSet bBase)
+    public Move(MoveSet pBase)
     {
-         Base= bBase;
-        PP = bBase.PP;
+         Base= pBase;
+        PP = pBase.PP;
     }
 
 }

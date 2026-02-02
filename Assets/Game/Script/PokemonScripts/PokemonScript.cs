@@ -7,8 +7,10 @@ public class PokemonScript
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
 
-    PokemonBasic _base;
-    int level;
+    public PokemonBasic _base { get; set; }
+    public int level { get; set; }
+
+    public int HP { get; set; }
 
     public List<Move> Moves { get; set; }
 
@@ -16,12 +18,18 @@ public class PokemonScript
     {
         _base = pBase;
         level = pLevel;
+        HP = _base.maxHP;
 
+
+        //generates the moveset based on level and learnable moves
         Moves = new List<Move>();
         foreach (var move in _base.LearnableMoves)
         {
             if (move.Level <= level)
                 Moves.Add(new Move(move.Base));
+
+            if (Moves.Count >= 4)
+                break;
         }
     }
 

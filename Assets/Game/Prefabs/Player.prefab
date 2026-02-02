@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1886592013
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 7152930139536384079, guid: 65e6e91d05cbbea43aca40b65c11a72e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -106,7 +106,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   solidObjectsLayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
+  grassLayer:
+    serializedVersion: 2
+    m_Bits: 0
   moveSpeed: 5
 --- !u!95 &7386156330885035046
 Animator:
