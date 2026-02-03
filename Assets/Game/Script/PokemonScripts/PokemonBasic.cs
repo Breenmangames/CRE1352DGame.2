@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -13,14 +14,14 @@ public class PokemonBasic : ScriptableObject
 
 
 
-    [SerializeField] Sprite frontSprite;
-    [SerializeField] Sprite backSprite;
+    [SerializeField] public Sprite frontSprite;
+    [SerializeField] public Sprite backSprite;
 
 
     [SerializeField] public PokemonType type1;
     [SerializeField] public PokemonType type2;
 
-
+   
     // Base Stats
     [SerializeField] public int maxHP;
     [SerializeField] public int attack;

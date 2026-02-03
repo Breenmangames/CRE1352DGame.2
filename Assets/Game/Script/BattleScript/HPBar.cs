@@ -9,6 +9,6 @@ public class HPBar : MonoBehaviour
 
     public void SetHP(float hpNormalised)
     {
-        health.transform.localScale = new Vector3(hpNormalised / 100f, 1f);
+        health.transform.localScale = new Vector3(hpNormalised, 1f);
     }
 }

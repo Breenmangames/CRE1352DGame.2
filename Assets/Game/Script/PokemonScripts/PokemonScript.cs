@@ -1,14 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-
 public class PokemonScript 
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
 
-    public PokemonBasic _base { get; set; }
-    public int level { get; set; }
+    public PokemonBasic Base { get; set; }
+    public int Level { get; set; }
 
     public int HP { get; set; }
 
@@ -16,16 +16,16 @@ public class PokemonScript
 
     public PokemonScript(PokemonBasic pBase, int pLevel)
     {
-        _base = pBase;
-        level = pLevel;
-        HP = _base.maxHP;
+        Base = pBase;
+        Level = pLevel;
+        HP = MaxHP;
 
 
         //generates the moveset based on level and learnable moves
         Moves = new List<Move>();
-        foreach (var move in _base.LearnableMoves)
+        foreach (var move in Base.LearnableMoves)
         {
-            if (move.Level <= level)
+            if (move.Level <= Level)
                 Moves.Add(new Move(move.Base));
 
             if (Moves.Count >= 4)
@@ -35,27 +35,27 @@ public class PokemonScript
 
     public int Attack
     {
-        get { return Mathf.FloorToInt((_base.attack * level) / 100f) + 5; }
+        get { return Mathf.FloorToInt((Base.attack * Level) / 100f) + 5; }
     }
     public int Defense
     {
-        get { return Mathf.FloorToInt((_base.defense * level) / 100f) + 5; }
+        get { return Mathf.FloorToInt((Base.defense * Level) / 100f) + 5; }
     }
     public int Speed
     {
-        get { return Mathf.FloorToInt((_base.speed * level) / 100f) + 5; }
+        get { return Mathf.FloorToInt((Base.speed * Level) / 100f) + 5; }
     }
     public int SpecialAttack
     {
-        get { return Mathf.FloorToInt((_base.specialAttack * level) / 100f) + 5; }
+        get { return Mathf.FloorToInt((Base.specialAttack * Level) / 100f) + 5; }
     }
     public int SpecialDefense
     {
-        get { return Mathf.FloorToInt((_base.specialDefense * level) / 100f) + 5; }
+        get { return Mathf.FloorToInt((Base.specialDefense * Level) / 100f) + 5; }
     }
     public int MaxHP
     {
-        get { return Mathf.FloorToInt((_base.maxHP * level) / 100f) + 10 + level; }
+        get { return Mathf.FloorToInt((Base.maxHP * Level) / 100f) + 10 + Level; }
     }
 
 
