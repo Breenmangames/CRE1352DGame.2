@@ -80,6 +80,8 @@ public class PokemonBasic : ScriptableObject
         Bug,
         Rock,
         Ghost,
-        Dragon
+        Dragon,
+        Steel
+
     }
 }

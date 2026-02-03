@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b45641612f7e39f4da4f83788e773e83
+guid: 9a6fc3e880196e34db5d48240e9b0ecf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4106984908562560284
-    second: Markshark_Front_PNG_0
+      213: -3060396886804871323
+    second: Swellbell_Back_PNG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Markshark_Front_PNG_0
+      name: Swellbell_Back_PNG_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 6
-        width: 58
-        height: 57
+        x: 5
+        y: 1
+        width: 54
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c15f2ccb301fef830800000000000000
-      internalID: 4106984908562560284
+      spriteID: 567c8420f394785d0800000000000000
+      internalID: -3060396886804871323
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Markshark_Front_PNG_0: 4106984908562560284
+      Swellbell_Back_PNG_0: -3060396886804871323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
