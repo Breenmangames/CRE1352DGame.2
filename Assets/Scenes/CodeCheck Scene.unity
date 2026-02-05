@@ -241,7 +241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b45641612f7e39f4da4f83788e773e83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fe5ffea52452d944acc1c7e25c8fbe0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1643,6 +1643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleDialogueBox
   dialogText: {fileID: 554740178}
   lettersPerSecond: 1
+  highlightedColor: {r: 0.10703685, g: 0.31289467, b: 0.8301887, a: 0}
   actionSelector: {fileID: 1095565703}
   moveSelector: {fileID: 68867302}
   moveDetails: {fileID: 2057898684}

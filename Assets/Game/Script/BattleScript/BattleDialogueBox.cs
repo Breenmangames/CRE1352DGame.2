@@ -9,6 +9,8 @@ public class BattleDialogueBox : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] Text dialogText;
     [SerializeField] int lettersPerSecond;
+    [SerializeField] Color highlightedColor;
+
     [SerializeField] GameObject actionSelector;
     [SerializeField] GameObject moveSelector;
     [SerializeField] GameObject moveDetails;
@@ -47,5 +49,38 @@ public class BattleDialogueBox : MonoBehaviour
         moveSelector.SetActive(enabled);
         moveDetails.SetActive(enabled);
     }
-    
+    public void UpdateActionSelection(int selectedAction)
+    {
+        for (int i = 0; i < actionTexts.Count; ++i)
+        {
+            if (i == selectedAction)
+                actionTexts[i].color = highlightedColor;
+            else
+                actionTexts[i].color = Color.black;
+        }
+    }
+    public void UpdateMoveSelection(int selectedMove, Move move)
+    {
+        for (int i = 0;i < moveTexts.Count; ++i)
+        {
+            if (i== selectedMove)
+                moveTexts[i].color = highlightedColor;
+            else 
+                moveTexts[i].color = Color.black;
+        }
+        ppTexts.text = $"PP {move.PP}/{move.Base.PP}";
+        typeTexts.text = move.Base.type.ToString();
+    }
+    public void SetMoveNames(List<Move> moves) 
+    {
+        for (int i = 0; i < moves.Count; ++i) 
+        {
+            if (i < moves.Count)
+                moveTexts[i].text = moves[i].Base.name;
+            else
+                moveTexts[i].text = "-";
+
+
+        }  
+    }
 }

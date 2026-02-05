@@ -11,7 +11,7 @@ public class MoveSet : ScriptableObject
     [TextArea]
     [SerializeField] string description;
 
-    [SerializeField] PokemonType type;
+    [SerializeField]  public PokemonType type;
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] int pp;
