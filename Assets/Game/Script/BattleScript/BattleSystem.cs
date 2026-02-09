@@ -23,7 +23,7 @@ public class BattleSystem : MonoBehaviour
        StartCoroutine(SetupBattle());
     }
 
-    public IEnumerator SetupBattle()
+    public IEnumerator SetupBattle()   
     {
         playerUnit.Setup();
         PlayerHUD.SetData(playerUnit.Pokemon);
@@ -36,7 +36,7 @@ public class BattleSystem : MonoBehaviour
        yield return new WaitForSeconds(1f);
 
         PlayerAction();
-
+        Debug.Log("you are working!");
     }
     void PlayerAction() 
     {

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "PokemonBasic", menuName = "Pokemon/Create New Pokemon")]
+[CreateAssetMenu(fileName = "PokemonBasic", menuName = "Pokemon/Create New Pokemon")]   //creates menu option to create new monster
 public class PokemonBasic : ScriptableObject
 {
     [SerializeField] string pokemonName;

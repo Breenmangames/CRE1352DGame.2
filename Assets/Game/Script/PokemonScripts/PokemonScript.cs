@@ -7,14 +7,14 @@ public class PokemonScript
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
 
-    public PokemonBasic Base { get; set; }
-    public int Level { get; set; }
+    public PokemonBasic Base { get; set; }   //grbs pokemon basic script
+    public int Level { get; set; }   // public level protoperty
 
     public int HP { get; set; }
 
-    public List<Move> Moves { get; set; }
+    public List<Move> Moves { get; set; }  //generates public list option in inspector
 
-    public PokemonScript(PokemonBasic pBase, int pLevel)
+    public PokemonScript(PokemonBasic pBase, int pLevel)   
     {
         Base = pBase;
         Level = pLevel;
