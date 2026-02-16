@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hand Castle Front PNG_0: -6854487655699407675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
