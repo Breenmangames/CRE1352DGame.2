@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Markshark_Back_Mini_PNG_0: 7252811367326796126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

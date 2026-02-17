@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fieyery_Back_Mini_PNG_0: -6711060855994049235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
