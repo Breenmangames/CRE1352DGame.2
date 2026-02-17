@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Grass
   - SolidObject
-  - 
+  - Furniture
   - 
   - 
   - 
@@ -47,8 +47,17 @@ TagManager:
   - name: Grass
     uniqueID: 199399581
     locked: 0
+  - name: furniture
+    uniqueID: 1091353083
+    locked: 0
   - name: player
     uniqueID: 1775667127
+    locked: 0
+  - name: solid objects
+    uniqueID: 373920751
+    locked: 0
+  - name: Small Objects
+    uniqueID: 3451899847
     locked: 0
   m_RenderingLayers:
   - Default
