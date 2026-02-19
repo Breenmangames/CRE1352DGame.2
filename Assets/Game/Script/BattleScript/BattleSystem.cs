@@ -20,7 +20,7 @@ public class BattleSystem : MonoBehaviour
 
     private void Start()
     {
-       StartCoroutine(SetupBattle());
+      // StartCoroutine(SetupBattle());
     }
 
     public IEnumerator SetupBattle()   
