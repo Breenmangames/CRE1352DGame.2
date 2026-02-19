@@ -16,7 +16,7 @@ TagManager:
   - SolidObject
   - Furniture
   - Ground
-  - 
+  - Water
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: solid objects
     uniqueID: 373920751
+    locked: 0
+  - name: Water
+    uniqueID: 1487532627
     locked: 0
   - name: Small Objects
     uniqueID: 3451899847
