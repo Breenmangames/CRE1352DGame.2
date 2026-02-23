@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     private Animator animator;
+    private Rigidbody2D rb;
     public Transform HomePosition;
     public GameObject player;
     private Transform target;
@@ -40,7 +41,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             FollowPlayer();
         }
-        else
+        else if(Vector3.Distance(transform.position, target.position) > maxFollowRange || Vector3.Distance(target.position, transform.position) < minFollowRange)
         {
             ReturnHome();
         }

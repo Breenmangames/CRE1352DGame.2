@@ -6,7 +6,7 @@ using static PokemonBasic;
 [CreateAssetMenu(fileName = "MoveSet", menuName = "Pokemon/Create New Move")]
 public class MoveSet : ScriptableObject
 {
-    [SerializeField] string name;
+    [SerializeField] string Name;
 
     [TextArea]
     [SerializeField] string description;

@@ -19,5 +19,7 @@ public class CameraFollow : MonoBehaviour
         
         // Apply the position
         transform.position = smoothedPosition;
+
+
     }
 }
