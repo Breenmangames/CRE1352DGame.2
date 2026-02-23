@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Moustatic Back PNG-Sheet_0: -5936348846042297423
+      Moustatic Back PNG-Sheet_1: 9014542983413200085
+      Moustatic Back PNG-Sheet_2: -7071190286621167750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
