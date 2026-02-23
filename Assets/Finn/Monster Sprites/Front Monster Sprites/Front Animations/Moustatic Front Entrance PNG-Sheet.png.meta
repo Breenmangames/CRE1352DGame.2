@@ -11,6 +11,18 @@ TextureImporter:
   - first:
       213: 5304742345588139722
     second: Moustatic Front Entrance PNG-Sheet_2
+  - first:
+      213: 1143178026884601639
+    second: Moustatic Front Entrance PNG-Sheet_3
+  - first:
+      213: 1809997316336861796
+    second: Moustatic Front Entrance PNG-Sheet_4
+  - first:
+      213: -3000866137445273916
+    second: Moustatic Front Entrance PNG-Sheet_5
+  - first:
+      213: 4333595397081623928
+    second: Moustatic Front Entrance PNG-Sheet_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,7 +123,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 3
-        width: 65
+        width: 64
         height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,10 +143,10 @@ TextureImporter:
       name: Moustatic Front Entrance PNG-Sheet_1
       rect:
         serializedVersion: 2
-        x: 63
+        x: 64
         y: 4
-        width: 130
-        height: 56
+        width: 64
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +165,10 @@ TextureImporter:
       name: Moustatic Front Entrance PNG-Sheet_2
       rect:
         serializedVersion: 2
-        x: 191
-        y: 3
-        width: 257
-        height: 58
+        x: 128
+        y: 5
+        width: 64
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,6 +179,94 @@ TextureImporter:
       bones: []
       spriteID: ac6e0cdbe0b3e9940800000000000000
       internalID: 5304742345588139722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moustatic Front Entrance PNG-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 6
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7271d7fcb526ddf00800000000000000
+      internalID: 1143178026884601639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moustatic Front Entrance PNG-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 5
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4624bac28f66e1910800000000000000
+      internalID: 1809997316336861796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moustatic Front Entrance PNG-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 4
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce6313b528ca56d0800000000000000
+      internalID: -3000866137445273916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moustatic Front Entrance PNG-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d6153ad06042c30800000000000000
+      internalID: 4333595397081623928
       vertices: []
       indices: 
       edges: []
@@ -184,10 +284,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Moustatic Front Entrance PNG-Sheet_0: -6746786256771192683
-      Moustatic Front Entrance PNG-Sheet_1: -2960560465199760902
-      Moustatic Front Entrance PNG-Sheet_2: 5304742345588139722
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
