@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7732596889779083753
+--- !u!1001 &3505158890877074118
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -26,19 +26,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.3
+      value: 0.6875549
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.3
+      value: 0.532371
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.36632
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 54.92074
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -78,21 +78,21 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2867033387837714431}
+      addedObject: {fileID: 2671724038953213311}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
---- !u!1 &862382938135547521 stripped
+--- !u!1 &5772678079402503598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
-  m_PrefabInstance: {fileID: 7732596889779083753}
+  m_PrefabInstance: {fileID: 3505158890877074118}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2867033387837714431
+--- !u!95 &2671724038953213311
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862382938135547521}
+  m_GameObject: {fileID: 5772678079402503598}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9106ac0cb78c098478a452ce09b3022f, type: 2}
