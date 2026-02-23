@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
    private void CheckForEncounters()
     {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, GrassLayer) != null)
+        if (Physics2D.OverlapCircle(transform.position, 20.2f, GrassLayer) != null)
         {
             if (Random.Range(1, 101) <= 10) // 10% chance
             {
