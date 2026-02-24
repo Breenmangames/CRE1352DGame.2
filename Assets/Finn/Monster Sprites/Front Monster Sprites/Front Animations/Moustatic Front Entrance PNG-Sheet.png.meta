@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Moustatic Front Entrance PNG-Sheet_0: -6746786256771192683
+      Moustatic Front Entrance PNG-Sheet_1: -2960560465199760902
+      Moustatic Front Entrance PNG-Sheet_2: 5304742345588139722
+      Moustatic Front Entrance PNG-Sheet_3: 1143178026884601639
+      Moustatic Front Entrance PNG-Sheet_4: 1809997316336861796
+      Moustatic Front Entrance PNG-Sheet_5: -3000866137445273916
+      Moustatic Front Entrance PNG-Sheet_6: 4333595397081623928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
