@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Markshark_Front_PNG-Sheet_0: -3323896487149813120
+      Markshark_Front_PNG-Sheet_1: 3699272237649340908
+      Markshark_Front_PNG-Sheet_2: -1302562127899832522
+      Markshark_Front_PNG-Sheet_3: 3018861795311896967
+      Markshark_Front_PNG-Sheet_4: 1459099903268696686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
