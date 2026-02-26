@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Art/Screenshot%202026-02-26%20151843.png?fileID=2800000&amp;guid=bd30241ceb7d71c459ca77e12fa60ff2&amp;type=3#Screenshot 2026-02-26 151843&quot;);">
+        <ui:VisualElement name="Header" style="flex-grow: 0; align-self: auto; flex-direction: row; flex-basis: 15%; align-items: center; justify-content: space-between;">
+            <ui:Button name="Options" style="background-image: url(&quot;project://database/Assets/Art/Art/gfx/objects.png?fileID=1858464204&amp;guid=b8196687ae4eda34c80c38ac8ce52589&amp;type=3#objects_0&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(188, 188, 188, 0); background-size: 16px 16px; -unity-background-scale-mode: scale-to-fit; height: 63px; width: 57px;" />
+            <ui:Button name="JournalButton" style="background-image: url(&quot;project://database/Assets/Art/Art/gfx/objects.png?fileID=1020166356&amp;guid=b8196687ae4eda34c80c38ac8ce52589&amp;type=3#objects_18&quot;); background-color: rgba(55, 55, 55, 0); background-size: 16px 16px; -unity-background-scale-mode: scale-to-fit; height: 62px; width: 55px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Title" style="flex-grow: 0; flex-basis: 50%;" />
+        <ui:VisualElement name="PlayButton" style="flex-grow: 1;" />
+        <ui:VisualElement name="Footer" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

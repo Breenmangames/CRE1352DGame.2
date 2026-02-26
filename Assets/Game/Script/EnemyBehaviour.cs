@@ -48,6 +48,17 @@ public class EnemyBehaviour : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+
+
+        if (player != null)
+        {
+            player.ChangeHealth(-2);
+        }
+    }
+
     public void FollowPlayer()
     {
         if (Vector3.Distance(transform.position, target.position) > 0.1f)

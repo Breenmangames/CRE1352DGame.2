@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Teleporter
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Ground
   - Water
   - Interactable
-  - 
+  - Player
   - 
   - 
   - 
