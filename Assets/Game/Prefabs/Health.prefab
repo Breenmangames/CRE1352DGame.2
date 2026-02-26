@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3198408281828882638}
   - component: {fileID: 2721054837670512453}
   - component: {fileID: 6534646994407129916}
+  - component: {fileID: 5074188618317754079}
   m_Layer: 11
   m_Name: Health
   m_TagString: PowerUp
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1775667127
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1559487360, guid: b8196687ae4eda34c80c38ac8ce52589, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,7 +120,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -147,3 +148,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5074188618317754079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311847779697034235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f3ade6f6f8e434bbc5dd4ce43c7a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

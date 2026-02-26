@@ -14,16 +14,24 @@ public class PlayerController : MonoBehaviour
     private Vector2 input;
 
     Animator animator;
-    private float m_timeSinceAttack;
-    private bool m_rolling;
-    private int m_currentAttack;
-    
+
+
+
+    public int maxHealth;
+    public int health { get { return currentHealth; } }
+    int currentHealth;
+
 
     private void Awake()    
     {
         animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
+    }
 
     // Update is called once per frame
     private void Update()
@@ -53,29 +61,14 @@ public class PlayerController : MonoBehaviour
         {
             Interact();
         }
-
-        else if (Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f && !m_rolling)
-        {
-            m_currentAttack++;
-
-            // Loop back to one after third attack
-            if (m_currentAttack > 3)
-                m_currentAttack = 1;
-
-            // Reset Attack combo if time since last attack is too large
-            if (m_timeSinceAttack > 1.0f)
-                m_currentAttack = 1;
-
-            // Call one of three attack animations "Attack1", "Attack2", "Attack3"
-            animator.SetTrigger("Attack" + m_currentAttack);
-
-            // Reset timer
-            m_timeSinceAttack = 0.0f;
-
-           
-        }
     }
 
+
+    public void ChangeHealth(int amount)   
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+
+    }
     void Interact()
     {
         Vector2 facingDirection = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
