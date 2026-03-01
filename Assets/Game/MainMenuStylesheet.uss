@@ -1,0 +1,14 @@
+:root {
+}
+
+.menu-button {
+    transition-duration: 0.5s;
+    border-left-color: rgba(245, 240, 240, 0);
+    border-right-color: rgba(245, 240, 240, 0);
+    border-top-color: rgba(245, 240, 240, 0);
+    border-bottom-color: rgba(245, 240, 240, 0);
+}
+
+.menu-button:hover {
+    scale: 1.2 1.2;
+}

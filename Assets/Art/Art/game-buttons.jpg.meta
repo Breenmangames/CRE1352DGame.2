@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2d61384195e46734480012c91c62acd4
+guid: ae948abf96af916409bba9ed6a5b4df0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7974029650093285015
-    second: no-heart-syringe-full-1_0
+      213: 7485818521962920178
+    second: game-buttons_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: no-heart-syringe-full-1_0
+      name: game-buttons_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 8
-        width: 104
-        height: 15
+        x: 0
+        y: 0
+        width: 800
+        height: 756
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 961e1cd084e865190800000000000000
-      internalID: -7974029650093285015
+      spriteID: 2f8b3aeb848f2e760800000000000000
+      internalID: 7485818521962920178
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      no-heart-syringe-full-1_0: -7974029650093285015
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

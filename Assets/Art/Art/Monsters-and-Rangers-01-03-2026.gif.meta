@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 2d61384195e46734480012c91c62acd4
+guid: 39e8f5b770e86f248bdfa0f485b62a22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7974029650093285015
-    second: no-heart-syringe-full-1_0
+      213: -2363489020299210697
+    second: Monsters-and-Rangers-01-03-2026_0
+  - first:
+      213: -4816759934742418610
+    second: Monsters-and-Rangers-01-03-2026_1
+  - first:
+      213: 5531019478695229533
+    second: Monsters-and-Rangers-01-03-2026_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: no-heart-syringe-full-1_0
+      name: Monsters-and-Rangers-01-03-2026_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 8
-        width: 104
-        height: 15
+        x: 41
+        y: 61
+        width: 297
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 961e1cd084e865190800000000000000
-      internalID: -7974029650093285015
+      spriteID: 73097822243333fd0800000000000000
+      internalID: -2363489020299210697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monsters-and-Rangers-01-03-2026_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 63
+        width: 114
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b28511c5e672db0800000000000000
+      internalID: -4816759934742418610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monsters-and-Rangers-01-03-2026_2
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 42
+        width: 269
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58356949e022cc40800000000000000
+      internalID: 5531019478695229533
       vertices: []
       indices: 
       edges: []
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      no-heart-syringe-full-1_0: -7974029650093285015
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

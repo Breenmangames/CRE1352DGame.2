@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2d61384195e46734480012c91c62acd4
+guid: 906d2ab0c8a263f47ad013deea1932ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7974029650093285015
-    second: no-heart-syringe-full-1_0
+      213: 3216490043927190581
+    second: ec0dca8e-f521-4c30-b3e7-d2f3a9f3881e_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: no-heart-syringe-full-1_0
+      name: ec0dca8e-f521-4c30-b3e7-d2f3a9f3881e_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 8
-        width: 104
-        height: 15
+        x: 0
+        y: 0
+        width: 832
+        height: 1248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 961e1cd084e865190800000000000000
-      internalID: -7974029650093285015
+      spriteID: 53c5cdb37a443ac20800000000000000
+      internalID: 3216490043927190581
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      no-heart-syringe-full-1_0: -7974029650093285015
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
