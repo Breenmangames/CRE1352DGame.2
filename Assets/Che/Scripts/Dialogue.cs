@@ -5,11 +5,14 @@ using System.Collections;
 
 public class Dialogue : MonoBehaviour
 {
+    [Header("UI")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI textComponent;
-    public string[] lines;
+
+    [Header("Typing")]
     public float textSpeed = 0.03f;
 
+    private string[] currentLines;
     private int index;
     private bool dialogueActive = false;
     private Coroutine typingRoutine;
@@ -17,7 +20,7 @@ public class Dialogue : MonoBehaviour
     void Awake()
     {
         Hide();
-        textComponent.text = "";
+        if (textComponent != null) textComponent.text = "";
     }
 
     void Update()
@@ -26,41 +29,51 @@ public class Dialogue : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (textComponent.text == lines[index])
+            if (textComponent.text == currentLines[index])
             {
                 NextLine();
             }
             else
             {
                 if (typingRoutine != null) StopCoroutine(typingRoutine);
-                textComponent.text = lines[index];
+                textComponent.text = currentLines[index];
             }
         }
     }
 
-    public void Begin()
+    /// <summary>
+    /// Starts dialogue using the lines provided by an NPC.
+    /// </summary>
+    public void Begin(string[] lines)
     {
-        dialoguePanel.SetActive(true);
-        dialogueActive = true;
+        if (lines == null || lines.Length == 0)
+        {
+            Debug.LogWarning("Dialogue.Begin called with no lines.");
+            return;
+        }
+
+        currentLines = lines;
         index = 0;
+        dialogueActive = true;
+        Show();
 
         if (typingRoutine != null) StopCoroutine(typingRoutine);
         typingRoutine = StartCoroutine(TypeLine());
     }
 
-    IEnumerator TypeLine()
+    private IEnumerator TypeLine()
     {
         textComponent.text = "";
-        foreach (char c in lines[index])
+        foreach (char c in currentLines[index])
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
     }
 
-    void NextLine()
+    private void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < currentLines.Length - 1)
         {
             index++;
             if (typingRoutine != null) StopCoroutine(typingRoutine);
@@ -75,11 +88,10 @@ public class Dialogue : MonoBehaviour
     public void EndDialogue()
     {
         dialogueActive = false;
+        if (typingRoutine != null) StopCoroutine(typingRoutine);
         Hide();
     }
 
-    void Hide()
-    {
-        dialoguePanel.SetActive(false);
-    }
+    private void Show() => dialoguePanel.SetActive(true);
+    private void Hide() => dialoguePanel.SetActive(false);
 }
