@@ -16,7 +16,7 @@ public class GraphicUI : MonoBehaviour
      void OnEnable()
     {
         //var root = GetComponent<GraphicUI>().rootVisualElement;
-        var startButton = root.Q<Button>("apply");
+       // var startButton = root.Q<Button>("apply");
 
         _cancel.clicked += onCancel;
         _apply.clicked += onApply;
