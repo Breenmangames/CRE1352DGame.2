@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
+//using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("TutorialZone"))
         {
-           // SoundEffectManager.StopSoundEffect("TutorialTheme");
+            
         }
     }
 
@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
         if (check != null)
         {
             Debug.Log(check.transform.position);
-          //  if (Random.Range(1, 101) <= 10) // 10% chance
+           if (Random.Range(1, 101) <= 10) // 10% chance
             {
                 Debug.Log("A wild enemy appears!");
                 // Trigger encounter logic here
