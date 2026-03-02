@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth;
     public int health { get { return currentHealth; } }
-    int currentHealth;
+    public int currentHealth;
     public float timeInvincible = 2.0f;
     bool isInvincible;
     float damageCooldown;
@@ -132,6 +132,11 @@ public class PlayerController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         
         UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }   
+
     }
 
 
