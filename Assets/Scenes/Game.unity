@@ -31290,6 +31290,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436843185}
   m_CullTransparentMesh: 1
+--- !u!1 &1470074258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1470074259}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1470074259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470074258}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7751346980871229009}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1482369906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360112,7 +360143,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7999041291042205048, guid: c1b85aad9c1b2b8439a62e7eaa669203, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1470074259}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7129118100364395805, guid: c1b85aad9c1b2b8439a62e7eaa669203, type: 3}
       insertIndex: -1
@@ -360123,6 +360157,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7129118100364395805, guid: c1b85aad9c1b2b8439a62e7eaa669203, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7751346980871229005}
+    - targetCorrespondingSourceObject: {fileID: 7129118100364395805, guid: c1b85aad9c1b2b8439a62e7eaa669203, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7751346980871229010}
   m_SourcePrefab: {fileID: 100100000, guid: c1b85aad9c1b2b8439a62e7eaa669203, type: 3}
 --- !u!1 &7751346980871229000 stripped
 GameObject:
@@ -360218,6 +360255,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!4 &7751346980871229009 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7999041291042205048, guid: c1b85aad9c1b2b8439a62e7eaa669203, type: 3}
+  m_PrefabInstance: {fileID: 7751346980871228999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7751346980871229010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751346980871229000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4816f4b642d4b9e48f0ca1225244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletPrefab: {fileID: 2236573740501416327, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
+  _bulletSpeed: 2
+  _gunOffset: {fileID: 1470074259}
+  _timeBetweenShots: 1
 --- !u!1001 &8984462447772348668
 PrefabInstance:
   m_ObjectHideFlags: 0
