@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Teleporter
   - PowerUp
+  - TutorialZone
   layers:
   - Default
   - TransparentFX

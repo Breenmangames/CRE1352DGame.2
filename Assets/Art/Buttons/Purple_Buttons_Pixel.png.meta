@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Purple_Buttons_Pixel_0: -7044162982686924201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

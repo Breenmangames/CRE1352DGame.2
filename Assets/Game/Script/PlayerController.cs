@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
+
 public class PlayerController : MonoBehaviour
 {
 
@@ -86,6 +90,22 @@ public class PlayerController : MonoBehaviour
     }
   
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("TutorialZone"))
+        {
+            SoundEffectManager.PlaySoundEffect("TutorialTheme");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("TutorialZone"))
+        {
+           // SoundEffectManager.StopSoundEffect("TutorialTheme");
+        }
+    }
+
     public void ChangeHealth(int amount)   
     {
         if (amount < 0)
@@ -159,7 +179,7 @@ public class PlayerController : MonoBehaviour
         if (check != null)
         {
             Debug.Log(check.transform.position);
-            if (Random.Range(1, 101) <= 10) // 10% chance
+          //  if (Random.Range(1, 101) <= 10) // 10% chance
             {
                 Debug.Log("A wild enemy appears!");
                 // Trigger encounter logic here
