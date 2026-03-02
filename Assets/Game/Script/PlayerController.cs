@@ -96,8 +96,19 @@ public class PlayerController : MonoBehaviour
         {
             SoundEffectManager.PlaySoundEffect("TutorialTheme");
         }
+        if (other.CompareTag("RoadZone1"))
+        {
+            SoundEffectManager.PlaySoundEffect("EarlyPathTheme");
+        }
     }
 
+    void OnTriggerEnter2D(PolygonCollider2D other)
+    {
+        if (other.CompareTag("RoadZone1"))
+        {
+            SoundEffectManager.PlaySoundEffect("EarlyPathTheme");
+        }
+    }
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("TutorialZone"))

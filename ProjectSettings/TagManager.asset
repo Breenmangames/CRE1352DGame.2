@@ -7,6 +7,7 @@ TagManager:
   - Teleporter
   - PowerUp
   - TutorialZone
+  - RoadZone1
   layers:
   - Default
   - TransparentFX
@@ -53,14 +54,17 @@ TagManager:
   - name: furniture
     uniqueID: 1091353083
     locked: 0
+  - name: Water
+    uniqueID: 1487532627
+    locked: 0
+  - name: Bridge
+    uniqueID: 1908381219
+    locked: 0
   - name: player
     uniqueID: 1775667127
     locked: 0
   - name: solid objects
     uniqueID: 373920751
-    locked: 0
-  - name: Water
-    uniqueID: 1487532627
     locked: 0
   - name: Small Objects
     uniqueID: 3451899847
