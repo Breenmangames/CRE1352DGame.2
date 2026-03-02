@@ -28372,7 +28372,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 3.5595055, y: 1.726654}
+  m_Offset: {x: 27.393345, y: 69.85841}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -28382,7 +28382,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 33.27236, y: 31.476784}
+  m_Size: {x: 80.94001, y: 27.390259}
   m_EdgeRadius: 0
 --- !u!1001 &1218320782
 PrefabInstance:
@@ -313129,8 +313129,8 @@ PolygonCollider2D:
       - {x: 39.93454, y: 11.6811905}
       - {x: 21.938965, y: 11.615627}
       - {x: -16.419542, y: 11.682903}
-      - {x: -16.207926, y: -24.011745}
-      - {x: 13.983696, y: -23.860096}
+      - {x: -16.781183, y: -56.032314}
+      - {x: 16.522413, y: -55.716885}
       - {x: 13.892012, y: -11.469276}
   m_UseDelaunayMesh: 0
 --- !u!4 &1543951088 stripped
