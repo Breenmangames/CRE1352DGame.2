@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Game/Script/UI%20Scripts/MainMenuStylesheet.uss?fileID=7433441132597879392&amp;guid=66d8e8febd308e64795164754d43f702&amp;type=3#MainMenuStylesheet" />
+    <ui:VisualElement name="GraphicsBackground" style="flex-grow: 0; background-color: rgba(45, 42, 42, 0.94); position: absolute; top: 0; right: 0; bottom: 0; left: 0;" />
+    <ui:VisualElement name="GraphicButtons" style="flex-grow: 0; justify-content: center; align-self: center; align-items: auto; align-content: center; flex-direction: row; position: absolute; top: 3px; left: -2px; right: 3px; bottom: -2px; margin-top: auto;">
+        <ui:Button text="Apply" name="apply" class="menu-button" style="flex-shrink: 1; width: 210px; position: absolute; top: 950px; left: 1108px; height: 103px;" />
+        <ui:Button text="Cancel&#10;" name="cancel" class="menu-button" style="position: absolute; top: 950px; left: 658px; height: 101px; width: 217px;" />
+    </ui:VisualElement>
+</ui:UXML>
