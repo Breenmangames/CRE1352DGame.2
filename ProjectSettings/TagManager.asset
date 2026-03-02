@@ -63,6 +63,9 @@ TagManager:
   - name: Water
     uniqueID: 1487532627
     locked: 0
+  - name: Bridge
+    uniqueID: 1908381219
+    locked: 0
   - name: Small Objects
     uniqueID: 3451899847
     locked: 0
