@@ -13959,7 +13959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 323851828}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: NPCs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355387,6 +355387,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1607793780429984036, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
