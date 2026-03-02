@@ -26826,8 +26826,12 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1099953640}
   textComponent: {fileID: 2101506856}
   lines:
-  - Helloooooo
-  - Whwhhaha
+  - Good morning son!
+  - It's your big day!
+  - The big graduation, we're so proud of you.
+  - I just realized, we forgot your present...
+  - We left it at the old oak tree just Northeast of town.
+  - Go retrieve it, and it's yours!
   textSpeed: 0.1
 --- !u!114 &1099953643
 MonoBehaviour:
@@ -352961,8 +352965,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
