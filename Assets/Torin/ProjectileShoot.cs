@@ -38,7 +38,7 @@ public class ProjectileShoot : MonoBehaviour
         }
     }
 
-    private void FireBullet()
+    public  void FireBullet()
     {
         // Instantiates the bullet prefab and sets its velocity
         GameObject bullet = Instantiate(_bulletPrefab, _gunOffset.position, transform.rotation);

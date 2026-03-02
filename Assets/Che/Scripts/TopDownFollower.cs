@@ -21,6 +21,7 @@ public class TopDownFollower : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        ProjectileAttack projectileAttack = GetComponent<ProjectileAttack>();
     }
 
     private void Update()
@@ -52,7 +53,10 @@ public class TopDownFollower : MonoBehaviour
 
         HandleFlip(velocity);
         UpdateAnimator(velocity);
+
+       
     }
+
 
     void UpdateAnimator(Vector2 velocity)
     {
