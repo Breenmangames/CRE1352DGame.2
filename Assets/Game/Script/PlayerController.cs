@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            Launch();
+            FindFirstObjectByType<ProjectileShoot>().FireBullet();
         }
     }
   
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void Launch()
+   /*void Launch()
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector2.up * 0.5f, Quaternion.identity);
         Projectile projectile = projectileObject.GetComponent<Projectile>();
@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
 
 
         animator.SetTrigger("Launch");
-    }
+    }*/
     void Interact()
     {
         Vector2 facingDirection = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ProjectileAttack : MonoBehaviour
@@ -14,8 +15,12 @@ public class ProjectileAttack : MonoBehaviour
     private void Update()
     {
         DestroyWhenOffScreen();
+
+       
     }
-         
+     
+    
+    
    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<EnemyMovement>())
