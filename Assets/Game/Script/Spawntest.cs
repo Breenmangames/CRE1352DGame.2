@@ -50,21 +50,26 @@ public class Spawntest : MonoBehaviour
 
         Vector2 playerWorldPos = player.transform.position;
 
-        // Check if player is overlapping the grass layer (small radius around player's position)
+        // Ensure player is inside the grass detection first
         Collider2D hit = Physics2D.OverlapCircle(playerWorldPos, detectionRadius, grassLayer);
         if (hit == null) return false;
 
-        // If the collider belongs to a Tilemap, snap spawn position to the tile center
+        // Pick a random direction and place the spawn at the edge of the detection radius
+        float angle = Random.Range(0f, Mathf.PI * 2f);
+        Vector2 offset = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * detectionRadius;
+        Vector2 candidateWorldPos = playerWorldPos + offset;
+
+        // If the collider belongs to a Tilemap, snap spawn position to the tile center of the candidate position
         Tilemap tilemap = hit.GetComponent<Tilemap>();
         if (tilemap != null)
         {
-            Vector3Int cell = tilemap.WorldToCell(playerWorldPos);
+            Vector3Int cell = tilemap.WorldToCell(candidateWorldPos);
             spawnPosition = tilemap.GetCellCenterWorld(cell);
             return true;
         }
 
-        // Fallback: use the player's position
-        spawnPosition = player.transform.position;
+        // Fallback: use the candidate position (edge of detection radius)
+        spawnPosition = (Vector3)candidateWorldPos;
         return true;
     }
 

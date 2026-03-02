@@ -50,13 +50,17 @@ public class PlayerController : MonoBehaviour
             if (input != Vector2.zero)
             {
                 animator.SetFloat("MoveX", input.x);
+                
                 animator.SetFloat("MoveY", input.y);
+                
                 var targetPosition = transform.position;
                 targetPosition.x += input.x;
                 targetPosition.y += input.y;
 
                 if (isWalkable(targetPosition))
                     StartCoroutine(Move(targetPosition));
+
+                SoundEffectManager.PlaySoundEffect("Walking");
             }
         }
         animator.SetBool("isMoving", isMoving);
