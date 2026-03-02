@@ -21,17 +21,16 @@ public class ProjectileAttack : MonoBehaviour
      
     
     
-   /*private void OnTriggerEnter2D(Collider2D collision)
+   private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<EnemyMovement>())
+        if (collision.GetComponent<EnemyBehaviour>())
         {
             // Damages enemies upon collision via targeting their movement script then destroys the bullet
-            HealthController healthController = collision.GetComponent<HealthController>();
-            healthController.TakeDamage(100);
+            // HealthController healthController = collision.GetComponent<HealthController>();
+            // healthController.TakeDamage(100);
             Destroy(gameObject);
         }
     }
-    */
 
     private void DestroyWhenOffScreen()
     {
