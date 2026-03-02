@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5257906014751601153}
   - component: {fileID: 7654227378652304370}
   - component: {fileID: 7735530900207910195}
+  - component: {fileID: 496438576054390987}
   m_Layer: 12
   m_Name: Coin
   m_TagString: PowerUp
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1775667127
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 451028340, guid: b8196687ae4eda34c80c38ac8ce52589, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -264,3 +265,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.006083727, y: 0.030418634}
   m_Radius: 0.3783269
+--- !u!114 &496438576054390987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254611949885386708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e105dc863421c4e83975cd7e2b8b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
