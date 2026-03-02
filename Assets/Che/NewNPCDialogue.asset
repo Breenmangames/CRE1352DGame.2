@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Townsman
   npcportrait: {fileID: 4936381123959553625, guid: 116ce6807e2f82b4b8bf005d44d2b79a, type: 3}
-  dialogueLines: []
+  dialogueLines:
+  - Hello there ranger!
+  - Welcome to the village.
   typingSpeed: 0.05
-  voiceSound: {fileID: 0}
+  voiceSound: {fileID: 8300000, guid: ac11006c08f6cdc4f92ca3930ea7112a, type: 3}
   voicePitch: 1
-  autoProgessLines: 
+  autoProgessLines: "\x01"
   autoProgressDelay: 1.5
