@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 input;
 
     Animator animator;
-    Vector2 moveDirection = new Vector2(1, 0);
+    //Vector2 moveDirection = new Vector2(1, 0);
 
     public GameObject projectilePrefab;
 
