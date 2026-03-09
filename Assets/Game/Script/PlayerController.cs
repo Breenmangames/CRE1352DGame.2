@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 //using System;
 
 public class PlayerController : MonoBehaviour
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public float timeInvincible = 2.0f;
     bool isInvincible;
     float damageCooldown;
+    private int m_CurrentCoins = 0;
 
     private void Awake()    
     {
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        
     }
 
     // Update is called once per frame
@@ -140,15 +143,22 @@ public class PlayerController : MonoBehaviour
     }
 
 
-   /*void Launch()
+    public void PickUpCoin(int coinValue = 1)
     {
-        GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector2.up * 0.5f, Quaternion.identity);
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(moveDirection, 300);
+        m_CurrentCoins += coinValue;
+        SetCoinValue(m_CurrentCoins);
+    }
 
 
-        animator.SetTrigger("Launch");
-    }*/
+    /*void Launch()
+     {
+         GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector2.up * 0.5f, Quaternion.identity);
+         Projectile projectile = projectileObject.GetComponent<Projectile>();
+         projectile.Launch(moveDirection, 300);
+
+
+         animator.SetTrigger("Launch");
+     }*/
     void Interact()
     {
         Vector2 facingDirection = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
