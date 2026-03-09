@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7386156330885035046}
   - component: {fileID: 8701893313611167642}
   - component: {fileID: 2081379266504677942}
-  - component: {fileID: 4178833224521770889}
   - component: {fileID: 5780544471776601376}
-  - component: {fileID: 4103350172203034701}
+  - component: {fileID: 6504934145044662199}
+  - component: {fileID: 1438671266149533734}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1775667127
   m_SortingLayer: 5
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7152930139536384079, guid: 65e6e91d05cbbea43aca40b65c11a72e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6895463637947253494}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52b814257e24eca42acea8566a318711, type: 3}
   m_Name: 
@@ -116,10 +116,11 @@ MonoBehaviour:
   InteractablesLayer:
     serializedVersion: 2
     m_Bits: 2048
-  moveSpeed: 7
-  projectilePrefab: {fileID: 0}
-  maxHealth: 0
-  timeInvincible: 2
+  moveSpeed: 4
+  projectilePrefab: {fileID: 2236573740501416327, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
+  maxHealth: 5
+  currentHealth: 0
+  timeInvincible: 1
 --- !u!95 &7386156330885035046
 Animator:
   serializedVersion: 7
@@ -130,7 +131,7 @@ Animator:
   m_GameObject: {fileID: 6895463637947253494}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aaa548bbb12df124e9167de4b2b9b783, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2412513218c9b5143985bcd964e890df, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -172,7 +173,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -191,19 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4958b59d8761c1b47817634a7fad6bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4178833224521770889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6895463637947253494}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1be031dcc0294469025eb2a8cd1b4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!50 &5780544471776601376
 Rigidbody2D:
   serializedVersion: 5
@@ -231,7 +219,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4103350172203034701
+--- !u!114 &6504934145044662199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,12 +228,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 6895463637947253494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90f68c1bd6c019142a5c6a2fe2dd41ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 7286271d7e11f4144bd06f57bdb9cfe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 7386156330885035046}
+  solidObjectsLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  GrassLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  InteractablesLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  moveSpeed: 6
+  maxHealth: 10
+  timeInvincible: 2
+  projectilePrefab: {fileID: 2236573740501416327, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
+  teleporterCheckRadius: 0.3
+--- !u!114 &1438671266149533734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895463637947253494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605059a3145144740ac3568bf9310366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   attackPoint: {fileID: 6074692352627089158}
   attackRange: 0.5
+  attackOffset: 0.6
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8

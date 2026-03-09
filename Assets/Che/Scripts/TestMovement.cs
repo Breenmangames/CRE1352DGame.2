@@ -3,31 +3,33 @@ using UnityEngine;
 
 public class TestMovement : MonoBehaviour
 {
+    [Header("Layers")]
     public LayerMask solidObjectsLayer;
     public LayerMask GrassLayer;
     public LayerMask InteractablesLayer;
 
-    private Rigidbody2D rb;
+    [Header("Movement")]
     public float moveSpeed;
-
     private bool isMoving;
     private Vector2 input;
-
-    private Animator animator;
-
-    // Stores last direction player moved
     private Vector2 moveDirection = new Vector2(0, -1);
+    public Vector2 FacingDirection => moveDirection;
 
-    public GameObject projectilePrefab;
-
+    [Header("Health")]
     public int maxHealth;
     public int health { get { return currentHealth; } }
-
     int currentHealth;
-
     public float timeInvincible = 2.0f;
     bool isInvincible;
     float damageCooldown;
+
+    [Header("References")]
+    private Rigidbody2D rb;
+    private Animator animator;
+    public GameObject projectilePrefab;
+
+    [Header("Teleporter")]
+    [SerializeField] private float teleporterCheckRadius = 0.3f;
 
     private void Awake()
     {
@@ -42,105 +44,37 @@ public class TestMovement : MonoBehaviour
 
     private void Update()
     {
+        HandleMovementInput();
+        HandleAnimations();
+        HandleInteract();
+        HandleAttack();
+        HandleInvincibility();
+        HandleTeleport();
+    }
+
+    #region Movement
+    private void HandleMovementInput()
+    {
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
-            // Prevent diagonal movement
             if (input.x != 0)
-                input.y = 0;
+                input.y = 0; // Prevent diagonal movement
 
             if (input != Vector2.zero)
             {
                 moveDirection = input;
-
-                animator.SetFloat("MoveX", moveDirection.x);
-                animator.SetFloat("MoveY", moveDirection.y);
-
                 Vector3 targetPosition = transform.position;
                 targetPosition.x += input.x;
                 targetPosition.y += input.y;
 
                 if (IsWalkable(targetPosition))
-                {
                     StartCoroutine(Move(targetPosition));
-                }
 
                 SoundEffectManager.PlaySoundEffect("Walking");
             }
-            else
-            {
-                // Maintain facing direction while idle
-                animator.SetFloat("MoveX", moveDirection.x);
-                animator.SetFloat("MoveY", moveDirection.y);
-            }
-        }
-
-        animator.SetBool("isMoving", isMoving);
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Interact();
-        }
-
-        if (isInvincible)
-        {
-            damageCooldown -= Time.deltaTime;
-
-            if (damageCooldown <= 0)
-            {
-                isInvincible = false;
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            FindFirstObjectByType<ProjectileShoot>().FireBullet();
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("TutorialZone"))
-        {
-            SoundEffectManager.PlaySoundEffect("TutorialTheme");
-        }
-
-        if (other.CompareTag("RoadZone1"))
-        {
-            SoundEffectManager.PlaySoundEffect("EarlyPathTheme");
-        }
-    }
-
-    public void ChangeHealth(int amount)
-    {
-        if (amount < 0)
-        {
-            if (isInvincible)
-                return;
-
-            isInvincible = true;
-            damageCooldown = timeInvincible;
-
-            animator.SetTrigger("Hit");
-        }
-
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-
-        UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
-    }
-
-    void Interact()
-    {
-        Vector2 interactPosition = (Vector2)transform.position + moveDirection;
-
-        Collider2D interactable =
-            Physics2D.OverlapCircle(interactPosition, 0.2f, InteractablesLayer);
-
-        if (interactable != null)
-        {
-            Debug.Log("Interacted with: " + interactable.name);
         }
     }
 
@@ -155,7 +89,6 @@ public class TestMovement : MonoBehaviour
                 targetPosition,
                 moveSpeed * Time.deltaTime
             );
-
             yield return null;
         }
 
@@ -165,28 +98,129 @@ public class TestMovement : MonoBehaviour
         CheckForEncounters();
     }
 
-    bool IsWalkable(Vector3 targetPosition)
+    private bool IsWalkable(Vector3 targetPosition)
     {
-        if (Physics2D.OverlapCircle(targetPosition, 0.2f,
-            solidObjectsLayer | InteractablesLayer) != null)
+        return Physics2D.OverlapCircle(
+            targetPosition,
+            0.2f,
+            solidObjectsLayer | InteractablesLayer
+        ) == null;
+    }
+    #endregion
+
+    #region Animations
+    private void HandleAnimations()
+    {
+        // Update MoveX/MoveY only on movement start or idle
+        if (!isMoving && input == Vector2.zero)
         {
-            return false;
+            animator.SetFloat("MoveX", moveDirection.x);
+            animator.SetFloat("MoveY", moveDirection.y);
+        }
+        else if (input != Vector2.zero)
+        {
+            animator.SetFloat("MoveX", moveDirection.x);
+            animator.SetFloat("MoveY", moveDirection.y);
         }
 
-        return true;
+        animator.SetBool("isMoving", isMoving);
     }
+    #endregion
 
-    void CheckForEncounters()
+    #region Interaction
+    private void HandleInteract()
     {
-        Collider2D check =
-            Physics2D.OverlapCircle(transform.position, 0.2f, GrassLayer);
-
-        if (check != null)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Random.Range(1, 101) <= 10)
+            Vector2 interactPosition = (Vector2)transform.position + moveDirection;
+            Collider2D interactable = Physics2D.OverlapCircle(interactPosition, 0.2f, InteractablesLayer);
+
+            if (interactable != null)
+                Debug.Log("Interacted with: " + interactable.name);
+        }
+    }
+    #endregion
+
+    #region Attack
+    private void HandleAttack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetFloat("MoveX", moveDirection.x);
+            animator.SetFloat("MoveY", moveDirection.y);
+            animator.SetTrigger("LightAttack");
+
+            // Projectile firing handled by TestCombat
+        }
+    }
+    #endregion
+
+    #region Teleporter
+    private void HandleTeleport()
+    {
+        Collider2D[] nearby = Physics2D.OverlapCircleAll(transform.position, teleporterCheckRadius);
+        foreach (var col in nearby)
+        {
+            Teleporter teleporter = col.GetComponent<Teleporter>();
+            if (teleporter != null && Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("A wild enemy appears!");
+                TeleportTo(teleporter);
             }
         }
     }
+
+    private void TeleportTo(Teleporter teleporter)
+    {
+        if (teleporter.GetDestination() != null)
+        {
+            transform.position = teleporter.GetDestination().position;
+            Debug.Log("Teleported to " + teleporter.GetDestination().position);
+
+            // Snap follower instantly
+            TopDownFollower follower = FindFirstObjectByType<TopDownFollower>();
+            if (follower != null)
+            {
+                follower.SnapToTarget();
+            }
+        }
+    }
+    #endregion
+
+    #region Health
+    public void ChangeHealth(int amount)
+    {
+        if (amount < 0)
+        {
+            if (isInvincible) return;
+
+            isInvincible = true;
+            damageCooldown = timeInvincible;
+            animator.SetTrigger("Hit");
+        }
+
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
+    }
+
+    private void HandleInvincibility()
+    {
+        if (isInvincible)
+        {
+            damageCooldown -= Time.deltaTime;
+            if (damageCooldown <= 0)
+                isInvincible = false;
+        }
+    }
+    #endregion
+
+    #region Encounters
+    private void CheckForEncounters()
+    {
+        Collider2D check = Physics2D.OverlapCircle(transform.position, 0.2f, GrassLayer);
+        if (check != null && Random.Range(1, 101) <= 10)
+        {
+            Debug.Log("A wild enemy appears!");
+        }
+    }
+    #endregion
 }

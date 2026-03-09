@@ -52,47 +52,38 @@ public class TopDownFollower : MonoBehaviour
         rb.linearVelocity = velocity;
 
         HandleFlip(velocity);
-        UpdateAnimator(velocity);
 
-       
-    }
-
-
-    void UpdateAnimator(Vector2 velocity)
-    {
-        if (animator == null) return;
-        animator.SetFloat("Speed", velocity.magnitude);
-
-        if (velocity.magnitude > 0.01f)
+        void HandleFlip(Vector2 velocity)
         {
-            Vector2 dir = velocity.normalized;
-            animator.SetFloat("MoveX", dir.x);
-            animator.SetFloat("MoveY", dir.y);
+            if (spriteRenderer == null) return;
+
+            if (velocity.x > 0.05f)
+                spriteRenderer.flipX = true;
+            else if (velocity.x < -0.05f)
+                spriteRenderer.flipX = false;
+        }
+        Vector2 GetDirectionWIthAvoidance(Vector2 toTarget)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, toTarget.normalized, 0.7f);
+            if (!hit)
+                return toTarget.normalized;
+
+            Vector2 right = new Vector2(toTarget.y, -toTarget.x).normalized;
+            Vector2 left = -right;
+
+            if (!Physics2D.Raycast(transform.position, right, 0.7f))
+                return right;
+            else if (!Physics2D.Raycast(transform.position, left, 0.7f))
+                return left;
+            return Vector2.zero;
         }
     }
-
-    void HandleFlip(Vector2 velocity)
+    public void SnapToTarget()
     {
-        if (spriteRenderer == null) return;
-
-        if (velocity.x > 0.05f)
-            spriteRenderer.flipX = true;
-        else if (velocity.x < -0.05f)
-            spriteRenderer.flipX = false;
-    }
-    Vector2 GetDirectionWIthAvoidance(Vector2 toTarget)
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, toTarget.normalized, 0.7f);
-        if (!hit)
-            return toTarget.normalized;
-
-        Vector2 right = new Vector2(toTarget.y, -toTarget.x).normalized;
-        Vector2 left = -right;
-
-        if (!Physics2D.Raycast(transform.position, right, 0.7f))
-            return right;
-        else if (!Physics2D.Raycast(transform.position, left, 0.7f))
-            return left;
-        return Vector2.zero;
+        if (target != null)
+        {
+            rb.position = target.position;
+            rb.linearVelocity = Vector2.zero; // stop any movement
+        }
     }
 }
