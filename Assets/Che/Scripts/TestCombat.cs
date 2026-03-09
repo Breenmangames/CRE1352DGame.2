@@ -3,9 +3,12 @@ using UnityEngine;
 public class TestCombat : MonoBehaviour
 {
     Animator animator;
+    TestMovement player;
 
     public Transform attackPoint;
+
     public float attackRange = 0.5f;
+    public float attackOffset = 0.6f;
 
     public LayerMask enemyLayers;
     public int attackDamage = 40;
@@ -15,6 +18,7 @@ public class TestCombat : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        player = GetComponent<TestMovement>();
     }
 
     void Update()
@@ -32,15 +36,20 @@ public class TestCombat : MonoBehaviour
 
         isAttacking = true;
 
+        Vector2 dir = player.FacingDirection;
+
+        animator.SetFloat("MoveX", dir.x);
+        animator.SetFloat("MoveY", dir.y);
+
         animator.SetTrigger("LightAttack");
+
+        attackPoint.localPosition = dir * attackOffset;
 
         Collider2D[] hitEnemies =
             Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("Hit " + enemy.name);
-
             EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
 
             if (enemyHealth != null)
@@ -63,7 +72,6 @@ public class TestCombat : MonoBehaviour
             return;
 
         Gizmos.color = Color.red;
-
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
