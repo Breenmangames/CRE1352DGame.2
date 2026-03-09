@@ -6,6 +6,7 @@ using UnityEngine;
 public class ProjectileAttack : MonoBehaviour
 {
     private Camera _camera;
+    private EnemyHealth healthController;
 
     private void Awake()
     {
@@ -26,8 +27,8 @@ public class ProjectileAttack : MonoBehaviour
         if (collision.GetComponent<EnemyBehaviour>())
         {
              //Damages enemies upon collision via targeting their movement script then destroys the bullet
-            // HealthController healthController = collision.GetComponent<HealthController>();
-             //healthController.TakeDamage(100);
+             healthController = collision.GetComponent<EnemyHealth>();
+            healthController.TakeDamage(100);
             Destroy(gameObject);
         }
     }

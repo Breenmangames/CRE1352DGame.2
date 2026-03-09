@@ -28323,6 +28323,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 3798232401772562716, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
+      propertyPath: shooter
+      value: 
+      objectReference: {fileID: 2053808201}
+    - target: {fileID: 3798232401772562716, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798232401772562716, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6028346339297294476, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
       propertyPath: m_LocalPosition.x
       value: -102.18568
@@ -31115,11 +31127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44056af4ceb3f3043bfdb458e2198240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2053808201}
   speed: 2
   maxFollowRange: 8
   minFollowRange: 0.75
-  Spawntest: {fileID: 0}
   SpawntestObject: {fileID: 0}
 --- !u!95 &1398621369
 Animator:
@@ -31324,6 +31334,10 @@ PrefabInstance:
       propertyPath: minFollowRange
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3907827810370065217, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
+      propertyPath: SpawntestObject
+      value: 
+      objectReference: {fileID: 1133725438}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -359798,6 +359812,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: maxHealth
       value: 5
       objectReference: {fileID: 0}
@@ -359820,6 +359838,18 @@ PrefabInstance:
     - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: InteractablesLayer.m_Bits
       value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438671266149533734, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438671266149533734, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: attackDamage
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438671266149533734, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: attackOffset
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -359868,6 +359898,14 @@ PrefabInstance:
     - target: {fileID: 5780544471776601376, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504934145044662199, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504934145044662199, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: maxHealth
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6895463637947253494, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_Name
