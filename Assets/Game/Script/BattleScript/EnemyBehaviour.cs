@@ -5,8 +5,8 @@ public class EnemyBehaviour : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rb;
-    private Vector3 homePosition;  // Changed from Transform to Vector3 - was never assigned
-    private GameObject player;     // Fixed missing access modifier
+    private Vector3 homePosition;  
+    private GameObject player;     
     private Transform target;
 
     [SerializeField] float speed;
@@ -38,7 +38,7 @@ public class EnemyBehaviour : MonoBehaviour
         spawnPos = homePosition;
 
         // Safely find Spawntest
-        SpawntestObject = GameObject.Find("SpawnerForGrass");
+       /* SpawntestObject = GameObject.Find("SpawnerForGrass");
         if (SpawntestObject != null)
         {
             Spawntest = SpawntestObject.GetComponent<Spawntest>();
@@ -54,7 +54,7 @@ public class EnemyBehaviour : MonoBehaviour
         else
         {
             Debug.LogError("SpawnerForGrass object not found in the scene.");
-        }
+        }*/
     }
 
     void Update()
