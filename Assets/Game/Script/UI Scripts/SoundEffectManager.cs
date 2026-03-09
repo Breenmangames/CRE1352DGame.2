@@ -26,7 +26,7 @@ public class SoundEffectManager : MonoBehaviour
 
     void Start()
     {
-        sfxSlider.onValueChanged.AddListener(delegate { OnValueChanged(); });
+        //sfxSlider.onValueChanged.AddListener(delegate { OnValueChanged(); });
     }
     public static void PlaySoundEffect(string name)
     {

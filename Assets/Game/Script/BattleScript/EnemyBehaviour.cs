@@ -5,57 +5,87 @@ public class EnemyBehaviour : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rb;
-    public Transform HomePosition;
-    public GameObject player;
+    private Vector3 homePosition;  
+    private GameObject player;     
     private Transform target;
-    [SerializeField] 
-    float speed;
-    [SerializeField]
-    float maxFollowRange;
-    [SerializeField]
-    float minFollowRange;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField] float speed;
+    [SerializeField] float maxFollowRange;
+    [SerializeField] float minFollowRange;
+
+    private Vector3 spawnPos;
+    public Spawntest Spawntest { get; private set; }
+    public GameObject SpawntestObject;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
-        target = FindFirstObjectByType<PlayerController>().transform;
-    }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 scale = transform.localScale;
-
-        if (player.transform.position.x > transform.position.x)
+        // Safely find player with null check
+        PlayerController playerController = FindFirstObjectByType<PlayerController>();
+        if (playerController != null)
         {
-            scale.x = Mathf.Abs(scale.x) * -1;
+            target = playerController.transform;
+            player = playerController.gameObject;
         }
         else
         {
-            scale.x = Mathf.Abs(scale.x);
+            Debug.LogError("PlayerController not found in scene for: " + gameObject.name);
         }
+
+        // Store spawn position at start rather than relying on unassigned HomePosition
+        homePosition = transform.position;
+        spawnPos = homePosition;
+
+        // Safely find Spawntest
+       /* SpawntestObject = GameObject.Find("SpawnerForGrass");
+        if (SpawntestObject != null)
+        {
+            Spawntest = SpawntestObject.GetComponent<Spawntest>();
+            if (Spawntest != null)
+            {
+                Debug.Log(Spawntest.spawnPos);
+            }
+            else
+            {
+                Debug.LogError("Spawntest component missing on SpawnerForGrass.");
+            }
+        }
+        else
+        {
+            Debug.LogError("SpawnerForGrass object not found in the scene.");
+        }*/
+    }
+
+    void Update()
+    {
+        // Guard clause - don't run if target is missing
+        if (target == null) return;
+
+        Vector3 scale = transform.localScale;
+        scale.x = target.position.x > transform.position.x
+            ? Mathf.Abs(scale.x) * -1
+            : Mathf.Abs(scale.x);
         transform.localScale = scale;
 
-        if(Vector3.Distance(transform.position, target.position) <= maxFollowRange && Vector3.Distance(target.position, transform.position) >= minFollowRange)
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+        if (distanceToTarget <= maxFollowRange && distanceToTarget >= minFollowRange)
         {
             FollowPlayer();
         }
-        else if(Vector3.Distance(transform.position, target.position) > maxFollowRange || Vector3.Distance(target.position, transform.position) < minFollowRange)
+        else
         {
             ReturnHome();
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerController player = other.gameObject.GetComponent<PlayerController>();
-
-
-        if (player != null)
+        PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
+        if (playerController != null)
         {
-            player.ChangeHealth(-2);
+            playerController.ChangeHealth(-2);
         }
     }
 
@@ -69,20 +99,29 @@ public class EnemyBehaviour : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", false);
-            
-
         }
     }
 
     public void ReturnHome()
     {
-        if (Vector3.Distance(transform.position, HomePosition.position) > 0.1f)
+        
+        if (Spawntest != null && Spawntest.TryGetEncounterSpawnPosition(out Vector3 spawnPosition))
         {
-            transform.position = Vector3.MoveTowards(transform.position, HomePosition.position, speed * Time.deltaTime);
+            spawnPos = spawnPosition;
+        }
+        else
+        {
+            spawnPos = homePosition;
+        }
+
+        if (Vector3.Distance(transform.position, homePosition) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, homePosition, speed * Time.deltaTime);
             animator.SetBool("isMoving", true);
         }
         else
         {
+            transform.position = homePosition;
             animator.SetBool("isMoving", false);
         }
     }
