@@ -25,9 +25,9 @@ public class ProjectileAttack : MonoBehaviour
     {
         if (collision.GetComponent<EnemyBehaviour>())
         {
-            // Damages enemies upon collision via targeting their movement script then destroys the bullet
+             //Damages enemies upon collision via targeting their movement script then destroys the bullet
             // HealthController healthController = collision.GetComponent<HealthController>();
-            // healthController.TakeDamage(100);
+             //healthController.TakeDamage(100);
             Destroy(gameObject);
         }
     }
