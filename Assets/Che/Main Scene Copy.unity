@@ -468,7 +468,7 @@ MonoBehaviour:
   - 'This is a great opportunity for some sight-seeing! '
   - You'll find your gift at the old oak tree North of town.
   - Bye now, good luck!
-  autoStartOnEnter: 1
+  autoStartOnEnter: 0
   playOnce: 1
   playerTag: Player
 --- !u!61 &111234137
@@ -595,7 +595,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111234135}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -29078,6 +29078,7 @@ MonoBehaviour:
   grassLayer:
     serializedVersion: 2
     m_Bits: 64
+  spawnPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1147432879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31043,11 +31044,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44056af4ceb3f3043bfdb458e2198240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HomePosition: {fileID: 805679473}
-  player: {fileID: 2053808201}
   speed: 2
   maxFollowRange: 8
   minFollowRange: 0.75
+  SpawntestObject: {fileID: 0}
 --- !u!95 &1398621369
 Animator:
   serializedVersion: 7
@@ -317491,7 +317491,7 @@ GameObject:
   - component: {fileID: 1617603750}
   - component: {fileID: 1617603751}
   - component: {fileID: 1617603752}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: To_MC's_HouseInterior1
   m_TagString: Teleporter
   m_Icon: {fileID: 0}
@@ -317507,8 +317507,8 @@ Transform:
   m_GameObject: {fileID: 1617603749}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -106.44709, y: 2.10713, z: 0}
-  m_LocalScale: {x: 3, y: 1.5, z: 1}
+  m_LocalPosition: {x: -106.44709, y: 1.82, z: 0}
+  m_LocalScale: {x: 3, y: 0.9375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 954127536}
@@ -359287,6 +359287,30 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 7386156330885035046, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
   m_PrefabInstance: {fileID: 1695417477240631128}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2053808220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053808201}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d872792ae4fe74684edec0c30fe3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solidObjectsLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  GrassLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  InteractablesLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  moveSpeed: 6
+  maxHealth: 5
+  timeInvincible: 2
 --- !u!1 &2057898684
 GameObject:
   m_ObjectHideFlags: 0
@@ -359567,6 +359591,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: moveSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1438671266149533734, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: animator
       value: 
@@ -359647,7 +359675,10 @@ PrefabInstance:
     - {fileID: 6504934145044662199, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6895463637947253494, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2053808220}
   m_SourcePrefab: {fileID: 100100000, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
 --- !u!1001 &3064320993884981064
 PrefabInstance:
