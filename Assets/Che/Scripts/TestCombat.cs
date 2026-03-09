@@ -2,24 +2,11 @@ using UnityEngine;
 
 public class TestCombat : MonoBehaviour
 {
-    Animator animator;
-    TestMovement player;
-
+    public Animator animator;
     public Transform attackPoint;
-
     public float attackRange = 0.5f;
-    public float attackOffset = 0.6f;
-
     public LayerMask enemyLayers;
     public int attackDamage = 40;
-
-    bool isAttacking;
-
-    void Awake()
-    {
-        animator = GetComponent<Animator>();
-        player = GetComponent<TestMovement>();
-    }
 
     void Update()
     {
@@ -29,49 +16,20 @@ public class TestCombat : MonoBehaviour
         }
     }
 
-    void Attack()
+    private void Attack()
     {
-        if (isAttacking)
-            return;
-
-        isAttacking = true;
-
-        Vector2 dir = player.FacingDirection;
-
-        animator.SetFloat("MoveX", dir.x);
-        animator.SetFloat("MoveY", dir.y);
-
         animator.SetTrigger("LightAttack");
 
-        attackPoint.localPosition = dir * attackOffset;
-
-        Collider2D[] hitEnemies =
-            Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage(attackDamage);
-            }
+            enemy.GetComponent<EnemyHealth>()?.TakeDamage(attackDamage);
         }
-
-        Invoke(nameof(EndAttack), 0.35f);
     }
 
-    void EndAttack()
+    private void OnDrawGizmosSelected()
     {
-        isAttacking = false;
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null)
-            return;
-
-        Gizmos.color = Color.red;
+        if (attackPoint == null) return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
