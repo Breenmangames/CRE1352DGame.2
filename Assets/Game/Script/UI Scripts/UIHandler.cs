@@ -34,7 +34,7 @@ public class UIHandler : MonoBehaviour
 
    
 
-    void PickUpCoin(int coinValue = 1)
+     public void PickUpCoin(int coinValue = 1)
     {
         m_CurrentCoins += coinValue;
         SetCoinValue(m_CurrentCoins);

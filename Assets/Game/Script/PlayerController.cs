@@ -143,12 +143,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void PickUpCoin(int coinValue = 1)
-    {
-        m_CurrentCoins += coinValue;
-        SetCoinValue(m_CurrentCoins);
-    }
-
+  
 
     /*void Launch()
      {
