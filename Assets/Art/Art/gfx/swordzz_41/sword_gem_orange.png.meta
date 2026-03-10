@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sword_gem_orange_0: -3014143645374764127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

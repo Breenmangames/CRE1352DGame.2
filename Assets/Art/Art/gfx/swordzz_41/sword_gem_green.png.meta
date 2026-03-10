@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sword_gem_green_0: -6725192267431738155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

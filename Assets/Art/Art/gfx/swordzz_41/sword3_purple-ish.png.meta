@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sword3_purple-ish_0: -3787877653799679737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
