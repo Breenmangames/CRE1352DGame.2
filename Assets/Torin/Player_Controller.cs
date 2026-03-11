@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController_TopDown : MonoBehaviour
+public class Player_Controller: MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;

@@ -14,6 +14,8 @@ public class Spawntest : MonoBehaviour
 
     private float _timeUntilSpawn;
 
+    public Vector3 spawnPos;
+
     private void Awake()
     {
         SetTimeUntilSpawn();
@@ -43,7 +45,7 @@ public class Spawntest : MonoBehaviour
 
     // Tries to determine a good spawn position when the player is on/near a grass tile.
     // Returns true and the world position to spawn if an encounter location is found.
-    private bool TryGetEncounterSpawnPosition(out Vector3 spawnPosition)
+    public bool TryGetEncounterSpawnPosition(out Vector3 spawnPosition)
     {
         spawnPosition = Vector3.zero;
         if (player == null) return false;

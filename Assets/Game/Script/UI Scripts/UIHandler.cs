@@ -7,6 +7,9 @@ using UnityEngine.UIElements;
 public class UIHandler : MonoBehaviour
 {
     private VisualElement m_Healthbar;
+    private IntegerField m_Coins;
+
+    private int m_CurrentCoins = 0;
     public static UIHandler instance { get; private set; }
 
 
@@ -24,9 +27,23 @@ public class UIHandler : MonoBehaviour
         UIDocument uiDocument = GetComponent<UIDocument>();
         m_Healthbar = uiDocument.rootVisualElement.Q<VisualElement>("HealthBar");
         SetHealthValue(1.0f);
+        m_Coins = uiDocument.rootVisualElement.Q<IntegerField>("CoinCount");
+        SetCoinValue(0);
+
     }
 
+   
 
+     public void PickUpCoin(int coinValue = 1)
+    {
+        m_CurrentCoins += coinValue;
+        SetCoinValue(m_CurrentCoins);
+    }
+
+    void SetCoinValue(int coins)
+    {
+       m_Coins.value = coins;
+    }
 
 
     public void SetHealthValue(float percentage)
