@@ -18,6 +18,10 @@ public class UIHandler : MonoBehaviour
         instance = this;
     }
 
+   // private void OnEnable()
+    {
+       // Loot.OnItemLooted += PickUpCoin;
+    
 
 
 
