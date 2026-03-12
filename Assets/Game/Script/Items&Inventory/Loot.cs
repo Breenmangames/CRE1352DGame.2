@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Loot : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Loot : MonoBehaviour
     public ItemsSO item;
     public SpriteRenderer sr;
     public Animator anim;
+
+    public static event Action<ItemsSO, int> OnItemLooted;
 
     public int amount;
 
