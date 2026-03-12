@@ -31574,12 +31574,12 @@ GameObject:
   - component: {fileID: 1495581316}
   - component: {fileID: 1495581315}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DialogCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1495581314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -360240,11 +360240,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4373115430709601963, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
       propertyPath: _bulletSpeed
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4373115430709601963, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: -2253911629886400664, guid: b6387ed61ac6b874fa813ea45477e12e, type: 3}
+    - target: {fileID: 4373115430709601963, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
       propertyPath: _timeBetweenShots
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5374584796854108165, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
       propertyPath: m_BodyType
