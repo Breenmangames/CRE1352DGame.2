@@ -80,6 +80,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1255039276474324470}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7699295734548097461}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
 --- !u!1 &1404735163916392462 stripped
 GameObject:
@@ -93,16 +96,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404735163916392462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44056af4ceb3f3043bfdb458e2198240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   speed: 2
   maxFollowRange: 8
   minFollowRange: 0.75
-  Spawntest: {fileID: 0}
   SpawntestObject: {fileID: 0}
 --- !u!61 &788166014819056493
 BoxCollider2D:
@@ -190,3 +191,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7699295734548097461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404735163916392462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32b7ae049ec75a4c9f21260b2415230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  maxFollowRange: 4
+  minFollowRange: 1
+  attackRange: 3.5
+  attackStandoffDistance: 1.5
+  attackCooldown: 1.5
+  SpawntestObject: {fileID: 0}
