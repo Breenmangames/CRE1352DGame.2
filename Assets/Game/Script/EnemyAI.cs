@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
 
     
 
-
+    
 
     private Animator animator;
     private Rigidbody2D rb;
@@ -26,7 +26,18 @@ public class EnemyAI : MonoBehaviour
     private EnemyState currentState;
     public Spawntest Spawntest { get; private set; }
     public GameObject SpawntestObject;
-    
+
+
+    [Header("Projectile Attack")]
+    [SerializeField] public GameObject projectilePrefab;
+    [SerializeField] Transform firePoint;             // Assign an empty child GameObject as the spawn point
+    [SerializeField] float projectileSpeed = 8f;
+    [SerializeField] int projectileDamage = 1;
+    [SerializeField] float knockbackForce = 6f;
+    [SerializeField] float projectileAttackCooldown = 2f;  // Separate cooldown from melee
+
+    private float lastProjectileAttackTime;
+
 
     private void Start()
     {
@@ -99,37 +110,56 @@ public class EnemyAI : MonoBehaviour
     }
 
     void HandleAttackState()
+{
+    float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+    if (distanceToTarget > attackStandoffDistance + 0.1f)
     {
-        float distanceToTarget = Vector3.Distance(transform.position, target.position);
-
-        // Move to standoff distance — close in if too far, back off if too close
-        if (distanceToTarget > attackStandoffDistance + 0.1f)
-        {
-            // Too far — move closer to player
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-            animator.SetBool("isMoving", true);
-        }
-        else if (distanceToTarget < attackStandoffDistance - 0.1f)
-        {
-            // Too close — back away from player
-            Vector3 directionAwayFromPlayer = (transform.position - target.position).normalized;
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + directionAwayFromPlayer, speed * Time.deltaTime);
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            // In standoff range — hold position and attack
-            animator.SetBool("isMoving", false);
-        }
-
-        // Attack on cooldown
-        float timeSinceLastAttack = Time.time - lastAttackTime;
-        if (timeSinceLastAttack >= attackCooldown)
-        {
-            PerformAttack();
-            lastAttackTime = Time.time;
-        }
+        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        animator.SetBool("isMoving", true);
     }
+    else if (distanceToTarget < attackStandoffDistance - 0.1f)
+    {
+        Vector3 directionAwayFromPlayer = (transform.position - target.position).normalized;
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + directionAwayFromPlayer, speed * Time.deltaTime);
+        animator.SetBool("isMoving", true);
+    }
+    else
+    {
+        animator.SetBool("isMoving", false);
+    }
+
+    // Melee contact attack (your existing cooldown)
+    if (Time.time - lastAttackTime >= attackCooldown)
+    {
+        PerformAttack();
+        lastAttackTime = Time.time;
+    }
+
+    // Projectile attack (separate cooldown)
+    if (Time.time - lastProjectileAttackTime >= projectileAttackCooldown)
+    {
+        FireProjectile();
+        lastProjectileAttackTime = Time.time;
+    }
+}
+
+void FireProjectile()
+{
+    if (projectilePrefab == null) return;
+
+    // Use firePoint if assigned, otherwise fire from enemy centre
+    Vector3 spawnPosition = firePoint != null ? firePoint.position : transform.position;
+
+    GameObject proj = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
+    EnemyProjectile ep = proj.GetComponent<EnemyProjectile>();
+
+    if (ep != null)
+    {
+        Vector2 direction = (target.position - spawnPosition).normalized;
+        ep.Init(direction, projectileSpeed, projectileDamage, knockbackForce);
+    }
+}
 
     void PerformAttack()
     {

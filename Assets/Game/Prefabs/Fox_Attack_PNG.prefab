@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2924361657068571920}
   - component: {fileID: 6864928468374507112}
+  - component: {fileID: 5598760737739596660}
   m_Layer: 0
   m_Name: Fox_Attack_PNG
   m_TagString: Untagged
@@ -87,3 +88,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5598760737739596660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9140266400167075838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cb800dc55934e41ba81e18b935b76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -31,7 +31,7 @@ public class Spawntest : MonoBehaviour
             if (TryGetEncounterSpawnPosition(out spawnPos) && Random.Range(1, 101) <= encounterChancePercent)
             {
                 Instantiate(_enemyPrefab, spawnPos, Quaternion.identity);
-                Debug.Log($"Spawned enemy at {spawnPos}");
+               // Debug.Log($"Spawned enemy at {spawnPos}");
             }
 
             SetTimeUntilSpawn();
