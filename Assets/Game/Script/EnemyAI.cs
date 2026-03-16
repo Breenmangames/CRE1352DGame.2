@@ -1,8 +1,14 @@
 using UnityEngine;
+using UnityEngine.WSA;
+using System;
 
 public class EnemyAI : MonoBehaviour
 {
     public enum EnemyState { Idle, Follow, Attack, ReturnHome }
+
+    
+
+
 
     private Animator animator;
     private Rigidbody2D rb;
@@ -20,6 +26,7 @@ public class EnemyAI : MonoBehaviour
     private EnemyState currentState;
     public Spawntest Spawntest { get; private set; }
     public GameObject SpawntestObject;
+    
 
     private void Start()
     {
@@ -127,6 +134,7 @@ public class EnemyAI : MonoBehaviour
     void PerformAttack()
     {
         animator.SetTrigger("attack"); // Hook this up to your attack animation trigger
+        
 
         // Apply damage directly — swap for projectile logic if needed
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
