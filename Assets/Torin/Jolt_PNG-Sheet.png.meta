@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: da25c8aec56dbaa4b9ef1f7baec62d70
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8534114245057456200
+    second: Jolt_PNG-Sheet_0
+  - first:
+      213: -1169148831815058559
+    second: Jolt_PNG-Sheet_1
+  - first:
+      213: 7641889152342478083
+    second: Jolt_PNG-Sheet_2
+  - first:
+      213: 1413342028806995049
+    second: Jolt_PNG-Sheet_3
+  - first:
+      213: -359376771589737685
+    second: Jolt_PNG-Sheet_4
+  - first:
+      213: 3498605919235620385
+    second: Jolt_PNG-Sheet_5
+  - first:
+      213: -8482553991342103361
+    second: Jolt_PNG-Sheet_6
+  - first:
+      213: -1590040310788075454
+    second: Jolt_PNG-Sheet_7
+  - first:
+      213: 9106735485700482735
+    second: Jolt_PNG-Sheet_8
+  - first:
+      213: -7188688330540401137
+    second: Jolt_PNG-Sheet_9
+  - first:
+      213: 9103388949517824826
+    second: Jolt_PNG-Sheet_10
+  - first:
+      213: -4429717209454858563
+    second: Jolt_PNG-Sheet_11
+  - first:
+      213: -8993740958485275475
+    second: Jolt_PNG-Sheet_12
+  - first:
+      213: -4972991143354228435
+    second: Jolt_PNG-Sheet_13
+  - first:
+      213: 4326159991760343175
+    second: Jolt_PNG-Sheet_14
+  - first:
+      213: 8395746265044881184
+    second: Jolt_PNG-Sheet_15
+  - first:
+      213: -6821904091834919505
+    second: Jolt_PNG-Sheet_16
+  - first:
+      213: 827846336138110765
+    second: Jolt_PNG-Sheet_17
+  - first:
+      213: -3164814915934396881
+    second: Jolt_PNG-Sheet_18
+  - first:
+      213: 5097419852091553559
+    second: Jolt_PNG-Sheet_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jolt_PNG-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8482041b0b34f6670800000000000000
+      internalID: 8534114245057456200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jolt_PNG-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18bb916f45956cfe0800000000000000
+      internalID: -1169148831815058559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jolt_PNG-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dc84212b17d0a60800000000000000
+      internalID: 7641889152342478083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jolt_PNG-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96cbb2546133d9310800000000000000
+      internalID: 1413342028806995049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f688d3206e6703f4cbf77bcb417b0d4d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Jolt_PNG-Sheet_0: 8534114245057456200
+      Jolt_PNG-Sheet_1: -1169148831815058559
+      Jolt_PNG-Sheet_2: 7641889152342478083
+      Jolt_PNG-Sheet_3: 1413342028806995049
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
