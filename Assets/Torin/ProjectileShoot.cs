@@ -37,13 +37,13 @@ public class ProjectileShoot : MonoBehaviour
             }
         }
     }
-    /*void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Projectile collision with: " + other.gameObject.name +
                   " | Layer: " + LayerMask.LayerToName(other.gameObject.layer) +
                   " | Tag: " + other.gameObject.tag);
         Destroy(gameObject);
-    }*/
+    }
     public  void FireBullet()
     {
         // Instantiates the bullet prefab and sets its velocity
