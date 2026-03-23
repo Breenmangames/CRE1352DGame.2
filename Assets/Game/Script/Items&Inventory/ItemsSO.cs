@@ -8,7 +8,7 @@ public class ItemsSO : ScriptableObject
         public Sprite itemIcon;
         public int itemID;
         public bool isStackable;
-        public int maxStackSize;
+        public int maxStackSize = 2;
 
         public bool isGold;
 

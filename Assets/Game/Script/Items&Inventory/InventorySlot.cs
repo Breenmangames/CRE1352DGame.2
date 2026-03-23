@@ -5,19 +5,18 @@ using UnityEngine.UI;
 using TMPro;
 using System.Diagnostics.Contracts;
 using UnityEngine.EventSystems;
+using UnityEngine.VFX;
 
 public class InventorySlot : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
-     InventoryManager inventoryManager;
 
-    
-    
-
+   public  InventoryManager inventoryManager;
     public ItemsSO ItemSO;
     public int Amount;
 
+
+    
 
     public Image ItemImage;
     public TMP_Text AmountText;
@@ -28,17 +27,18 @@ public class InventorySlot : MonoBehaviour
         
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData, int amount)
     {
         if (Amount > 0)
         {
             if (eventData.button == PointerEventData.InputButton.Left)
             {
-                inventoryManager.UseItem(this);
+                inventoryManager.AddItem(this,amount);
             }
-             else if (eventData.button == PointerEventData.InputButton.Right)
+            else if (eventData.button == PointerEventData.InputButton.Right)
             {
-                inventoryManager.DropItem(this);
+                var so = ScriptableObject.CreateInstance<ItemsSO>(); // TODO: make this actually an so that matter
+                inventoryManager.DropItem(so, amount);
             }
         }
     }

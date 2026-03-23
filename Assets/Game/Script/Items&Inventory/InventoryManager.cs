@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class InventoryManager : MonoBehaviour  
+public class InventoryManager : MonoBehaviour
 {
-    
-    public InventorySlot[] inventorySlots;
 
+    public InventorySlot[] inventorySlots;
+    public InventorySlot inventorySlot;
+    public ItemsSO itemsSO;
+
+    public GameObject lootPrefab;
+    public Transform player;
     void Start()
     {
         inventorySlots = GetComponentsInChildren<InventorySlot>();
@@ -42,29 +46,47 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
-        
+
     }
 
-    public void UseItem(InventorySlot slot)
+    public void AddItem(InventorySlot slot, int amount)
     {
-        if (slot.ItemSO != null && slot.Amount > 0)
+        if (slot.ItemSO != null && amount > 0)
         {
-            // Implement item usage logic here
-            Debug.Log($"Used {slot.ItemSO.itemName}");
-            slot.Amount--;
+
+            amount--;
             slot.UpdateUI();
+
         }
+
+        foreach (var inventorySlot in inventorySlots)
+        {
+            if (inventorySlot.ItemSO == itemsSO && amount < itemsSO.maxStackSize)
+            {
+
+
+                int availableSpace = itemsSO.maxStackSize - inventorySlot.Amount;
+                int amountToAdd = Math.Min(amount, availableSpace);
+
+                inventorySlot.Amount += amountToAdd;
+                amount -= amountToAdd;
+                inventorySlot.UpdateUI();
+
+
+                if (amount <= 0)
+                    return;
+            }
+        }
+
+        if (amount > 0)
+            DropItem(itemsSO, amount);
     }
 
-    public void DropItem(InventorySlot slot)
+
+
+    public void DropItem(ItemsSO itemsSO, int amount)
     {
-        if (slot.ItemSO != null && slot.Amount >= 0)
-        {
-            // Implement item dropping logic here
-            Debug.Log($"Dropped {slot.ItemSO.itemName}");
-            slot.Amount--;
-            slot.UpdateUI();
-        }
+        Instantiate(lootPrefab, player.position, Quaternion.identity).GetComponent<Loot>().item = itemsSO;
     }
 }
 

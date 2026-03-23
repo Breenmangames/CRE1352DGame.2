@@ -19,9 +19,24 @@ public class Loot : MonoBehaviour
         if (item == null)
             return;
 
+        UpdateAppearance();
+
+
+    }
+    public void Initialize(ItemsSO itemsSO, int amount)
+    {
+         this.item = itemsSO;
+         this.amount = amount;
+         UpdateAppearance();
+    }
+
+    private void UpdateAppearance()
+    {
+                if (item != null)
+        {
             sr.sprite = item.itemIcon;
             this.name = item.itemName;
-        
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

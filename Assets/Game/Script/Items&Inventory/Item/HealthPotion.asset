@@ -17,8 +17,9 @@ MonoBehaviour:
   itemID: 10
   isStackable: 1
   maxStackSize: 3
+  isGold: 0
   currentHealth: 10
-  maxHealth: 0
+  maxHealth: 10
   health: 0
   speed: 0
   duration: 0
