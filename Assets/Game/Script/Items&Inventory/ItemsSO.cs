@@ -10,6 +10,8 @@ public class ItemsSO : ScriptableObject
         public bool isStackable;
         public int maxStackSize;
 
+        public bool isGold;
+
         [Header("Item Stats")]
         public int currentHealth;
         public int maxHealth;

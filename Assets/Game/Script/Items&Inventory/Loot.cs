@@ -29,7 +29,8 @@ public class Loot : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             anim.Play("LootPickup");
-             Destroy(gameObject, 0.5f);
+            OnItemLooted?.Invoke(item, amount);
+            Destroy(gameObject, 0.5f);
         }
     }
 }
