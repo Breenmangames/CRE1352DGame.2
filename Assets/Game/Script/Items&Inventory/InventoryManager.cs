@@ -1,9 +1,16 @@
 using UnityEngine;
+using System;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour  
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void OnEnable()
+    
+    public InventorySlot[] inventorySlots;
+   
+// Start is called once before the first execution of Update after the MonoBehaviour is created
+private void OnEnable()
     {
         Loot.OnItemLooted += AddItemToInventory;
     }
@@ -15,8 +22,16 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItemToInventory(ItemsSO item, int amount)
     {
-
-        UpdateUI();
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            if (slot.ItemSO != null && slot.ItemSO == item)
+            {
+                slot.Amount += amount;
+                slot.UpdateUI();
+                return;
+            }
+        }
+        
     }
 }
 

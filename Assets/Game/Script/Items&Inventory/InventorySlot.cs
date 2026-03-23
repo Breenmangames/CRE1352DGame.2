@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using System.Diagnostics.Contracts;
 
 public class InventorySlot : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
+    public InventoryManager inventoryManager;
+
+    
+    
+
     public ItemsSO ItemSO;
     public int Amount;
 
@@ -15,7 +21,7 @@ public class InventorySlot : MonoBehaviour
     public Image ItemImage;
     public TMP_Text AmountText;
 
-    public void UpdateUi()
+    public void UpdateUI()
     {
                 if (ItemSO != null)
         {
