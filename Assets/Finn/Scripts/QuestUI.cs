@@ -10,6 +10,7 @@ public class QuestUI : MonoBehaviour
     public GameObject objectiveTextPrefab;
 
     public Quest testQuest;
+    public Quest activateQuests;
     public int testQuestAmount;
     private List<QuestProgress> testQuests = new();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
