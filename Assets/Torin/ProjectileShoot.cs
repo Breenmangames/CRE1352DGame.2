@@ -20,6 +20,7 @@ public class ProjectileShoot : MonoBehaviour
     private bool _fireSingle;
     private float _lastFireTime;
     private Vector2 _aimDirection = Vector2.up;
+    private Vector2 knockbackForce;
 
     void Update()
     {
@@ -66,17 +67,28 @@ public class ProjectileShoot : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Projectile collision with: " + other.gameObject.name +
-                  " | Layer: " + LayerMask.LayerToName(other.gameObject.layer) +
-                  " | Tag: " + other.gameObject.tag);
+        
 
-        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-        if (enemyHealth != null)
+        // Search self AND parents, in case the hit collider is a child object
+        EnemyHealth enemyHP = other.GetComponentInParent<EnemyHealth>();
+
+        if (enemyHP != null)
         {
-            enemyHealth.TakeDamage(_damage);
-        }
+            enemyHP.TakeDamage(_damage);
 
-        Destroy(gameObject);
+            Rigidbody2D enemyRb = other.GetComponentInParent<Rigidbody2D>();
+            if (enemyRb != null)
+            {
+                Vector2 knockbackDir = (other.transform.position - transform.position).normalized;
+                enemyRb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
+            }
+
+            Destroy(gameObject);
+        }
+        else if (!other.isTrigger)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnAttack(InputValue inputValue)

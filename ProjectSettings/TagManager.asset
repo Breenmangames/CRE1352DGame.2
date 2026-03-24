@@ -69,5 +69,8 @@ TagManager:
   - name: Small Objects
     uniqueID: 3451899847
     locked: 0
+  - name: Projectile
+    uniqueID: 2872115335
+    locked: 0
   m_RenderingLayers:
   - Default
