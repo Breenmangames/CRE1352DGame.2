@@ -45273,7 +45273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   maxFollowRange: 10
-  minFollowRange: 1
+  minFollowRange: 2.5
   attackRange: 6
   attackStandoffDistance: 2
   attackCooldown: 1.75
@@ -396759,7 +396759,8 @@ MonoBehaviour:
   lines:
   - Hey, turn left from here to go towards the old oak tree.
   - Though you'll have to go through the maze to get to it, huh?
-  - 
+  - 'I''ll give you a bit of a hint: the right path seems to be the way to go.'
+  - That's all the hints I've got! Haven't been able to reach the end myself...
   autoStartOnEnter: 1
   playOnce: 1
   playerTag: Player
@@ -396884,6 +396885,10 @@ PrefabInstance:
     - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: maxHealth
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: moveSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: currentHealth
