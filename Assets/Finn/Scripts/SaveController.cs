@@ -11,11 +11,31 @@ public class SaveController : MonoBehaviour
     {
         //Define save location
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
+
+        LoadGame();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SaveGame()
     {
-        
+        SaveData saveData = new SaveData
+        {
+            playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position
+        };
+
+        File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
+    }
+
+    public void LoadGame()
+    {
+        if(File.Exists(saveLocation))
+        {
+           SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
+
+           GameObject.FindGameObjectWithTag("Player").transform.position = saveData.playerPosition;
+        }
+        else
+        {
+           SaveGame();
+        }
     }
 }
