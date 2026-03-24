@@ -701,6 +701,8 @@ MonoBehaviour:
   - Ah, I just remembered, we forgot to bring back your gift...
   - 'This is a great opportunity for some sight-seeing! '
   - You'll find your gift at the old oak tree North of town.
+  - When you reach the crossroads at the end of the dirt path, turn left.
+  - Going right will take you directly into the city instead!
   - Bye now, good luck!
   autoStartOnEnter: 1
   playOnce: 1

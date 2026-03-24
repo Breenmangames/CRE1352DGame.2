@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      QuestLogo_0: 325571537833084213
+      QuestLogo_1: -4799205368498530264
+      QuestLogo_2: 7536061618942862256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
