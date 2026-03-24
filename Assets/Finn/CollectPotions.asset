@@ -16,8 +16,8 @@ MonoBehaviour:
   questName: CollectCoins
   questDescription: Find the man's 5 coins!
   objectives:
-  - objectiveID: 
-    description: 
+  - objectiveID: 10
+    description: Collect 5 speed potions
     type: 0
-    requiredAmount: 0
+    requiredAmount: 3
     currentAmount: 0
