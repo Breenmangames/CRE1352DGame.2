@@ -14,7 +14,8 @@ public class ProjectileShoot : MonoBehaviour
     [SerializeField]
     private float _timeBetweenShots;
     [SerializeField]
-    private int _damage = 10;
+    private int _damage = 25;
+    public LayerMask EnemyLayer;
 
     private bool _fireContinuously;
     private bool _fireSingle;
@@ -69,10 +70,17 @@ public class ProjectileShoot : MonoBehaviour
     {
         
 
+<<<<<<< HEAD
         // Search self AND parents, in case the hit collider is a child object
         EnemyHealth enemyHP = other.GetComponentInParent<EnemyHealth>();
 
         if (enemyHP != null)
+=======
+
+
+        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+>>>>>>> 6cb06ffa93c3b10f27dddcbf899b6f06b3e96bc1
         {
             enemyHP.TakeDamage(_damage);
 
