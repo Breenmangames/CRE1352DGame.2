@@ -69,18 +69,9 @@ public class ProjectileShoot : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         
-
-<<<<<<< HEAD
-        // Search self AND parents, in case the hit collider is a child object
         EnemyHealth enemyHP = other.GetComponentInParent<EnemyHealth>();
 
         if (enemyHP != null)
-=======
-
-
-        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-        if (enemyHealth != null)
->>>>>>> 6cb06ffa93c3b10f27dddcbf899b6f06b3e96bc1
         {
             enemyHP.TakeDamage(_damage);
 
