@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ProjectileShoot : MonoBehaviour
+public class TestProjectile : MonoBehaviour
 {
     [SerializeField]
     private GameObject _bulletPrefab;
