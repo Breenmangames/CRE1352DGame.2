@@ -86,7 +86,9 @@ public class InventoryManager : MonoBehaviour
 
     public void DropItem(ItemsSO itemsSO, int amount)
     {
-        Instantiate(lootPrefab, player.position, Quaternion.identity).GetComponent<Loot>().item = itemsSO;
+        Loot loot =  Instantiate(lootPrefab, player.position, Quaternion.identity).GetComponent<Loot>();
+        loot.Initialize(itemsSO, amount);
+
     }
 }
 

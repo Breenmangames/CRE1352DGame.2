@@ -13,11 +13,15 @@ public class ProjectileShoot : MonoBehaviour
     private Transform _gunOffset;
     [SerializeField]
     private float _timeBetweenShots;
+    [SerializeField]
+    private int _damage = 25;
+    public LayerMask EnemyLayer;
 
     private bool _fireContinuously;
     private bool _fireSingle;
     private float _lastFireTime;
     private Vector2 _aimDirection = Vector2.up;
+    private Vector2 knockbackForce;
 
     void Update()
     {
@@ -42,14 +46,11 @@ public class ProjectileShoot : MonoBehaviour
 
         Vector2 rawDirection = (mouseWorld - _gunOffset.position);
 
-        Debug.Log($"Mouse world pos: {mouseWorld}, Gun pos: {_gunOffset.position}, Raw dir: {rawDirection}");
-
         if (rawDirection.sqrMagnitude > 0.001f)
         {
             _aimDirection = rawDirection.normalized;
         }
 
-        Debug.Log($"Final aim direction: {_aimDirection}");
     }
 
     public void FireBullet()
@@ -67,10 +68,26 @@ public class ProjectileShoot : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Projectile collision with: " + other.gameObject.name +
-                  " | Layer: " + LayerMask.LayerToName(other.gameObject.layer) +
-                  " | Tag: " + other.gameObject.tag);
-        Destroy(gameObject);
+        
+        EnemyHealth enemyHP = other.GetComponentInParent<EnemyHealth>();
+
+        if (enemyHP != null)
+        {
+            enemyHP.TakeDamage(_damage);
+
+            Rigidbody2D enemyRb = other.GetComponentInParent<Rigidbody2D>();
+            if (enemyRb != null)
+            {
+                Vector2 knockbackDir = (other.transform.position - transform.position).normalized;
+                enemyRb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
+            }
+
+            Destroy(gameObject);
+        }
+        else if (!other.isTrigger)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnAttack(InputValue inputValue)
