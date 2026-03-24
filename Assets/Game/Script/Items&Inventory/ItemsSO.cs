@@ -11,8 +11,9 @@ public class ItemsSO : ScriptableObject
         public int maxStackSize = 2;
 
         public bool isGold;
+        public bool canCapture;
 
-        [Header("Item Stats")]
+       [Header("Item Stats")]
         public int currentHealth;
         public int maxHealth;
         public int health;
