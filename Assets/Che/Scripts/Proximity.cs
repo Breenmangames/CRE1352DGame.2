@@ -6,6 +6,7 @@ public class NPCProximity2D : MonoBehaviour, IInteractable
     [Header("References")]
     public Dialogue dialogueUI;
     [Header("Dialogue Data")]
+    public string speakerName = "";
     [TextArea(2, 5)] public string[] lines;
     [Header("Behaviour")]
     public bool autoStartOnEnter = true;
@@ -58,7 +59,7 @@ public class NPCProximity2D : MonoBehaviour, IInteractable
             Debug.LogWarning($"{name}: No dialogue lines assigned.");
             return;
         }
-        dialogueUI.Begin(lines);
+        dialogueUI.Begin(lines, speakerName);
         hasPlayed = true;
     }
 }

@@ -8,6 +8,7 @@ public class Dialogue : MonoBehaviour
     [Header("UI")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI nameComponent;
 
     [Header("Typing")]
     public float textSpeed = 0.03f;
@@ -45,7 +46,7 @@ public class Dialogue : MonoBehaviour
     /// <summary>
     /// Starts dialogue using the lines provided by an NPC.
     /// </summary>
-    public void Begin(string[] lines)
+    public void Begin(string[] lines, string speakerName = "")
     {
         if (lines == null || lines.Length == 0)
         {
@@ -53,6 +54,11 @@ public class Dialogue : MonoBehaviour
             return;
         }
 
+        if (nameComponent != null)
+        {
+            nameComponent.text = speakerName;
+            nameComponent.gameObject.SetActive(speakerName != "");
+        }
         currentLines = lines;
         index = 0;
         IsActive = true;
