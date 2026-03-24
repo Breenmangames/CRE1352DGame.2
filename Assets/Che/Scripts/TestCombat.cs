@@ -10,6 +10,10 @@ public class TestCombat : MonoBehaviour
 
     void Update()
     {
+        if (Dialogue.IsActive) return;
+        {
+            
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Attack();

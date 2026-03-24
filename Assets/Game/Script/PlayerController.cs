@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
         {
             FindFirstObjectByType<ProjectileShoot>().FireBullet();
         }
+        if (Dialogue.IsActive) return;
     }
   
 

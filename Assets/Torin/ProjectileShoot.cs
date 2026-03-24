@@ -14,7 +14,8 @@ public class ProjectileShoot : MonoBehaviour
     [SerializeField]
     private float _timeBetweenShots;
     [SerializeField]
-    private int _damage = 10;
+    private int _damage = 25;
+    public LayerMask EnemyLayer;
 
     private bool _fireContinuously;
     private bool _fireSingle;
@@ -69,6 +70,8 @@ public class ProjectileShoot : MonoBehaviour
         Debug.Log("Projectile collision with: " + other.gameObject.name +
                   " | Layer: " + LayerMask.LayerToName(other.gameObject.layer) +
                   " | Tag: " + other.gameObject.tag);
+
+
 
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)

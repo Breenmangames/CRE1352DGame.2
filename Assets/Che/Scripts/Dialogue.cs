@@ -16,6 +16,7 @@ public class Dialogue : MonoBehaviour
     private int index;
     private bool dialogueActive = false;
     private Coroutine typingRoutine;
+    public static bool IsActive { get; private set; }
 
     void Awake()
     {
@@ -54,6 +55,7 @@ public class Dialogue : MonoBehaviour
 
         currentLines = lines;
         index = 0;
+        IsActive = true;
         dialogueActive = true;
         Show();
 
@@ -87,6 +89,7 @@ public class Dialogue : MonoBehaviour
 
     public void EndDialogue()
     {
+        IsActive = false;
         dialogueActive = false;
         if (typingRoutine != null) StopCoroutine(typingRoutine);
         Hide();
