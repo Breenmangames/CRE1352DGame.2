@@ -396304,32 +396304,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 7386156330885035046, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
   m_PrefabInstance: {fileID: 1695417477240631128}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2053808212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053808201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cf89d3d447990e4b9d95f65c7478670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  solidObjectsLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  GrassLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  InteractablesLayer:
-    serializedVersion: 2
-    m_Bits: 2048
-  moveSpeed: 4
-  projectilePrefab: {fileID: 2236573740501416327, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
-  maxHealth: 20
-  currentHealth: 20
-  timeInvincible: 1
 --- !u!1 &2057898684
 GameObject:
   m_ObjectHideFlags: 0
@@ -396812,7 +396786,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: maxHealth
@@ -396869,10 +396843,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6895463637947253494, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2053808212}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
 --- !u!1001 &3064320993884981064
 PrefabInstance:
@@ -397155,7 +397126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7699295734548097461, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7699295734548097461, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
       propertyPath: knockbackForce
@@ -397173,41 +397144,8 @@ PrefabInstance:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1404735163916392462, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8525724057728393580}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
---- !u!1 &8525724057728393579 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1404735163916392462, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
-  m_PrefabInstance: {fileID: 8525724057728393578}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8525724057728393580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8525724057728393579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81da935b4ec5ce747947bd2292c7c724, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  maxFollowRange: 4
-  minFollowRange: 2
-  attackRange: 3.5
-  attackStandoffDistance: 1.5
-  attackCooldown: 1.5
-  SpawntestObject: {fileID: 0}
-  projectilePrefab: {fileID: 0}
-  firePoint: {fileID: 0}
-  projectileSpeed: 4
-  projectileDamage: 5
-  knockbackForce: 0
-  projectileAttackCooldown: 1.5
 --- !u!1001 &8984462447772348668
 PrefabInstance:
   m_ObjectHideFlags: 0
