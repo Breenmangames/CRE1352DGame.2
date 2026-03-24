@@ -28070,7 +28070,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.71059, y: 95.270004, z: -10}
+  m_LocalPosition: {x: 6.01059, y: 94.67, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44923,6 +44923,10 @@ PrefabInstance:
       value: Gingerred Fox Front Entrance ASE
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -44936,11 +44940,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.8924
+      value: 63.7
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 72.4525
+      value: 72.71
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -332352,6 +332356,10 @@ PrefabInstance:
       value: Gingerred Fox Front ASE
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: 80ed2314acbba7545a7ac02f1415a086, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 80ed2314acbba7545a7ac02f1415a086, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -333216,7 +333224,7 @@ Transform:
   m_GameObject: {fileID: 1701846390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.71059, y: 95.270004, z: -10}
+  m_LocalPosition: {x: 6.01059, y: 94.67, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -394821,7 +394829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1861035003}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FoxPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396594,7 +396602,7 @@ Transform:
   m_GameObject: {fileID: 2097928045}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.71059, y: 95.270004, z: -10}
+  m_LocalPosition: {x: 6.01059, y: 94.67, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -396790,11 +396798,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 60.5
+      value: 59.9
       objectReference: {fileID: 0}
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -396944,11 +396952,11 @@ PrefabInstance:
       objectReference: {fileID: 1626375269}
     - target: {fileID: 8336819483594094990, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 8336819483594094990, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.1
+      value: 60.07
       objectReference: {fileID: 0}
     - target: {fileID: 8336819483594094990, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
       propertyPath: m_LocalPosition.z
