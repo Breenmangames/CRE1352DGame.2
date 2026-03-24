@@ -13,6 +13,8 @@ public class ProjectileShoot : MonoBehaviour
     private Transform _gunOffset;
     [SerializeField]
     private float _timeBetweenShots;
+    [SerializeField]
+    private int _damage = 10;
 
     private bool _fireContinuously;
     private bool _fireSingle;
@@ -42,14 +44,11 @@ public class ProjectileShoot : MonoBehaviour
 
         Vector2 rawDirection = (mouseWorld - _gunOffset.position);
 
-        Debug.Log($"Mouse world pos: {mouseWorld}, Gun pos: {_gunOffset.position}, Raw dir: {rawDirection}");
-
         if (rawDirection.sqrMagnitude > 0.001f)
         {
             _aimDirection = rawDirection.normalized;
         }
 
-        Debug.Log($"Final aim direction: {_aimDirection}");
     }
 
     public void FireBullet()
@@ -70,6 +69,13 @@ public class ProjectileShoot : MonoBehaviour
         Debug.Log("Projectile collision with: " + other.gameObject.name +
                   " | Layer: " + LayerMask.LayerToName(other.gameObject.layer) +
                   " | Tag: " + other.gameObject.tag);
+
+        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.TakeDamage(_damage);
+        }
+
         Destroy(gameObject);
     }
 
