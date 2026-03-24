@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 7287922263679737279}
   - component: {fileID: 978618117617376948}
   - component: {fileID: -8557458595285443635}
-  m_Layer: 13
+  - component: {fileID: 2297740583862977710}
+  m_Layer: 0
   m_Name: Jolt_PNG-Sheet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,3 +193,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &2297740583862977710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543791745257984986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92eb26663abbb647b11abd8c9653abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -396919,6 +396919,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1543791745257984986, guid: 5fd19ed66d219fc4aafea5c5e014ae43, type: 3}
     - target: {fileID: 4373115430709601963, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
+      propertyPath: EnemyLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373115430709601963, guid: ce97fa806f6a73c498d03330fbfd1c9f, type: 3}
       propertyPath: _timeBetweenShots
       value: 1
       objectReference: {fileID: 0}
@@ -397068,6 +397072,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1255039276474324470, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1404735163916392462, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
       propertyPath: m_Name
       value: Garlick
@@ -397111,10 +397119,6 @@ PrefabInstance:
     - target: {fileID: 2203216517871120491, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6157570458823465492, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
