@@ -26825,13 +26825,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d4a80358008db46a69fc03194ebdb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Unknown Enemy
-  sourcePrefab: {fileID: 0}
-  icon: {fileID: 0}
+  enemyName: Garlick
+  sourcePrefab: {fileID: 444395529}
+  icon: {fileID: -4475731750704595254, guid: 2d19914a52a79034ab437ff6173a5f3e, type: 3}
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   isCaptured: 0
-  playerOwner: {fileID: 0}
+  playerOwner: {fileID: 1626375269}
 --- !u!1 &450621156
 GameObject:
   m_ObjectHideFlags: 0
@@ -28116,7 +28116,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.044304, y: 99.54111, z: -10}
+  m_LocalPosition: {x: 65.91059, y: 46.77, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40788,6 +40788,63 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: pp
+--- !u!1001 &925591950
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 69.425
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.96911
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409434793498279128, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623138319916041293, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
+      propertyPath: m_Name
+      value: Health Potion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 123ad33e5414e83419cbf1013b37cdf4, type: 3}
 --- !u!1001 &926504984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -333476,7 +333533,7 @@ Transform:
   m_GameObject: {fileID: 1701846390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -97.08941, y: 100.67, z: -10}
+  m_LocalPosition: {x: 65.91059, y: 46.77, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -396612,7 +396669,7 @@ MonoBehaviour:
   captureItemPrefab: {fileID: 3122983693072461327, guid: 018df9033510bd74cb25fcc2700f65c9, type: 3}
   throwOrigin: {fileID: 1710887293}
   throwKey: 113
-  deployKey: 101
+  deployKey: 99
 --- !u!114 &2053808219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396914,7 +396971,7 @@ Transform:
   m_GameObject: {fileID: 2097928045}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -97.08941, y: 100.67, z: -10}
+  m_LocalPosition: {x: 65.91059, y: 46.77, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -397197,11 +397254,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -99.9
+      value: 63.1
       objectReference: {fileID: 0}
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 65.9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -397628,3 +397685,4 @@ SceneRoots:
   - {fileID: 1049501273}
   - {fileID: 1304110136}
   - {fileID: 2105582290}
+  - {fileID: 925591950}
