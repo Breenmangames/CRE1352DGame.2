@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public class CaptureNet: MonoBehaviour
 {
-
-    [Header("References")]
-     public GameObject captureItemPrefab;
-     public Transform throwOrigin;      
+   
+        [Header("References")]
+        public GameObject captureItemPrefab;
+        public Transform throwOrigin;      
 
         [Header("Input")]
         public KeyCode throwKey = KeyCode.Q;
