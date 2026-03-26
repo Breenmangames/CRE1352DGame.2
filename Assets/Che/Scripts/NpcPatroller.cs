@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class NpcPatroller : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("Patrol Points")]
+    [SerializeField] private Transform pointA;
+    [SerializeField] private Transform pointB;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("Settings")]
+    [SerializeField] private float moveSpeed = 2f;
+
 }
