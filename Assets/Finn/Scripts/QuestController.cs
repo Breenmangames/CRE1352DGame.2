@@ -7,7 +7,6 @@ public class QuestController : MonoBehaviour
     public static QuestController Instance {  get; private set; }
     public List<QuestProgress> activateQuests = new();
     private QuestUI questUI;
-   
 
     private void Awake()
     {
@@ -26,5 +25,5 @@ public class QuestController : MonoBehaviour
         questUI.UpdateQuestUI();
     }
 
-  //  public bool IsQuestActive(string questID) => activateQuests.Exists(q =>  q.QuestID == questID);
+    public bool IsQuestActive(string questID) => activateQuests.Exists(q =>  q.QuestID == questID);
 }

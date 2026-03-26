@@ -62,5 +62,5 @@ public class QuestProgress
 
     public bool IsCompleted => objectives.TrueForAll(o => o.IsCompleted);
 
-    public string QuestId => quest.questID;
+    public string QuestID => quest.questID;
 }
