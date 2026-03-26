@@ -1,43 +1,49 @@
 fileFormatVersion: 2
-guid: 311a2ebd1b3bc624b8b8498883707773
+guid: 295e0cbd2a0fb804d94b55cac57a902e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6134421028427622431
-    second: balls_0
+      213: -755143178591903704
+    second: Bob_idle_anim_16x16_0
   - first:
-      213: 300353140021029200
-    second: balls_1
+      213: -152445148830460372
+    second: Bob_idle_anim_16x16_1
   - first:
-      213: 338592883393811448
-    second: balls_2
+      213: -8282523860374429034
+    second: Bob_idle_anim_16x16_2
   - first:
-      213: -7209212159076336660
-    second: balls_3
+      213: -426629733277366553
+    second: Bob_idle_anim_16x16_3
   - first:
-      213: 2023522969545607760
-    second: balls_4
+      213: 2905971967901035589
+    second: Bob_idle_anim_16x16_4
   - first:
-      213: -5579777447416819038
-    second: balls_5
+      213: -8436606495708435726
+    second: Bob_idle_anim_16x16_5
   - first:
-      213: -6885498132332409789
-    second: pokeball
+      213: -82424221150292309
+    second: Bob_idle_anim_16x16_6
   - first:
-      213: 8020060226805192610
-    second: balls_7
+      213: -2703421178544753877
+    second: Bob_idle_anim_16x16_7
   - first:
-      213: -3959120327227033700
-    second: balls_8
+      213: -5472313571734192150
+    second: Bob_idle_anim_16x16_8
   - first:
-      213: -2598005947579844795
-    second: balls_9
+      213: 3275717811239722401
+    second: Bob_idle_anim_16x16_9
   - first:
-      213: 9112020770366926958
-    second: balls_10
+      213: -2544835487040489543
+    second: Bob_idle_anim_16x16_10
   - first:
-      213: -8793112832175403279
-    second: balls_11
+      213: 7059048554462835289
+    second: Bob_idle_anim_16x16_11
+  - first:
+      213: -1978366527520463970
+    second: Bob_idle_anim_16x16_12
+  - first:
+      213: 6199681918989444045
+    second: Bob_idle_anim_16x16_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,14 +107,14 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,20 +127,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,56 +139,56 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: balls_0
+      name: Bob_idle_anim_16x16_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 79
-        width: 24
-        height: 24
+        x: 0
+        y: 0
+        width: 15
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1e792e183982edaa0800000000000000
-      internalID: -6134421028427622431
+      spriteID: 820687da7413585f0800000000000000
+      internalID: -755143178591903704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_1
+      name: Bob_idle_anim_16x16_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 79
-        width: 24
-        height: 24
+        x: 16
+        y: 0
+        width: 15
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 059602ae6911b2400800000000000000
-      internalID: 300353140021029200
+      spriteID: c269a30e1f762edf0800000000000000
+      internalID: -152445148830460372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_2
+      name: Bob_idle_anim_16x16_2
       rect:
         serializedVersion: 2
-        x: 77
-        y: 79
-        width: 24
+        x: 32
+        y: 0
+        width: 15
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -203,21 +196,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8f3d92afe6ce2b400800000000000000
-      internalID: 338592883393811448
+      spriteID: 6926fa28e609e0d80800000000000000
+      internalID: -8282523860374429034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_3
+      name: Bob_idle_anim_16x16_3
       rect:
         serializedVersion: 2
-        x: 110
-        y: 79
-        width: 24
+        x: 48
+        y: 0
+        width: 15
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -225,65 +218,65 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cebf3d3ccbbb3fb90800000000000000
-      internalID: -7209212159076336660
+      spriteID: 7e60269948e441af0800000000000000
+      internalID: -426629733277366553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_4
+      name: Bob_idle_anim_16x16_4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 51
-        width: 24
-        height: 24
+        x: 64
+        y: 0
+        width: 15
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 05a0c927b6ff41c10800000000000000
-      internalID: 2023522969545607760
+      spriteID: 54cebf9bb16145820800000000000000
+      internalID: 2905971967901035589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_5
+      name: Bob_idle_anim_16x16_5
       rect:
         serializedVersion: 2
-        x: 45
-        y: 51
-        width: 24
-        height: 24
+        x: 80
+        y: 0
+        width: 15
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2a21cf879f5a092b0800000000000000
-      internalID: -5579777447416819038
+      spriteID: 2faab8957172bea80800000000000000
+      internalID: -8436606495708435726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_7
+      name: Bob_idle_anim_16x16_6
       rect:
         serializedVersion: 2
-        x: 110
-        y: 51
-        width: 24
+        x: 95
+        y: 0
+        width: 98
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -291,65 +284,65 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2a756ffb84afc4f60800000000000000
-      internalID: 8020060226805192610
+      spriteID: ba6d2798b9b2bdef0800000000000000
+      internalID: -82424221150292309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_8
+      name: Bob_idle_anim_16x16_7
       rect:
         serializedVersion: 2
-        x: 13
-        y: 23
-        width: 24
-        height: 24
+        x: 193
+        y: 0
+        width: 15
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c97ba98e9016e09c0800000000000000
-      internalID: -3959120327227033700
+      spriteID: b23729ee2c48b7ad0800000000000000
+      internalID: -2703421178544753877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_9
+      name: Bob_idle_anim_16x16_8
       rect:
         serializedVersion: 2
-        x: 45
-        y: 23
-        width: 24
-        height: 24
+        x: 209
+        y: 0
+        width: 15
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 547b6220b5702fbd0800000000000000
-      internalID: -2598005947579844795
+      spriteID: aeffb31dccf6e04b0800000000000000
+      internalID: -5472313571734192150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_10
+      name: Bob_idle_anim_16x16_9
       rect:
         serializedVersion: 2
-        x: 77
-        y: 23
-        width: 24
+        x: 225
+        y: 0
+        width: 15
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -357,21 +350,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e60b3b3fc96647e70800000000000000
-      internalID: 9112020770366926958
+      spriteID: 1ad1d5b6effa57d20800000000000000
+      internalID: 3275717811239722401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_11
+      name: Bob_idle_anim_16x16_10
       rect:
         serializedVersion: 2
-        x: 110
-        y: 23
-        width: 24
+        x: 241
+        y: 0
+        width: 15
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -379,21 +372,65 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1fe8140977698f580800000000000000
-      internalID: -8793112832175403279
+      spriteID: 9b7b42f8b9deeacd0800000000000000
+      internalID: -2544835487040489543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_6
+      name: Bob_idle_anim_16x16_11
       rect:
         serializedVersion: 2
-        x: 77
-        y: 51
-        width: 24
+        x: 257
+        y: 0
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952fdf48247c6f160800000000000000
+      internalID: 7059048554462835289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_idle_anim_16x16_12
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93ae93002e6b84e0800000000000000
+      internalID: -1978366527520463970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bob_idle_anim_16x16_13
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 97
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -401,10 +438,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 53bd64b2438db6d4ca72efab5ee07b84
-      internalID: -1763531028
+      spriteID: dc327c5abd1b90650800000000000000
+      internalID: 6199681918989444045
       vertices: []
       indices: 
       edges: []
@@ -413,7 +450,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -421,22 +458,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
-    nameFileIdTable:
-      balls_0: -6134421028427622431
-      balls_1: 300353140021029200
-      balls_10: 9112020770366926958
-      balls_11: -8793112832175403279
-      balls_2: 338592883393811448
-      balls_3: -7209212159076336660
-      balls_4: 2023522969545607760
-      balls_5: -5579777447416819038
-      balls_6: -1763531028
-      balls_7: 8020060226805192610
-      balls_8: -3959120327227033700
-      balls_9: -2598005947579844795
+      entries: []
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

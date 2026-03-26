@@ -1,43 +1,40 @@
 fileFormatVersion: 2
-guid: 311a2ebd1b3bc624b8b8498883707773
+guid: ae5e6f6765c66a640876541065822211
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6134421028427622431
-    second: balls_0
+      213: -5353767124290664959
+    second: Amelia_sit3_16x16_0
   - first:
-      213: 300353140021029200
-    second: balls_1
+      213: 5085353010836365739
+    second: Amelia_sit3_16x16_1
   - first:
-      213: 338592883393811448
-    second: balls_2
+      213: -2695959667890179920
+    second: Amelia_sit3_16x16_2
   - first:
-      213: -7209212159076336660
-    second: balls_3
+      213: 5063955346585296525
+    second: Amelia_sit3_16x16_3
   - first:
-      213: 2023522969545607760
-    second: balls_4
+      213: 3128614260237800001
+    second: Amelia_sit3_16x16_4
   - first:
-      213: -5579777447416819038
-    second: balls_5
+      213: -7993355701725109425
+    second: Amelia_sit3_16x16_5
   - first:
-      213: -6885498132332409789
-    second: pokeball
+      213: 6989687666889359785
+    second: Amelia_sit3_16x16_6
   - first:
-      213: 8020060226805192610
-    second: balls_7
+      213: -8673782535391783752
+    second: Amelia_sit3_16x16_7
   - first:
-      213: -3959120327227033700
-    second: balls_8
+      213: -9109034899980678556
+    second: Amelia_sit3_16x16_8
   - first:
-      213: -2598005947579844795
-    second: balls_9
+      213: 2781255269573137358
+    second: Amelia_sit3_16x16_9
   - first:
-      213: 9112020770366926958
-    second: balls_10
-  - first:
-      213: -8793112832175403279
-    second: balls_11
+      213: 7636463511536888101
+    second: Amelia_sit3_16x16_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,14 +98,14 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,20 +118,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,56 +130,56 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: balls_0
+      name: Amelia_sit3_16x16_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 79
-        width: 24
-        height: 24
+        x: 1
+        y: 0
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1e792e183982edaa0800000000000000
-      internalID: -6134421028427622431
+      spriteID: 1068d7a7a2993b5b0800000000000000
+      internalID: -5353767124290664959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_1
+      name: Amelia_sit3_16x16_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 79
-        width: 24
-        height: 24
+        x: 17
+        y: 0
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 059602ae6911b2400800000000000000
-      internalID: 300353140021029200
+      spriteID: ba16d58be9dc29640800000000000000
+      internalID: 5085353010836365739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_2
+      name: Amelia_sit3_16x16_2
       rect:
         serializedVersion: 2
-        x: 77
-        y: 79
-        width: 24
+        x: 33
+        y: 0
+        width: 16
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -203,21 +187,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8f3d92afe6ce2b400800000000000000
-      internalID: 338592883393811448
+      spriteID: 0b030a247f6069ad0800000000000000
+      internalID: -2695959667890179920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_3
+      name: Amelia_sit3_16x16_3
       rect:
         serializedVersion: 2
-        x: 110
-        y: 79
-        width: 24
+        x: 49
+        y: 0
+        width: 16
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -225,87 +209,87 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cebf3d3ccbbb3fb90800000000000000
-      internalID: -7209212159076336660
+      spriteID: d8e18a7ce88c64640800000000000000
+      internalID: 5063955346585296525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_4
+      name: Amelia_sit3_16x16_4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 51
-        width: 24
-        height: 24
+        x: 65
+        y: 0
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 05a0c927b6ff41c10800000000000000
-      internalID: 2023522969545607760
+      spriteID: 14212b4f7121b6b20800000000000000
+      internalID: 3128614260237800001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_5
+      name: Amelia_sit3_16x16_5
       rect:
         serializedVersion: 2
-        x: 45
-        y: 51
-        width: 24
-        height: 24
+        x: 81
+        y: 0
+        width: 30
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2a21cf879f5a092b0800000000000000
-      internalID: -5579777447416819038
+      spriteID: f43e4530755e11190800000000000000
+      internalID: -7993355701725109425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_7
+      name: Amelia_sit3_16x16_6
       rect:
         serializedVersion: 2
-        x: 110
-        y: 51
-        width: 24
-        height: 24
+        x: 111
+        y: 0
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2a756ffb84afc4f60800000000000000
-      internalID: 8020060226805192610
+      spriteID: 9a18edb66eb500160800000000000000
+      internalID: 6989687666889359785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_8
+      name: Amelia_sit3_16x16_7
       rect:
         serializedVersion: 2
-        x: 13
-        y: 23
-        width: 24
+        x: 127
+        y: 0
+        width: 16
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -313,21 +297,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c97ba98e9016e09c0800000000000000
-      internalID: -3959120327227033700
+      spriteID: 8b45cfe5db880a780800000000000000
+      internalID: -8673782535391783752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_9
+      name: Amelia_sit3_16x16_8
       rect:
         serializedVersion: 2
-        x: 45
-        y: 23
-        width: 24
+        x: 143
+        y: 0
+        width: 16
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -335,76 +319,54 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 547b6220b5702fbd0800000000000000
-      internalID: -2598005947579844795
+      spriteID: 46a040c2505369180800000000000000
+      internalID: -9109034899980678556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_10
+      name: Amelia_sit3_16x16_9
       rect:
         serializedVersion: 2
-        x: 77
-        y: 23
-        width: 24
-        height: 24
+        x: 159
+        y: 0
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e60b3b3fc96647e70800000000000000
-      internalID: 9112020770366926958
+      spriteID: ec317949ee0099620800000000000000
+      internalID: 2781255269573137358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balls_11
+      name: Amelia_sit3_16x16_10
       rect:
         serializedVersion: 2
-        x: 110
-        y: 23
-        width: 24
-        height: 24
+        x: 175
+        y: 0
+        width: 16
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1fe8140977698f580800000000000000
-      internalID: -8793112832175403279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: balls_6
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 51
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53bd64b2438db6d4ca72efab5ee07b84
-      internalID: -1763531028
+      spriteID: 5296361aa1b2af960800000000000000
+      internalID: 7636463511536888101
       vertices: []
       indices: 
       edges: []
@@ -413,7 +375,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -421,22 +383,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
-    nameFileIdTable:
-      balls_0: -6134421028427622431
-      balls_1: 300353140021029200
-      balls_10: 9112020770366926958
-      balls_11: -8793112832175403279
-      balls_2: 338592883393811448
-      balls_3: -7209212159076336660
-      balls_4: 2023522969545607760
-      balls_5: -5579777447416819038
-      balls_6: -1763531028
-      balls_7: 8020060226805192610
-      balls_8: -3959120327227033700
-      balls_9: -2598005947579844795
+      entries: []
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
