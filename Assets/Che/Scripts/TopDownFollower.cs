@@ -15,6 +15,8 @@ public class TopDownFollower : MonoBehaviour
     private Vector2 smoothDirection;
     private Vector2 lastTargetPosition;
 
+    public Transform owner { get; internal set; }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

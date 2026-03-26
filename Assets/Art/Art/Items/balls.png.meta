@@ -278,28 +278,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokeball
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 51
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34c06b8fdebc170a0800000000000000
-      internalID: -6885498132332409789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: balls_7
       rect:
         serializedVersion: 2
@@ -409,6 +387,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: balls_6
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 51
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bd64b2438db6d4ca72efab5ee07b84
+      internalID: -1763531028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -421,7 +421,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       balls_0: -6134421028427622431
       balls_1: 300353140021029200
@@ -431,10 +433,10 @@ TextureImporter:
       balls_3: -7209212159076336660
       balls_4: 2023522969545607760
       balls_5: -5579777447416819038
+      balls_6: -1763531028
       balls_7: 8020060226805192610
       balls_8: -3959120327227033700
       balls_9: -2598005947579844795
-      pokeball: -6885498132332409789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
