@@ -17,6 +17,8 @@ public class ProjectileShoot : MonoBehaviour
     private int _damage = 25;
     public LayerMask EnemyLayer;
 
+    CaptureNet captureNet;
+
     private bool _fireContinuously;
     private bool _fireSingle;
     private float _lastFireTime;
@@ -39,7 +41,7 @@ public class ProjectileShoot : MonoBehaviour
         }
     }
 
-    private void UpdateAimDirection()
+    public void UpdateAimDirection()
     {
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mouseWorld.z = 0f;

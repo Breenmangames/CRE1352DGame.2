@@ -1,14 +1,17 @@
-﻿using UnityEngine;
-using System.Collections;
-using
-    System.Collections.Generic;         
+﻿using NUnit.Framework;
 using System;
+using System.Collections;
+using System.Collections.Generic;         
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using static UnityEngine.UI.Image;
 
 
 public class CaptureItem : MonoBehaviour
     {
         [Header("Capture Settings")]
-        [Range(0f, 1f)]
+        [UnityEngine.Range(0f, 1f)]
         [Tooltip("Base probability of capture when the enemy is at full health.")]
         public float baseCaptureChance = 0.1f;
 
@@ -26,27 +29,33 @@ public class CaptureItem : MonoBehaviour
         public AudioClip captureSuccessSFX;
         public AudioClip captureFailSFX;
 
+         CaptureNet captureNet;
+
 
         private bool _hasTriggered = false;
-        private Rigidbody _rb;
+        
+        private Rigidbody2D _rb;
+        
         private AudioSource _audio;
 
         private void Awake()
         {
-            _rb = GetComponent<Rigidbody>();
+            _rb = GetComponent<Rigidbody2D>();
             _audio = GetComponent<AudioSource>();
         }
 
        
-        public void Throw(Transform playerTransform)
+        public void ItemThrow(Vector2 aimDirection)
         {
-            if (_rb == null) return;
-            Vector3 dir = playerTransform.forward + Vector3.up * throwUpward;
-            _rb.AddForce(dir.normalized * throwForce, ForceMode.Impulse);
+        Debug.Log($"[CaptureItem] Throw() called. RB null: {_rb == null}");  //item wouldnt move past spawn so added debug to see what is breaking
+        if (_rb == null) return;
+
+        _rb.bodyType = RigidbodyType2D.Dynamic; 
+        _rb.AddForce(aimDirection * throwForce, ForceMode2D.Impulse);
         }
+     
 
-
-        private void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
             if (_hasTriggered) return;
 
@@ -58,7 +67,7 @@ public class CaptureItem : MonoBehaviour
         }
 
         
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (_hasTriggered) return;
 
@@ -76,9 +85,6 @@ public class CaptureItem : MonoBehaviour
             float chance = CalculateCaptureChance(enemy);
             float roll = UnityEngine.Random.value;          
 
-            Debug.Log($"[CaptureItem] Attempting capture of {enemy.enemyName}. " +
-                      $"Chance: {chance * 100f:F1}%  Roll: {roll * 100f:F1}%");
-
             if (roll <= chance)
                 CaptureSuccess(enemy);
             else
@@ -94,16 +100,11 @@ public class CaptureItem : MonoBehaviour
 
         private void CaptureSuccess(EnemyStats enemy)
         {
-            Debug.Log($"[CaptureItem] ✓ Captured {enemy.enemyName}!");
-
-            
             enemy.OnCaptured(FindPlayerTransform());
-
-            
             var entry = new CapturedEnemy(enemy);
             MonsterInventory.Instance?.AddCapturedEnemy(entry);
 
-            // Remove from world
+           
             Destroy(enemy.gameObject);
 
             PlayEffects(captureSuccessVFX, captureSuccessSFX);
@@ -118,7 +119,7 @@ public class CaptureItem : MonoBehaviour
             StartCoroutine(DestroyAfterEffects(0.5f));
         }
 
-        // ── Helpers ──────────────────────────────────────────────
+  
 
         private Transform FindPlayerTransform()
         {
@@ -143,10 +144,10 @@ public class CaptureItem : MonoBehaviour
 
         private IEnumerator DestroyAfterEffects(float delay)
         {
-            // Disable visuals/physics immediately
-            var renderer = GetComponent<Renderer>();
+           
+            var renderer = GetComponent<SpriteRenderer>();
             if (renderer != null) renderer.enabled = false;
-            if (_rb != null) _rb.isKinematic = true;
+        if (_rb != null)
 
             yield return new WaitForSeconds(delay);
             Destroy(gameObject);
