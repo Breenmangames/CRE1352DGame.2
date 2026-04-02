@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5890710668707735482}
   - component: {fileID: 3040711008649082790}
   - component: {fileID: 696380249538756847}
+  - component: {fileID: -7467914583261038625}
   m_Layer: 12
   m_Name: DangerZone
   m_TagString: PowerUp
@@ -175,3 +176,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206300c6cfc0d3147a1187e33063a7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7467914583261038625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017256982113830129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf60111f09333f41b84c320fcc11f6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: 
+  enemyPrefab: {fileID: 0}
+  maxHealth: 0
+  capturedAtHealth: 0
+  icon: {fileID: 0}
+  isDeployed: 0
