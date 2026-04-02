@@ -2,6 +2,11 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+
+
+using Object = UnityEngine.Object;
 
 public class Loot : MonoBehaviour
 {
@@ -10,6 +15,14 @@ public class Loot : MonoBehaviour
     public SpriteRenderer sr;
     public Animator anim;
 
+    private UIHandler uiController;
+
+
+    public void Start()
+    {
+        UIHandler uiDocument = Object.FindFirstObjectByType<UIHandler>();
+        uiController = uiDocument?.GetComponent<UIHandler>();
+    }
     public static event Action<ItemsSO, int> OnItemLooted;
 
     public int amount;
@@ -45,6 +58,10 @@ public class Loot : MonoBehaviour
         {
             anim.Play("LootPickup");
             OnItemLooted?.Invoke(item, amount);
+            uiController.PickUpHealthPotion();
+            uiController.PickUpSpeedPotion();
+            uiController.PickUpAttackPotion();
+            SoundEffectManager.PlaySoundEffect("ConsumablePickUpSound");
             Destroy(gameObject, 0.5f);
         }
     }

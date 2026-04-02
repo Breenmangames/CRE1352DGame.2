@@ -7,6 +7,7 @@ using System.Diagnostics.Contracts;
 using UnityEngine.EventSystems;
 using UnityEngine.VFX;
 
+using Object = System.Object;
 public class InventorySlot : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,8 +16,8 @@ public class InventorySlot : MonoBehaviour
     public ItemsSO ItemSO;
     public int Amount;
 
+    private UIHandler uiController;
 
-    
 
     public Image ItemImage;
     public TMP_Text AmountText;
@@ -24,7 +25,9 @@ public class InventorySlot : MonoBehaviour
     private void Start()
     {
         inventoryManager = GetComponentInParent<InventoryManager>();
-        
+
+        UIHandler uiDocument = UnityEngine.Object.FindFirstObjectByType<UIHandler>();
+        uiController = uiDocument?.GetComponent<UIHandler>();
     }
 
     public void OnPointerClick(PointerEventData eventData, int amount)
@@ -40,6 +43,19 @@ public class InventorySlot : MonoBehaviour
                 var so = ScriptableObject.CreateInstance<ItemsSO>(); // TODO: make this actually an so that matter
                 inventoryManager.DropItem(so, amount);
             }
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            SoundEffectManager.PlaySoundEffect("ConsumablePickUpSound");
+            uiController.PickUpCoin();
+            uiController.PickUpHealthPotion();
+            uiController.PickUpSpeedPotion();
+            uiController.PickUpAttackPotion();
+            Destroy(gameObject);
         }
     }
 

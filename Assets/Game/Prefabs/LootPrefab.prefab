@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 1527069352048224463}
   - component: {fileID: 6274593158206166090}
   m_Layer: 12
-  m_Name: LootPrefab
+  m_Name: Speed Potion
   m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2f4b6dfe457df408c88bdaeff8d008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: be199d1c6e5bbe64ea29f69e464e1f54, type: 2}
   sr: {fileID: 3328834354273922369}
   anim: {fileID: 0}
   amount: 1
