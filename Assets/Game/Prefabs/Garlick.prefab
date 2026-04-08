@@ -236,8 +236,8 @@ MonoBehaviour:
   SpawntestObject: {fileID: 0}
   projectilePrefab: {fileID: 6578240110573196088, guid: cdb43618d0d7cc44db147e9aaa93ea04, type: 3}
   firePoint: {fileID: 1156424240551071301}
-  projectileSpeed: 4
-  projectileDamage: 3
+  projectileSpeed: 3
+  projectileDamage: 1
   knockbackForce: 0
   projectileAttackCooldown: 2
 --- !u!58 &6157570458823465492
