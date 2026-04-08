@@ -41,7 +41,7 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
         isDialogueActive = true;
         dialogueIndex = 0;
 
-        nameText.SetText(dialogueData.name);
+        nameText.SetText(dialogueData.npcName);
         portraitImage.sprite = dialogueData.npcPortrait;
 
         dialoguePanel.SetActive(true);
@@ -58,7 +58,8 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
             dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
-        else if(++dialogueIndex < dialogueData.dialogueLines[dialogueIndex])
+
+        else if(++dialogueIndex < dialogueData.dialogueLines.Length)
         {
             //If another line, type next line
             StartCoroutine(TypeLine());
