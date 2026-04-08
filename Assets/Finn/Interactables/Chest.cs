@@ -15,12 +15,6 @@ public class Chest : MonoBehaviour, IInteractable2
         ChestID ??= GlobalHelper.GenerateUniqueID(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public bool CanInteract()
     {
         return !IsOpened;
