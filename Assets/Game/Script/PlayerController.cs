@@ -108,6 +108,23 @@ public class PlayerController : MonoBehaviour
         {
             SoundEffectManager.PlaySoundEffect("TownTheme");
         }
+        if (other.CompareTag("SchoolThemeZone"))
+        {
+            SoundEffectManager.PlaySoundEffect("SchoolTheme");
+        }   
+        if (other.CompareTag("HomeZone"))
+        {
+            SoundEffectManager.PlaySoundEffect("HomeTheme");
+        }
+        if (other.CompareTag("MarketZone"))
+        {
+            SoundEffectManager.PlaySoundEffect("MarketTheme");
+        }
+        if (other.CompareTag("DesertZone"))
+        {
+            SoundEffectManager.PlaySoundEffect("DesertTheme");
+        }
+
     }
 
     
@@ -124,6 +141,22 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("TownZone"))
         {
             SoundEffectManager.StopSoundEffect("TownTheme");
+        }
+        if (other.CompareTag("SchoolThemeZone"))
+        {
+            SoundEffectManager.StopSoundEffect("SchoolTheme");
+        }
+        if (other.CompareTag("HomeZone"))
+        {
+            SoundEffectManager.StopSoundEffect("HomeTheme");
+        }
+        if (other.CompareTag("MarketZone"))
+        {
+            SoundEffectManager.StopSoundEffect("MarketTheme");
+        }
+        if (other.CompareTag("DesertZone"))
+        {
+            SoundEffectManager.StopSoundEffect("DesertTheme");
         }
     }
 

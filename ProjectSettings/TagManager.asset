@@ -8,6 +8,11 @@ TagManager:
   - PowerUp
   - TutorialZone
   - RoadZone1
+  - TownZone
+  - SchoolThemeZone
+  - HomeZone
+  - MarketZone
+  - DesertZone
   layers:
   - Default
   - TransparentFX
