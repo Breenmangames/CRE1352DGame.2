@@ -237,9 +237,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6578240110573196088, guid: cdb43618d0d7cc44db147e9aaa93ea04, type: 3}
   firePoint: {fileID: 1156424240551071301}
   projectileSpeed: 4
-  projectileDamage: 5
+  projectileDamage: 3
   knockbackForce: 0
-  projectileAttackCooldown: 1.5
+  projectileAttackCooldown: 2
 --- !u!58 &6157570458823465492
 CircleCollider2D:
   m_ObjectHideFlags: 0
