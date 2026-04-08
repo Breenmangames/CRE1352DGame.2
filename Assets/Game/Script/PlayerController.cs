@@ -104,20 +104,26 @@ public class PlayerController : MonoBehaviour
         {
             SoundEffectManager.PlaySoundEffect("EarlyPathTheme");
         }
-    }
-
-    void OnTriggerEnter2D(PolygonCollider2D other)
-    {
-        if (other.CompareTag("RoadZone1"))
+        if (other.CompareTag("TownZone"))
         {
-            SoundEffectManager.PlaySoundEffect("EarlyPathTheme");
+            SoundEffectManager.PlaySoundEffect("TownTheme");
         }
     }
+
+    
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("TutorialZone"))
         {
-            
+            SoundEffectManager.StopSoundEffect("TutorialTheme");
+        }
+        if (other.CompareTag("RoadZone1"))
+        {
+            SoundEffectManager.StopSoundEffect("EarlyPathTheme");
+        }
+        if (other.CompareTag("TownZone"))
+        {
+            SoundEffectManager.StopSoundEffect("TownTheme");
         }
     }
 

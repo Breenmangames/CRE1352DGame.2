@@ -38,6 +38,11 @@ public class SoundEffectManager : MonoBehaviour
         
     }
 
+    public static void StopSoundEffect(string name)
+    {
+        audioSource.Stop();
+    }
+
     public static void SetVolume(float volume)
     {
         audioSource.volume = volume;
