@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
@@ -8,8 +9,12 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 //using System;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IInteractable2
 {
+
+    IInteractable2 interactable2;
+    Chest chest2;
+
 
     public LayerMask solidObjectsLayer;
     public LayerMask GrassLayer;
@@ -41,7 +46,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
-        
+        interactable2 = GetComponent<IInteractable2>();
+        chest2 = GetComponent<Chest>();
+
     }
 
     // Update is called once per frame
@@ -183,7 +190,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-  
+
 
     /*void Launch()
      {
@@ -194,15 +201,21 @@ public class PlayerController : MonoBehaviour
 
          animator.SetTrigger("Launch");
      }*/
-    void Interact()
+    public void Interact()
     {
         Vector2 facingDirection = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
         Vector2 interactPosition = (Vector2)transform.position + facingDirection;
-        Collider2D interactable = Physics2D.OverlapCircle(interactPosition, 0.2f, InteractablesLayer);
-        if (interactable != null)
+
+        Collider2D hitCollider = Physics2D.OverlapCircle(interactPosition, 0.2f, InteractablesLayer);
+
+        if (hitCollider == null) return;
+
+        IInteractable2 target = hitCollider.GetComponent<IInteractable2>();
+
+        if (target != null && target.CanInteract())
         {
-            Debug.Log("Interacted with: " + interactable.name);
-            // Add interaction logic here
+            Debug.Log("Interacting with " + hitCollider.name);
+            target.Interact();
         }
     }
 
@@ -246,5 +259,10 @@ public class PlayerController : MonoBehaviour
                 // Trigger encounter logic here
             }
         }
+    }
+
+    public bool CanInteract()
+    {
+        return interactable2.CanInteract();
     }
 }

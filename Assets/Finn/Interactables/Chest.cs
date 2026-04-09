@@ -26,7 +26,7 @@ public class Chest : MonoBehaviour, IInteractable2
         OpenChest();
     }
 
-    private void OpenChest()
+    public void OpenChest()
     {
         SetOpened(true);
 
