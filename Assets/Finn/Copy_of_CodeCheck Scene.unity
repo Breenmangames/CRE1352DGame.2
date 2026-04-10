@@ -3907,7 +3907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &405775488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9828,6 +9828,7 @@ GameObject:
   - component: {fileID: 1337695430}
   - component: {fileID: 1337695432}
   - component: {fileID: 1337695433}
+  - component: {fileID: 1337695434}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -9892,6 +9893,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateQuests: []
+--- !u!114 &1337695434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337695429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb9f6d56e5575b4d8fc37b99e817319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1352009059
 GameObject:
   m_ObjectHideFlags: 0
@@ -52529,7 +52542,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1173111892}
   m_HandleRect: {fileID: 1173111891}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
