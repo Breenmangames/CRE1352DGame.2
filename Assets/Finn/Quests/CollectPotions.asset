@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: CollectPotions
   m_EditorClassIdentifier: 
   questID: 7b2a266e-94ef-4844-81eb-0556b00164c0
-  questName: CollectCoins
-  questDescription: Find the man's 5 coins!
+  questName: CollectPotions
+  questDescription: Find the man's 5 potions!
   objectives:
   - objectiveID: 10
     description: Collect 5 speed potions
     type: 0
-    requiredAmount: 3
+    requiredAmount: 5
     currentAmount: 0
