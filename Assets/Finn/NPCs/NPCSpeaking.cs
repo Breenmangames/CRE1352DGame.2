@@ -47,7 +47,7 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
         dialogueUI.SetNPCinfo(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueUI.ShowDialogueUI(true);
 
-        StartCoroutine(TypeLine());
+        DisplayCurrentLine();
     }
 
     void NextLine()
@@ -59,11 +59,28 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
+        //Clear Choices
+        dialogueUI.ClearChoices();
+        //Check endDialogueLines
+        if(dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
+        {
+            EndDialogue();
+            return;
+        }
+        //Check if choices, display them if so
+        foreach(DialogueChoice dialogueChoice in dialogueData.choices)
+        {
+            if(dialogueChoice.dialogueIndex == dialogueIndex)
+            {
+                DisplayChoices(dialogueChoice);
+                return;
+            }
+        }
 
-        else if(++dialogueIndex < dialogueData.dialogueLines.Length)
+        if(++dialogueIndex < dialogueData.dialogueLines.Length)
         {
             //If another line, type next line
-            StartCoroutine(TypeLine());
+            DisplayCurrentLine();
         }
         else
         {
@@ -89,6 +106,29 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
         }
+    }
+
+    void DisplayChoices(DialogueChoice choice)
+    {
+        for(int i = 0; i < choice.choices.Length; i++)
+        {
+            int nextIndex = choice.nextDialogueIndexes[i];
+            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+        }
+    }
+
+    void ChooseOption(int nextIndex)
+    {
+        dialogueIndex = nextIndex;
+        dialogueUI.ClearChoices();
+        DisplayCurrentLine();
+
+    }
+
+    void DisplayCurrentLine()
+    {
+        StopAllCoroutines();
+        StartCoroutine(TypeLine());
     }
 
     public void EndDialogue()

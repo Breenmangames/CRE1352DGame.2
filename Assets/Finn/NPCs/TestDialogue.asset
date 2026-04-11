@@ -15,10 +15,19 @@ MonoBehaviour:
   npcName: Test
   npcPortrait: {fileID: -2324715518332284020, guid: 776b4b02ee795f84dae03132e6a6d3e6, type: 3}
   dialogueLines:
-  - Hello
-  - Im your neighbour
+  - Hello, neighbour!
+  - Sorry to bother you on your journey, but could you assist me?
+  - Ah, thanks!
+  - Oh, dangit. Guess I'll never find my potions...
   autoProgressLines: 0100
+  endDialogueLines: 00000101
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - Sure!
+    - Eh, I'm kinda busy...
+    nextDialogueIndexes: 0200000003000000
