@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class NPCSpeaking : MonoBehaviour, IInteractable2
 {
     public NPCDialogue dialogueData;
+    public GameObject dialoguePanel;
+    public TMP_Text dialogueText, nameText;
+    public Image portraitImage;
     private DialogueController dialogueUI;
 
     private int dialogueIndex;
@@ -48,6 +51,8 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
         dialogueUI.ShowDialogueUI(true);
 
         DisplayCurrentLine();
+
+        StartCoroutine(TypeLine());
     }
 
     void NextLine()
@@ -59,6 +64,17 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
+        else if(++dialogueIndex < dialogueData.dialogueLines.Length)
+        {
+            //If another line, type next line
+            DisplayCurrentLine();
+        }
+        else
+        {
+            EndDialogue();
+        }
+
+
         //Clear Choices
         dialogueUI.ClearChoices();
         //Check endDialogueLines
@@ -75,16 +91,6 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
                 DisplayChoices(dialogueChoice);
                 return;
             }
-        }
-
-        if(++dialogueIndex < dialogueData.dialogueLines.Length)
-        {
-            //If another line, type next line
-            DisplayCurrentLine();
-        }
-        else
-        {
-            EndDialogue();
         }
     }
 

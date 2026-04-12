@@ -22,10 +22,15 @@ MonoBehaviour:
   autoProgressLines: 0100
   endDialogueLines: 00000101
   autoProgressDelay: 1.5
-  typingSpeed: 0.05
+  typingSpeed: 0.005
   voiceSound: {fileID: 0}
   voicePitch: 1
   choices:
+  - dialogueIndex: 1
+    choices:
+    - Sure!
+    - Eh, I'm kinda busy...
+    nextDialogueIndexes: 0200000003000000
   - dialogueIndex: 1
     choices:
     - Sure!
