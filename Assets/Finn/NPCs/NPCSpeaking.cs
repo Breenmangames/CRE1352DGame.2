@@ -8,6 +8,7 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
 {
     public NPCDialogue dialogueData;
     private DialogueController dialogueUI;
+    public PlayerController playerController;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;

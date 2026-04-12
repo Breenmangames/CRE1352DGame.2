@@ -4863,7 +4863,7 @@ GameObject:
   - component: {fileID: 623774425}
   - component: {fileID: 623774424}
   - component: {fileID: 623774427}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4999,6 +4999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: 69c71faafa75cb2428efda27e4b18a52, type: 2}
+  playerController: {fileID: 0}
 --- !u!1 &630748810
 GameObject:
   m_ObjectHideFlags: 0
@@ -8019,7 +8020,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 58437650}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
