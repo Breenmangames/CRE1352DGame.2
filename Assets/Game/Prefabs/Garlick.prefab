@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   maxFollowRange: 4
-  minFollowRange: 1.5
+  minFollowRange: 2
   attackRange: 3.5
   attackStandoffDistance: 1.5
   attackCooldown: 1.5
