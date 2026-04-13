@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Minerrage-Completed-Sheet_0: -794537954388177066
+      Minerrage-Completed-Sheet_1: 3874872440071931394
+      Minerrage-Completed-Sheet_2: -5771919484609922076
+      Minerrage-Completed-Sheet_3: 6244577142234152803
+      Minerrage-Completed-Sheet_4: -4236334978746443269
+      Minerrage-Completed-Sheet_5: 4856784687102010185
+      Minerrage-Completed-Sheet_6: 8912705400807748081
+      Minerrage-Completed-Sheet_7: 1977433529097465495
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
