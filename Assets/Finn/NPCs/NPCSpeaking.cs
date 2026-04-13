@@ -157,12 +157,17 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
         {
             int nextIndex = choice.nextDialogueIndexes[i];
             bool givesQuest = choice.givesQuest[i];
-            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, givesQuest));
         }
     }
 
-    void ChooseOption(int nextIndex)
+    void ChooseOption(int nextIndex, bool givesQuest)
     {
+        if (givesQuest)
+        {
+            QuestController.Instance.AcceptQuest(dialogueData.quest);
+            questState = QuestState.InProgress;
+        }
         dialogueIndex = nextIndex;
         dialogueUI.ClearChoices();
         DisplayCurrentLine();
