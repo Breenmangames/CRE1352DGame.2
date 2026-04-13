@@ -15,6 +15,9 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
 
+    private enum QuestState { NotStarted, InProgress, Completed }
+    private QuestState questState = QuestState.NotStarted;
+
     private void Start()
     {
         dialogueUI = DialogueController.Instance;
@@ -44,8 +47,25 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
 
     void StartDialogue()
     {
+        //Sync with quest data
+        SyncQuestState();
+
+        //Set dialogue line based on questState
+        if(questState == QuestState.NotStarted)
+        {
+            dialogueIndex = 0;
+        }
+        else if(questState == QuestState.InProgress)
+        {
+            dialogueIndex = dialogueData.questInProgressIndex;
+        }
+        else if(questState == QuestState.Completed)
+        {
+            dialogueIndex = dialogueData.questCompletedIndex;
+        }
+
+
         isDialogueActive = true;
-        dialogueIndex = 0;
 
         dialogueUI.SetNPCinfo(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueUI.ShowDialogueUI(true);
@@ -53,6 +73,23 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
         DisplayCurrentLine();
 
         StartCoroutine(TypeLine());
+    }
+
+    private void SyncQuestState()
+    {
+        if(dialogueData.quest == null) return;
+
+        string questID = dialogueData.quest.questID;
+
+        //Future update add completing quest and handing in!
+        if(QuestController.Instance.IsQuestActive(questID))
+        {
+            questState = QuestState.InProgress;
+        }
+        else
+        {
+            questState = QuestState.NotStarted;
+        }
     }
 
     void NextLine()
@@ -119,6 +156,7 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
         for(int i = 0; i < choice.choices.Length; i++)
         {
             int nextIndex = choice.nextDialogueIndexes[i];
+            bool givesQuest = choice.givesQuest[i];
             dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
         }
     }

@@ -16,11 +16,13 @@ MonoBehaviour:
   npcPortrait: {fileID: -2324715518332284020, guid: 776b4b02ee795f84dae03132e6a6d3e6, type: 3}
   dialogueLines:
   - Hello, neighbour!
-  - Sorry to bother you on your journey, but could you assist me?
-  - Ah, thanks!
+  - Sorry to bother you on your journey, but could you assist me? I lost my potions...
+  - Ah, thanks! I hope you can help me find them!
   - Oh, dangit. Guess I'll never find my potions...
+  - How's finding my potions coming along?
+  - You found my potions? Terrific!
   autoProgressLines: 0100
-  endDialogueLines: 00000101
+  endDialogueLines: 000001010101
   autoProgressDelay: 1.5
   typingSpeed: 0.005
   voiceSound: {fileID: 0}
@@ -31,8 +33,13 @@ MonoBehaviour:
     - Sure!
     - Eh, I'm kinda busy...
     nextDialogueIndexes: 0200000003000000
+    givesQuest: 0100
   - dialogueIndex: 1
     choices:
     - Sure!
     - Eh, I'm kinda busy...
     nextDialogueIndexes: 0200000003000000
+    givesQuest: 
+  questInProgressIndex: 4
+  questCompletedIndex: 5
+  quest: {fileID: 11400000, guid: 3e7a737dbc15fad4985384b506ec31c8, type: 2}
