@@ -6,7 +6,7 @@ public class BattleManager : MonoBehaviour
 {
     [Header("References")]
     public MonsterInventory monsterInventory;
-    public Monster enemyMonster;          // the wild monster the player is fighting
+    public Monster enemyMonster;         
 
     private Monster _activePlayerMonster;
     private bool _battleActive = false;
@@ -24,10 +24,10 @@ public class BattleManager : MonoBehaviour
         }
 
         _battleActive = true;
-        Debug.Log($"[Battle] {_activePlayerMonster.monsterName} vs {enemyMonster.monsterName}!");
+        
     }
 
-    /// <summary>Call this from a UI button or input handler during the player's turn.</summary>
+    
     public void PlayerAttack()
     {
         if (!_battleActive) return;
@@ -50,14 +50,11 @@ public class BattleManager : MonoBehaviour
         if (!_battleActive) return;
 
         monsterInventory.UseCaptureItemOn(enemyMonster);
-        // After a successful capture the enemy is removed from the scene automatically.
-        // The battle ends when the enemy is no longer available.
+        
         _battleActive = false;
     }
 
-    // ──────────────────────────────────────────
-    //  Internal
-    // ──────────────────────────────────────────
+    
 
     private void EnemyAttack()
     {
@@ -67,7 +64,7 @@ public class BattleManager : MonoBehaviour
         if (playerMonsterFainted)
         {
             Debug.Log($"[Battle] {_activePlayerMonster.monsterName} fainted!");
-            // Try to switch to the next available monster
+            
             _activePlayerMonster = monsterInventory.GetFirstAvailableMonster();
 
             if (_activePlayerMonster == null)
@@ -86,12 +83,10 @@ public class BattleManager : MonoBehaviour
     {
         _battleActive = false;
         _activePlayerMonster = null;
-        Debug.Log("[Battle] Battle over.");
+        
     }
 
-    // ──────────────────────────────────────────
-    //  Quick keyboard test controls (remove in production)
-    // ──────────────────────────────────────────
+  
     private void Update()
     {
 #if UNITY_EDITOR
