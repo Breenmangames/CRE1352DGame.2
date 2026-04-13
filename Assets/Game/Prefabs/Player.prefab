@@ -188,8 +188,13 @@ GameObject:
   - component: {fileID: 1438671266149533734}
   - component: {fileID: 2613808198972479212}
   - component: {fileID: 113123451925181780}
+<<<<<<< HEAD
   - component: {fileID: 8886845678355263849}
   - component: {fileID: 2614081715298191533}
+=======
+  - component: {fileID: 6747885071242708429}
+  - component: {fileID: 8961349512661000632}
+>>>>>>> e0c3b3ba9daf88ad859280c3d6b59cde3968a297
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -540,7 +545,11 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &8886845678355263849
+=======
+--- !u!114 &6747885071242708429
+>>>>>>> e0c3b3ba9daf88ad859280c3d6b59cde3968a297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -557,7 +566,11 @@ MonoBehaviour:
   throwOrigin: {fileID: 3493608630442406834}
   throwKey: 116
   deployKey: 103
+<<<<<<< HEAD
 --- !u!114 &2614081715298191533
+=======
+--- !u!114 &8961349512661000632
+>>>>>>> e0c3b3ba9daf88ad859280c3d6b59cde3968a297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
