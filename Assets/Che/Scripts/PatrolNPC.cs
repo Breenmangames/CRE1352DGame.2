@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class PatrolNPC : MonoBehaviour
@@ -12,6 +13,7 @@ public class PatrolNPC : MonoBehaviour
 
     private bool isWaiting = false;
     private float waitCounter;
+    private bool isMoving = false;
 
     private Vector2 lastDirection;
 
@@ -72,7 +74,7 @@ public class PatrolNPC : MonoBehaviour
     {
         waitCounter -= Time.deltaTime;
 
-        if (waitCounter <= 0f)
+        if (waitCounter <= 0.1f)
         {
             target = target == pointA ? pointB : pointA;
             isWaiting = false;
