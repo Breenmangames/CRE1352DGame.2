@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679bd09054e569a4192d50c003bc1553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 30
 --- !u!50 &7264511078579178371
 Rigidbody2D:
   serializedVersion: 5
@@ -248,10 +248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32b7ae049ec75a4c9f21260b2415230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  maxFollowRange: 4
-  minFollowRange: 2
-  attackRange: 3.5
+  speed: 3
+  maxFollowRange: 5
+  minFollowRange: 1
+  attackRange: 4
   attackStandoffDistance: 1.5
   attackCooldown: 1.5
   SpawntestObject: {fileID: 0}
