@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Name
-      value: Fieyery 1
+      value: Fieyery
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Layer
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679bd09054e569a4192d50c003bc1553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 30
 --- !u!50 &7264511078579178371
 Rigidbody2D:
   serializedVersion: 5
@@ -248,19 +248,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32b7ae049ec75a4c9f21260b2415230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  maxFollowRange: 4
-  minFollowRange: 2
-  attackRange: 3.5
+  speed: 3
+  maxFollowRange: 5
+  minFollowRange: 1
+  attackRange: 4
   attackStandoffDistance: 1.5
   attackCooldown: 1.5
   SpawntestObject: {fileID: 0}
   projectilePrefab: {fileID: 4094226315209392998, guid: e6a9ae546e9226346be800fd1710a748, type: 3}
   firePoint: {fileID: 1844882982523659449}
-  projectileSpeed: 3
-  projectileDamage: 1
+  projectileSpeed: 2
+  projectileDamage: 2
   knockbackForce: 0
-  projectileAttackCooldown: 2
+  projectileAttackCooldown: 3.5
 --- !u!58 &7262301718210095590
 CircleCollider2D:
   m_ObjectHideFlags: 0
