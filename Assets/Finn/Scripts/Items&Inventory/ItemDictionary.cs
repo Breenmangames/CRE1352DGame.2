@@ -19,11 +19,20 @@ public class ItemDictionary : MonoBehaviour
                 itemPrefabs[i].ID = i + 1;
             }
         }
+
+        foreach(Item item in itemPrefabs)
+        {
+            itemDictionary[item.ID] = item.gameObject;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject GetItemPrefab(int itemID)
     {
-        
+        itemDictionary.TryGetValue(itemID, out GameObject prefab);
+        if(prefab == null)
+        {
+            Debug.LogWarning($"Item with ID {itemID} not found in dictionary");
+        }
+        return prefab;
     }
 }
