@@ -76,7 +76,6 @@ public class CaptureNet: MonoBehaviour
                 return;
             }
 
-            // Deploy the first non-deployed enemy
             for (int i = 0; i < _inventory.capturedEnemies.Count; i++)
             {
                 if (!_inventory.capturedEnemies[i].isDeployed)

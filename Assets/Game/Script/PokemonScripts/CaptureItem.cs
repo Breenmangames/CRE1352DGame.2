@@ -73,8 +73,8 @@ public class CaptureItem : MonoBehaviour
         Monster target = collision.gameObject.GetComponent<Monster>();
         if (_hasTriggered) return;
 
-        var enemy = collision.gameObject.GetComponent<EnemyStats>();
-        if (enemy == null) return;
+        
+        if (target == null) return;
 
         _hasTriggered = true;
         Use(target, MonsterInventory.Instance);
@@ -130,8 +130,7 @@ public class CaptureItem : MonoBehaviour
 
         bool success = roll <= captureChance;
 
-        Debug.Log($"Capture roll: {roll:F2}  |  Required: ≤{captureChance:F2}  |  Result: {(success ? "SUCCESS" : "FAIL")}");
-
+       
         if (success)
         {
             OnCaptureSuccess(target, inventory);
