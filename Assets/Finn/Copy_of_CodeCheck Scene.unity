@@ -7408,6 +7408,7 @@ GameObject:
   - component: {fileID: 795163982}
   - component: {fileID: 795163984}
   - component: {fileID: 795163983}
+  - component: {fileID: 795163985}
   m_Layer: 5
   m_Name: InventoryPage
   m_TagString: Untagged
@@ -7473,6 +7474,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795163981}
   m_CullTransparentMesh: 1
+--- !u!114 &795163985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795163981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 200, y: 200}
+  m_Spacing: {x: 200, y: 200}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &817427950
 GameObject:
   m_ObjectHideFlags: 0
@@ -7754,7 +7779,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 58437650}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8553,8 +8578,6 @@ MonoBehaviour:
   questListContent: {fileID: 55127669}
   questEntryPrefab: {fileID: 8080132040808938281, guid: 10c7c38b9af996744bcebe69c01d8919, type: 3}
   objectiveTextPrefab: {fileID: 5063007456494501864, guid: 76653fba86183a04292a7d638d55209b, type: 3}
-  testQuest: {fileID: 11400000, guid: 3e7a737dbc15fad4985384b506ec31c8, type: 2}
-  testQuestAmount: 1
 --- !u!4 &980447014
 Transform:
   m_ObjectHideFlags: 0
@@ -52651,7 +52674,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1173111892}
   m_HandleRect: {fileID: 1173111891}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
