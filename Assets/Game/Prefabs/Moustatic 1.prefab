@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 42d7b357051efa14ca23d5278e85bc05, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 42d7b357051efa14ca23d5278e85bc05, type: 3}
       propertyPath: m_SortingOrder
@@ -242,3 +242,7 @@ MonoBehaviour:
   _bulletSpeed: 2
   _gunOffset: {fileID: 5388873680179284739}
   _timeBetweenShots: 1
+  _damage: 25
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
