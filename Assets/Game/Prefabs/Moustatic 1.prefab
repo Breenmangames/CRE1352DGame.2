@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  followSpeed: 5
+  followSpeed: 3.5
   stoppingDistance: 2
   turnSmoothness: 1
 --- !u!50 &5374584796854108165
@@ -239,10 +239,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 2236573740501416327, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
-  _bulletSpeed: 2
+  _bulletSpeed: 5
   _gunOffset: {fileID: 5388873680179284739}
-  _timeBetweenShots: 1
-  _damage: 25
+  _timeBetweenShots: 5
+  _damage: 10
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 0
