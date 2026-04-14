@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5762926144029127925}
   - component: {fileID: 7153489878421892222}
   - component: {fileID: 6693447035246918824}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: InteractionDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2932247819180030873}
   - component: {fileID: 793957229609780595}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: InteractionIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 5065438267004950039}
   - component: {fileID: 6821790674943569526}
   - component: {fileID: 751153501588706237}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6074692352627089158}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Attack Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
