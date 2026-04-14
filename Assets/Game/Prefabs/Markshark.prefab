@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Name
-      value: MarksharkEye
+      value: Markshark
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Layer
@@ -65,10 +65,14 @@ PrefabInstance:
       objectReference: {fileID: 5022585362148036061, guid: f9c9dc9edde9d584ca3bcd1c41361269, type: 3}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_LocalScale.y
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
@@ -208,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679bd09054e569a4192d50c003bc1553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 5000
 --- !u!50 &1759016939470857616
 Rigidbody2D:
   serializedVersion: 5
@@ -248,19 +252,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32b7ae049ec75a4c9f21260b2415230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   maxFollowRange: 5
-  minFollowRange: 3
-  attackRange: 4
+  minFollowRange: 2
+  attackRange: 3
   attackStandoffDistance: 1.5
-  attackCooldown: 1.5
+  attackCooldown: 4
   SpawntestObject: {fileID: 0}
-  projectilePrefab: {fileID: 4094226315209392998, guid: e6a9ae546e9226346be800fd1710a748, type: 3}
+  projectilePrefab: {fileID: 4094226315209392998, guid: 85a9c1cc718d4c540958315205b3133f, type: 3}
   firePoint: {fileID: 8391476917826728632}
   projectileSpeed: 2
-  projectileDamage: 2
+  projectileDamage: 5
   knockbackForce: 0
-  projectileAttackCooldown: 3.5
+  projectileAttackCooldown: 6
 --- !u!58 &732729389142223631
 CircleCollider2D:
   m_ObjectHideFlags: 0
