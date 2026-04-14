@@ -32,10 +32,19 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         canvasGroup.alpha = 1f; // Becomes opaque
 
         Slot dropSlot = eventData.pointerEnter?.GetComponent<Slot>(); // The slot where you drop the item
+        if(dropSlot == null)
+        {
+            GameObject dropitem = eventData.pointerEnter;
+            if (dropitem != null)
+            {
+                dropSlot = dropitem.GetComponentInParent<Slot>();
+            }
+        }
         Slot originalSlot = originalParent.GetComponent<Slot>();
 
-        if(dropSlot != null)
+        if (dropSlot != null)
         {
+            //Is a slot under the drop point?
             if(dropSlot.currentItem != null)
             {
                 // If the slot already has an item, swap items

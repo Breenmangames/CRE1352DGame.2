@@ -11,6 +11,7 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
     private DialogueController dialogueUI;
+    public PlayerController playerController;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
