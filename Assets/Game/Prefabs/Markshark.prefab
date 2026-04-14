@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679bd09054e569a4192d50c003bc1553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5000
+  maxHealth: 660
 --- !u!50 &1759016939470857616
 Rigidbody2D:
   serializedVersion: 5
@@ -264,7 +264,7 @@ MonoBehaviour:
   projectileSpeed: 2
   projectileDamage: 5
   knockbackForce: 0
-  projectileAttackCooldown: 6
+  projectileAttackCooldown: 8
 --- !u!58 &732729389142223631
 CircleCollider2D:
   m_ObjectHideFlags: 0
