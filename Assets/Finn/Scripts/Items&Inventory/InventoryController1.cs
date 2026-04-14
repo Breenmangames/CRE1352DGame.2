@@ -39,22 +39,68 @@ public class InventoryController1 : MonoBehaviour
     void Start()
     {
         itemDictionary = FindFirstObjectByType<ItemDictionary>();
+        // **PART OF EOGHAN STUFF TO FIX** RebuildItemCounts();
 
-          // initialize the inventory slots array
+        // initialize the inventory slots array
 
-       // EVERYTHING BELOW THIS MAY BE UNCOMMENTED LATER
-       // for (int i = 0; i < slotCount; i++)
-       // {
-       //     Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();  // create a new slot and set its parent to the inventory panel
-       //       if (i < itemPrefabs.Length)
-       //     {
-       //           GameObject item = Instantiate(itemPrefabs[i], slot.transform);  // create a new item and set its parent to the slot
-       //           item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;  // reset the item's local position to the center of the slot
-       //           slot.currentItem = item;  // assign the item to the slot's currentItem variable
-       //     }
-       // }
-       // inventoryPanel.SetActive(isInventoryOpen);  // set the inventory panel active or inactive based on the isInventoryOpen flag
+        // for (int i = 0; i < slotCount; i++)
+        // {
+        //     Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();  // create a new slot and set its parent to the inventory panel
+        //       if (i < itemPrefabs.Length)
+        //     {
+        //           GameObject item = Instantiate(itemPrefabs[i], slot.transform);  // create a new item and set its parent to the slot
+        //           item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;  // reset the item's local position to the center of the slot
+        //           slot.currentItem = item;  // assign the item to the slot's currentItem variable
+        //     }
+        // }
+        // inventoryPanel.SetActive(isInventoryOpen);  // set the inventory panel active or inactive based on the isInventoryOpen flag
     }
+
+    // **THIS UNCOMMENTED STUFF IS FOR EOGHAN TO TRY FIX, THE "quantity" AND "AddItem" PARTS ARE THE PROBLEM**.
+    // public void RebuildItemCounts()
+    // {
+    //     itemsCountCache.Clear();
+    // 
+    //     foreach (Transform slotTransform in inventoryPanel.transform)
+    //     {
+    //         Slot slot = slotTransform.GetComponent<Slot>();
+    //         if(slot.currentItem != null)
+    //         {
+    //             Item item = slot.currentItem.GetComponent<Item>();
+    //             if(item != null)
+    //             {
+    //                 itemsCountCache[item.ID] = itemsCountCache.GetValueOrDefault(item.ID, 0) + item.quantity;
+    //             }
+    //         }
+    //     }
+    // 
+    //     OnInventoryChanged.Invoke();
+    // }
+    // 
+    // public Dictionary<int, int> GetItemCounts() => itemsCountCache;
+    // 
+    // public bool AddItem(GameObject itemPrefab)
+    // {
+    //     Item itemToAdd = itemPrefab.GetComponent<Item>();
+    //     if (itemToAdd != null) return false;
+    // 
+    //     // Check if we have this item type in inventory)
+    //     foreach (Transform slotTransform in inventoryPanel.transform)
+    //     {
+    //         Slot slot = slotTransform.GetComponent<Slot>();
+    //         if (slot != null && slot.currentItem != null)
+    //         {
+    //             Item slotItem = slot.currentItem.GetComponent<Item>();
+    //             if(slotItem != null && slotItem.ID == itemToAdd.ID)
+    //             {
+    //                 //Same item, so they stack together
+    //                 slotItem.AddToStack();
+    //                 RebuildItemCounts();
+    //                 return true;
+    //             }
+    //         }
+    //     }
+    // }
 
     public List<InventorySaveData> GetInventoryItems()
     {
