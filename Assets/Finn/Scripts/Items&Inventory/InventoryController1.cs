@@ -39,7 +39,7 @@ public class InventoryController1 : MonoBehaviour
     void Start()
     {
         itemDictionary = FindFirstObjectByType<ItemDictionary>();
-        // **PART OF EOGHAN STUFF TO FIX** RebuildItemCounts();
+        RebuildItemCounts();
 
         // initialize the inventory slots array
 
@@ -56,51 +56,61 @@ public class InventoryController1 : MonoBehaviour
         // inventoryPanel.SetActive(isInventoryOpen);  // set the inventory panel active or inactive based on the isInventoryOpen flag
     }
 
-    // **THIS UNCOMMENTED STUFF IS FOR EOGHAN TO TRY FIX, THE "quantity" AND "AddItem" PARTS ARE THE PROBLEM**.
-    // public void RebuildItemCounts()
-    // {
-    //     itemsCountCache.Clear();
-    // 
-    //     foreach (Transform slotTransform in inventoryPanel.transform)
-    //     {
-    //         Slot slot = slotTransform.GetComponent<Slot>();
-    //         if(slot.currentItem != null)
-    //         {
-    //             Item item = slot.currentItem.GetComponent<Item>();
-    //             if(item != null)
-    //             {
-    //                 itemsCountCache[item.ID] = itemsCountCache.GetValueOrDefault(item.ID, 0) + item.quantity;
-    //             }
-    //         }
-    //     }
-    // 
-    //     OnInventoryChanged.Invoke();
-    // }
-    // 
-    // public Dictionary<int, int> GetItemCounts() => itemsCountCache;
-    // 
-    // public bool AddItem(GameObject itemPrefab)
-    // {
-    //     Item itemToAdd = itemPrefab.GetComponent<Item>();
-    //     if (itemToAdd != null) return false;
-    // 
-    //     // Check if we have this item type in inventory)
-    //     foreach (Transform slotTransform in inventoryPanel.transform)
-    //     {
-    //         Slot slot = slotTransform.GetComponent<Slot>();
-    //         if (slot != null && slot.currentItem != null)
-    //         {
-    //             Item slotItem = slot.currentItem.GetComponent<Item>();
-    //             if(slotItem != null && slotItem.ID == itemToAdd.ID)
-    //             {
-    //                 //Same item, so they stack together
-    //                 slotItem.AddToStack();
-    //                 RebuildItemCounts();
-    //                 return true;
-    //             }
-    //         }
-    //     }
-    // }
+
+    public void RebuildItemCounts()
+    {
+        itemsCountCache.Clear();
+    
+        foreach (Transform slotTransform in inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if(slot.currentItem != null)
+            {
+                Item item = slot.currentItem.GetComponent<Item>();
+                if(item != null)
+                {
+                    itemsCountCache[item.ID] = itemsCountCache.GetValueOrDefault(item.ID, 0) + item.quantity;
+                }
+            }
+        }
+    
+        OnInventoryChanged.Invoke();
+    }
+    
+    public Dictionary<int, int> GetItemCounts() => itemsCountCache;
+
+    //THE UNCOMMENTED STUFF BELOW IS FOR EOGHAN TO TRY FIX, THE "AddItem" PART IS THE PROBLEM**.
+
+    /* public bool AddItem(GameObject itemPrefab)
+    {
+            Item itemToAdd = itemPrefab.GetComponent<Item>();
+            if (itemToAdd != null) return false;
+        
+            // Look for empty slot)
+           foreach (Transform slotTransform in inventoryPanel.transform)
+            {
+                Slot slot = slotTransform.GetComponent<Slot>();
+                if (slot != null && slot.currentItem != null)
+               {
+                    GameObject newItem = Instantiate(itemPrefab, slot.transform);
+                    newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                    slot.currentItem = newItem;
+                    return true;
+
+                    // Item slotItem = slot.currentItem.GetComponent<Item>();
+                    // if(slotItem != null && slotItem.ID == itemToAdd.ID)
+                    // {
+                    //     //Same item, so they stack together
+                    //     slotItem.AddToStack();
+                    //     // **RebuildItemCounts();**
+                    //     return true;
+                    // }
+               }
+                
+                Debug.Log("Inventory is full!");
+                return false;
+            }
+    } */
 
     public List<InventorySaveData> GetInventoryItems()
     {

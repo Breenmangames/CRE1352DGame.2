@@ -13,6 +13,7 @@ TagManager:
   - HomeZone
   - MarketZone
   - DesertZone
+  - Item
   layers:
   - Default
   - TransparentFX
