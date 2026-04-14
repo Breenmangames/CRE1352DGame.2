@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 
 
 
@@ -18,22 +20,37 @@ public class InventoryController1 : MonoBehaviour
     public int inventorySize;  // the number of slots in the inventory
     public GameObject[] itemPrefabs;  // array to hold the inventory slots
 
+    public static InventoryController1 Instance { get; private set; }
+    Dictionary<int, int> itemsCountCache = new();
+    public event Action OnInventoryChanged; //Notifies quest system and more
 
+    private void Awake()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
+
+    //Start is called before the first frame update
     void Start()
     {
         itemDictionary = FindFirstObjectByType<ItemDictionary>();
 
           // initialize the inventory slots array
 
-       // EVERYTHING BELOW THIS MAY BE UNCOMMENTED LATER?
-       // for (int i = 0; i < inventorySize; i++)
+       // EVERYTHING BELOW THIS MAY BE UNCOMMENTED LATER
+       // for (int i = 0; i < slotCount; i++)
        // {
        //     Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();  // create a new slot and set its parent to the inventory panel
        //       if (i < itemPrefabs.Length)
        //     {
-       //                         GameObject item = Instantiate(itemPrefabs[i], slot.transform);  // create a new item and set its parent to the slot
-       //                         item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;  // reset the item's local position to the center of the slot
-       //                         slot.currentItem = item;  // assign the item to the slot's currentItem variable
+       //           GameObject item = Instantiate(itemPrefabs[i], slot.transform);  // create a new item and set its parent to the slot
+       //           item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;  // reset the item's local position to the center of the slot
+       //           slot.currentItem = item;  // assign the item to the slot's currentItem variable
        //     }
        // }
        // inventoryPanel.SetActive(isInventoryOpen);  // set the inventory panel active or inactive based on the isInventoryOpen flag

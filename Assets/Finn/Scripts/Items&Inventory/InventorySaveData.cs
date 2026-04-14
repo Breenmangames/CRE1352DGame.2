@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class InventorySaveData : MonoBehaviour
+public class InventorySaveData
 {
     public int itemID;
     public int slotIndex; //Index for where the item is placed in the inventory
