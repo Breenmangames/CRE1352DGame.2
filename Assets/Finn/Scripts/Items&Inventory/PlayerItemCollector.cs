@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerItemCollector : MonoBehaviour
 {
-    private InventoryController inventoryController;
+    private InventoryController1 inventoryController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventoryController = FindFirstObjectByType<InventoryController>();
+        inventoryController = FindFirstObjectByType<InventoryController1>();
     }
 
-   /* private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
    {
        if(collision.CompareTag("Item"))
        {
@@ -27,5 +27,5 @@ public class PlayerItemCollector : MonoBehaviour
                }
            }
        }
-   } */
+   } 
 }
