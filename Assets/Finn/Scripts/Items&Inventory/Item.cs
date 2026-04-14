@@ -37,6 +37,11 @@ public class Item : MonoBehaviour
         return removed;
     }
 
+    // public GameObject CloneItem(int newQuantity)
+    // {
+    // 
+    // }
+
     public virtual void UseItem()
     {
         Debug.Log("Using item " + Name);
