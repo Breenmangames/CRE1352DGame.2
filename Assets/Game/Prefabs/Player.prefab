@@ -375,7 +375,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8
-  attackDamage: 41
+  attackDamage: 15
 --- !u!70 &2380997039034336488
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
