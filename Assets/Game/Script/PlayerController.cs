@@ -226,12 +226,15 @@ public class PlayerController : MonoBehaviour, IInteractable2
 
         while ((targetPosition - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-            yield return null;
+            rb.MovePosition(Vector3.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime));
+            yield return new WaitForFixedUpdate();
         }
-        transform.position = targetPosition;
-        isMoving = false;
 
+        // Snap to target and kill all velocity so physics doesn't carry momentum
+        rb.MovePosition(targetPosition);
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        isMoving = false;
 
         CheckForEncounters();
     }
