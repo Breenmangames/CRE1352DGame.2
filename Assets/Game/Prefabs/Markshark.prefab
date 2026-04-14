@@ -65,11 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 5022585362148036061, guid: f9c9dc9edde9d584ca3bcd1c41361269, type: 3}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_LocalScale.z
