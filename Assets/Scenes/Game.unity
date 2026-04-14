@@ -485226,8 +485226,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2380997039034336488, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7415466
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380997039034336488, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380997039034336488, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.029823303
       objectReference: {fileID: 0}
     - target: {fileID: 2613808198972479212, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_Enabled
@@ -485293,7 +485301,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2613808198972479212, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
