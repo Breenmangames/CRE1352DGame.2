@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 42d7b357051efa14ca23d5278e85bc05, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 42d7b357051efa14ca23d5278e85bc05, type: 3}
       propertyPath: m_SortingOrder
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  followSpeed: 5
+  followSpeed: 3.5
   stoppingDistance: 2
   turnSmoothness: 1
 --- !u!50 &5374584796854108165
@@ -239,6 +239,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 2236573740501416327, guid: a6c2463d1cde8e646a68cc77f5dc9a73, type: 3}
-  _bulletSpeed: 2
+  _bulletSpeed: 5
   _gunOffset: {fileID: 5388873680179284739}
-  _timeBetweenShots: 1
+  _timeBetweenShots: 5
+  _damage: 10
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 0

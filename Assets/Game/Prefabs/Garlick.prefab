@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679bd09054e569a4192d50c003bc1553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 90
 --- !u!50 &1255039276474324470
 Rigidbody2D:
   serializedVersion: 5
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f73212267fee84c9678c33c0c7bfa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterName: 
+  monsterName: Garlick
   level: 1
   baseCaptureRate: 0.986
   maxHP: 100

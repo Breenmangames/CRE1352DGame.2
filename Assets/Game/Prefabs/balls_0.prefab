@@ -104,20 +104,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseCaptureChance: 1
+  itemName: Capture Orb
   lowHealthMultiplier: 100
   throwForce: 5
   throwUpward: 0
-  captureSuccessVFX: {fileID: 0}
-  captureFailVFX: {fileID: 0}
-  captureSuccessSFX: {fileID: 0}
-  captureFailSFX: {fileID: 0}
-  itemName: Capture Orb
-  captureBonus: 1
   captureAnimationDuration: 2
-  captureVFXPrefab: {fileID: 0}
-  captureSound: {fileID: 0}
-  successSound: {fileID: 0}
-  failSound: {fileID: 0}
+  capturePrefab: {fileID: 3122983693072461327}
+  captureSuccessPrefab: {fileID: 3122983693072461327}
+  captureFailPrefab: {fileID: 3122983693072461327}
+  captureSuccessSound: {fileID: 8300000, guid: d18a72499ba58dd40a0e379085d24c94, type: 3}
+  captureFailSound: {fileID: 8300000, guid: 1d2f348735857f047b7a5defd60d930a, type: 3}
+  captureSound: {fileID: 8300000, guid: 8ce14858148c08a459f93602337335eb, type: 3}
 --- !u!50 &-5927216096586281443
 Rigidbody2D:
   serializedVersion: 5
@@ -175,7 +172,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

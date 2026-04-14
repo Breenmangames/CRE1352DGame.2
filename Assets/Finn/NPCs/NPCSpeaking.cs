@@ -7,11 +7,17 @@ using UnityEngine.UI;
 public class NPCSpeaking : MonoBehaviour, IInteractable2
 {
     public NPCDialogue dialogueData;
+    public GameObject dialoguePanel;
+    public TMP_Text dialogueText, nameText;
+    public Image portraitImage;
     private DialogueController dialogueUI;
     public PlayerController playerController;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
+
+    private enum QuestState { NotStarted, InProgress, Completed }
+    private QuestState questState = QuestState.NotStarted;
 
     private void Start()
     {
@@ -42,13 +48,49 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
 
     void StartDialogue()
     {
+        //Sync with quest data
+        SyncQuestState();
+
+        //Set dialogue line based on questState
+        if(questState == QuestState.NotStarted)
+        {
+            dialogueIndex = 0;
+        }
+        else if(questState == QuestState.InProgress)
+        {
+            dialogueIndex = dialogueData.questInProgressIndex;
+        }
+        else if(questState == QuestState.Completed)
+        {
+            dialogueIndex = dialogueData.questCompletedIndex;
+        }
+
+
         isDialogueActive = true;
-        dialogueIndex = 0;
 
         dialogueUI.SetNPCinfo(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueUI.ShowDialogueUI(true);
 
         DisplayCurrentLine();
+
+        StartCoroutine(TypeLine());
+    }
+
+    private void SyncQuestState()
+    {
+        if(dialogueData.quest == null) return;
+
+        string questID = dialogueData.quest.questID;
+
+        //Future update add completing quest and handing in!
+        if(QuestController.Instance.IsQuestActive(questID))
+        {
+            questState = QuestState.InProgress;
+        }
+        else
+        {
+            questState = QuestState.NotStarted;
+        }
     }
 
     void NextLine()
@@ -60,6 +102,17 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
+        else if(++dialogueIndex < dialogueData.dialogueLines.Length)
+        {
+            //If another line, type next line
+            DisplayCurrentLine();
+        }
+        else
+        {
+            EndDialogue();
+        }
+
+
         //Clear Choices
         dialogueUI.ClearChoices();
         //Check endDialogueLines
@@ -76,16 +129,6 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
                 DisplayChoices(dialogueChoice);
                 return;
             }
-        }
-
-        if(++dialogueIndex < dialogueData.dialogueLines.Length)
-        {
-            //If another line, type next line
-            DisplayCurrentLine();
-        }
-        else
-        {
-            EndDialogue();
         }
     }
 
@@ -114,12 +157,18 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
         for(int i = 0; i < choice.choices.Length; i++)
         {
             int nextIndex = choice.nextDialogueIndexes[i];
-            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+            bool givesQuest = choice.givesQuest[i];
+            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, givesQuest));
         }
     }
 
-    void ChooseOption(int nextIndex)
+    void ChooseOption(int nextIndex, bool givesQuest)
     {
+        if (givesQuest)
+        {
+            QuestController.Instance.AcceptQuest(dialogueData.quest);
+            questState = QuestState.InProgress;
+        }
         dialogueIndex = nextIndex;
         dialogueUI.ClearChoices();
         DisplayCurrentLine();
