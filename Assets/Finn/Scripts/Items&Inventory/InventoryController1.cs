@@ -79,12 +79,26 @@ public class InventoryController1 : MonoBehaviour
     
     public Dictionary<int, int> GetItemCounts() => itemsCountCache;
 
-    //THE UNCOMMENTED STUFF BELOW IS FOR EOGHAN TO TRY FIX, THE "AddItem" PART IS THE PROBLEM**.
-
     public bool AddItem(GameObject itemPrefab)
     {
         Item itemToAdd = itemPrefab.GetComponent<Item>();
-        if (itemToAdd == null) return false;  
+        if (itemToAdd == null) return false; 
+
+        //Check if we have this item type in inventory
+        foreach (Transform slotTransform in inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem != null)  
+            {
+                Item slotItem = slot.currentItem.GetComponent<Item>();
+                if(slotItem != null && slotItem.ID == itemToAdd.ID)
+                {
+                    //Same item, stack them
+                    slotItem.AddToStack();
+                    return true;
+                }
+            }
+        } 
 
         // Look for empty slot
         foreach (Transform slotTransform in inventoryPanel.transform)
@@ -98,7 +112,6 @@ public class InventoryController1 : MonoBehaviour
                 RebuildItemCounts();  
                 return true;
             }
-            
         }
 
         Debug.Log("Inventory is full!");
@@ -114,7 +127,12 @@ public class InventoryController1 : MonoBehaviour
             if(slot.currentItem != null)
             {
                 Item item = slot.currentItem.GetComponent<Item>();
-                invData.Add(new InventorySaveData { itemID = item.ID, slotIndex = slotTransform.GetSiblingIndex()  });
+                invData.Add(new InventorySaveData
+                {
+                    itemID = item.ID,
+                    slotIndex = slotTransform.GetSiblingIndex(),
+                    quantity = item.quantity
+                });
             }
         }
         return invData;
@@ -135,7 +153,7 @@ public class InventoryController1 : MonoBehaviour
             Instantiate(slotPrefab, inventoryPanel.transform);
         }
 
-        //Populate inventory slots with items
+        //Populate inventory slots with the saved items
         foreach(InventorySaveData data in inventorySaveData)
         {
             if (data.slotIndex < slotCount)
@@ -146,6 +164,14 @@ public class InventoryController1 : MonoBehaviour
                 {
                     GameObject item = Instantiate(itemPrefab, slot.transform);
                     item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+                    Item itemComponent = item.GetComponent<Item>();
+                    if(itemComponent != null && data.quantity > 1)
+                    {
+                        itemComponent.quantity = data.quantity;
+                        itemComponent.UpdateQuantityDisplay();
+                    }
+
                     slot.currentItem = item;
                 }
             }

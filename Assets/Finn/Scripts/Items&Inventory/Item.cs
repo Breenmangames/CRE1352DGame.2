@@ -37,17 +37,21 @@ public class Item : MonoBehaviour
         return removed;
     }
 
-    // public GameObject CloneItem(int newQuantity)
-    // {
-    // 
-    // }
+    public GameObject CloneItem(int newQuantity)
+    {
+        GameObject clone = Instantiate(gameObject);
+        Item cloneItem = clone.GetComponent<Item>();
+        cloneItem.quantity = newQuantity;
+        cloneItem.UpdateQuantityDisplay();
+        return clone;
+    }
 
     public virtual void UseItem()
     {
         Debug.Log("Using item " + Name);
     }
 
- /* public virtual void PickUp()
+    /* public virtual void PickUp()
     {
         Sprite itemIcon = GetComponent<Image>().sprite;
         if(ItemPickupUIController.Instance  != null )
