@@ -90,8 +90,10 @@ public class CaptureItem : MonoBehaviour
 
         if (target != null)
         {
-            MonsterInventory inventory = GetComponent<MonsterInventory>();
-            Use(target, inventory);
+            //nsterInventory inventory = GetComponent<MonsterInventory>();
+            Use(target, MonsterInventory.Instance);
+            return;
+
         }
 
         _hasTriggered = true;
