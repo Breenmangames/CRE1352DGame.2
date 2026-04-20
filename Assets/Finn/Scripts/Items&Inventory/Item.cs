@@ -54,12 +54,12 @@ public class Item : MonoBehaviour
         Debug.Log("Using item " + Name);
     }
 
-    /* public virtual void PickUp()
+    public virtual void PickUp()
     {
         Sprite itemIcon = GetComponent<Image>().sprite;
         if(ItemPickupUIController.Instance  != null )
         {
-            ItemPickupController.Instance.ShowItemPickup(Name, itemIcon);
+            ItemPickupUIController.Instance.ShowItemPickup(Name, itemIcon);
         }
-    } */
+    }
 }

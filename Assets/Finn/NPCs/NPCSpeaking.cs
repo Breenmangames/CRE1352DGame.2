@@ -1,17 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPCSpeaking : MonoBehaviour, IInteractable2
+public class NPCSpeaking : MonoBehaviour //, IInteractable2
 {
-    public NPCDialogue dialogueData;
+    /* public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
     private DialogueController dialogueUI;
     public PlayerController playerController;
+    public QuestController questController;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
@@ -83,6 +85,10 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
         string questID = dialogueData.quest.questID;
 
         //Future update add completing quest and handing in!
+        if(questController.Instance.IsQuestCompleted(questID) || QuestController.Instance.IsQuestHandedIn(questID))
+        {
+            questState = QuestState.Completed;
+        }
         if(QuestController.Instance.IsQuestActive(questID))
         {
             questState = QuestState.InProgress;
@@ -166,7 +172,7 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
     {
         if (givesQuest)
         {
-            QuestController.Instance.AcceptQuest(dialogueData.quest);
+           questController.Instance.AcceptQuest(dialogueData.quest);
             questState = QuestState.InProgress;
         }
         dialogueIndex = nextIndex;
@@ -183,9 +189,19 @@ public class NPCSpeaking : MonoBehaviour, IInteractable2
 
     public void EndDialogue()
     {
+        if(questState == QuestState.Completed && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID))
+        {
+            HandleQuestCompletion(dialogueData.quest);
+        }
+
         StopAllCoroutines();
         isDialogueActive = false;
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
     }
+
+    void HandleQuestCompletion(Quest quest)
+    {
+        QuestController.Instance.HandInQuest(quest.questID);
+    } */
 }
