@@ -12,7 +12,7 @@ public class Quest : ScriptableObject
     public List<QuestObjective> objectives;
 
     //Called when scriptable object is edited
-    private void OnValidate()
+    private void OnEnable()
     {
         if (string.IsNullOrEmpty(questID))
         {

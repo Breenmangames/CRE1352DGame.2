@@ -22,7 +22,9 @@ public class SaveController : MonoBehaviour
         SaveData saveData = new SaveData
         {
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
-            inventorySaveData = inventoryController.GetInventoryItems()
+            inventorySaveData = inventoryController.GetInventoryItems(),
+            questProgressData = QuestController.Instance.activateQuests,
+            handinQuestIDs = QuestController.Instance.handinQuestIDs
         };
 
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
@@ -36,11 +38,16 @@ public class SaveController : MonoBehaviour
 
            GameObject.FindGameObjectWithTag("Player").transform.position = saveData.playerPosition;
 
-            inventoryController.SetInventoryItems(saveData.inventorySaveData);
+           inventoryController.SetInventoryItems(saveData.inventorySaveData);
+
+           QuestController.Instance.LoadQuestProgress(saveData.questProgressData);
+           QuestController.Instance.handinQuestIDs = saveData.handinQuestIDs;
         }
         else
         {
            SaveGame();
+
+            inventoryController.SetInventoryItems(new List<InventorySaveData>());
         }
-    }
+    } 
 }

@@ -241,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31af44f3307534d45affe1aa63dad394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDropDistance: 2
+  maxDropDistance: 3
 --- !u!114 &145667468699911186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bae5ca08631f7438d07a6d79a723dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 1
+  ID: 10
   Name: Placeholder
   quantity: 1
   quantityText: {fileID: 0}

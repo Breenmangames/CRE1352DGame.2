@@ -38,6 +38,6 @@ public class QuestUI : MonoBehaviour
                 TMP_Text objText = objTextGO.GetComponent<TMP_Text>();
                 objText.text = $"{objective.description} ({objective.currentAmount}/{objective.requiredAmount})"; //Collect 5 speed potions (0/5)
             }
-        }
+        } 
     }
 }
