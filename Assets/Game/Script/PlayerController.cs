@@ -224,14 +224,15 @@ public class PlayerController : MonoBehaviour, IInteractable2
     {
         isMoving = true;
 
-        while ((targetPosition - transform.position).sqrMagnitude > Mathf.Epsilon)
+        while (((Vector2)targetPosition - rb.position).sqrMagnitude > Mathf.Epsilon)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-            yield return null;
+            Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime);
+            rb.MovePosition(newPos);
+            yield return new WaitForFixedUpdate();
         }
-        transform.position = targetPosition;
-        isMoving = false;
 
+        rb.MovePosition(targetPosition);
+        isMoving = false;
 
         CheckForEncounters();
     }
