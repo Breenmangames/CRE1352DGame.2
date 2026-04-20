@@ -59,7 +59,7 @@ public class CaptureItem : MonoBehaviour
 
     public void ItemThrow(Vector2 aimDirection)
     {
-        Debug.Log($"[CaptureItem] Throw() called. RB null: {_rb == null}");  //item wouldnt move past spawn so added debug to see what is breaking
+       
         if (_rb == null) return;
 
         _rb.bodyType = RigidbodyType2D.Dynamic;
@@ -69,7 +69,7 @@ public class CaptureItem : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log($"[CaptureItem] OnCollisionEnter2D() called. Collided with: {collision.gameObject.name}");  // added debug to see if collision was working at all
+        
         Monster target = collision.gameObject.GetComponent<Monster>();
         if (_hasTriggered) return;
 
@@ -84,7 +84,7 @@ public class CaptureItem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        Debug.Log($"[CaptureItem] OnTriggerEnter2D() called. Collider: {other.name}");  // added debug to see if trigger was working at all
+        
         Monster target = other.GetComponent<Monster>();
         if (_hasTriggered) return;
 
@@ -111,20 +111,19 @@ public class CaptureItem : MonoBehaviour
 
     private IEnumerator AttemptCapture(Monster target, MonsterInventory inventory)
     {
-        Debug.Log($"Used {itemName} on {target.monsterName}!");
-
-        // Spawn capture VFX
+       
+        
         if (capturePrefab != null)
             Instantiate(capturePrefab, target.transform.position, Quaternion.identity);
 
         PlaySound(captureSound);
 
-        // Hide the monster during the animation window
+       
         target.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(captureAnimationDuration);
 
-        // Roll for capture
+        
         float roll = UnityEngine.Random.value;                                       // 0.0 – 1.0
         float captureChance = Mathf.Clamp01(target.GetEffectiveCaptureRate() + baseCaptureChance);
 
@@ -140,7 +139,7 @@ public class CaptureItem : MonoBehaviour
             OnCaptureFail(target);
         }
 
-        // Consume this item (remove from scene / mark used)
+        
         ConsumeItem(inventory);
     }
 
@@ -154,7 +153,7 @@ public class CaptureItem : MonoBehaviour
     private void OnCaptureSuccess(Monster target, MonsterInventory inventory)
     {
         target.isCaptured = true;
-        target.gameObject.SetActive(false);          // fully remove from world
+        target.gameObject.SetActive(false);         
 
         inventory.AddMonster(target);
 
@@ -164,7 +163,7 @@ public class CaptureItem : MonoBehaviour
 
     private void OnCaptureFail(Monster target)
     {
-        target.BreakFree();                          // returns to original position
+        target.BreakFree();                          
         PlaySound(captureFailSound);
         Debug.Log($"{target.monsterName} broke free!");
     }
@@ -206,7 +205,6 @@ public class CaptureItem : MonoBehaviour
     private void ConsumeItem(MonsterInventory inventory)
     {
         inventory.RemoveCaptureItem(this);
-        // Destroy the physical item if it exists in the scene
         Destroy(gameObject);
     }
     private void PlaySound(AudioClip clip)
