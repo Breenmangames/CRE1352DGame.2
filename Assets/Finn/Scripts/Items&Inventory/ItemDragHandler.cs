@@ -156,6 +156,8 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             Destroy(gameObject);
         }
+
+        InventoryController1.Instance.RebuildItemCounts();
     }
 
     public void OnPointerClick(PointerEventData eventData)

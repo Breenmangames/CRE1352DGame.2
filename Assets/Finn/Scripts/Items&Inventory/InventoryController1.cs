@@ -74,7 +74,7 @@ public class InventoryController1 : MonoBehaviour
             }
         }
     
-        OnInventoryChanged.Invoke();
+        OnInventoryChanged?.Invoke();
     }
     
     public Dictionary<int, int> GetItemCounts() => itemsCountCache;
@@ -95,6 +95,7 @@ public class InventoryController1 : MonoBehaviour
                 {
                     //Same item, stack them
                     slotItem.AddToStack();
+                    RebuildItemCounts();
                     return true;
                 }
             }
@@ -176,5 +177,31 @@ public class InventoryController1 : MonoBehaviour
                 }
             }
         }
+
+        RebuildItemCounts();
+    }
+
+    public void RemoveItemsFromInventory(int itemID, int amountToRemove)
+    {
+        foreach(Transform slotTransform in inventoryPanel.transform)
+        {
+            if (amountToRemove <= 0) break;
+
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if(slot?.currentItem?.GetComponent<Item>() is Item item && item.ID == itemID)
+            {
+                int removed = Mathf.Min(amountToRemove, item.quantity);
+                item.RemoveFromStack(removed);
+                amountToRemove = removed;
+
+                if(item.quantity == 0)
+                {
+                    Destroy(slot.currentItem);
+                    slot.currentItem = null;
+                }
+            }
+        }
+
+        RebuildItemCounts();
     }
 }
