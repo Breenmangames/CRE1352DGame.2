@@ -7,6 +7,8 @@ public class MonsterInventory : MonoBehaviour
 
     public static MonsterInventory Instance { get; private set; }
 
+    public event System.Action OnInventoryChanged;
+
     [Header("Captured Enemies")]
     public List<CapturedEnemy> capturedEnemies = new();
 
@@ -30,14 +32,14 @@ public class MonsterInventory : MonoBehaviour
         if (!_capturedMonsters.Contains(monster))
         {
             _capturedMonsters.Add(monster);
-            Debug.Log($"[Inventory] {monster.monsterName} added. Total monsters: {_capturedMonsters.Count}");
+            
         }
     }
 
     public void RemoveMonster(Monster monster)
     {
-        if (_capturedMonsters.Remove(monster))
-            Debug.Log($"[Inventory] {monster.monsterName} removed.");
+        if (_capturedMonsters.Remove(monster));
+            
     }
 
     public List<Monster> GetAllMonsters() => new List<Monster>(_capturedMonsters);
@@ -47,8 +49,7 @@ public class MonsterInventory : MonoBehaviour
     public void AddCapturedEnemy(CapturedEnemy entry)
     {
         capturedEnemies.Add(entry);
-        Debug.Log($"[Inventory] Captured: {entry.enemyName}  " +
-                  $"(HP when caught: {entry.capturedAtHealth:F0}/{entry.maxHealth:F0})");
+        
         OnInventoryChanged?.Invoke();
     }
 
@@ -60,20 +61,20 @@ public class MonsterInventory : MonoBehaviour
         var entry = capturedEnemies[index];
         if (entry.isDeployed)
         {
-            Debug.Log($"[Inventory] {entry.enemyName} is already deployed.");
+            
             return false;
         }
 
         int currentlyDeployed = capturedEnemies.FindAll(e => e.isDeployed).Count;
         if (currentlyDeployed >= maxDeployed)
         {
-            Debug.Log("[Inventory] Max deployed limit reached.");
+            
             return false;
         }
 
         if (entry.enemyPrefab == null)
         {
-            Debug.LogWarning($"[Inventory] No prefab assigned for {entry.enemyName}.");
+            
             return false;
         }
 
@@ -90,7 +91,7 @@ public class MonsterInventory : MonoBehaviour
         entry.isDeployed = true;
         entry.deployedInstance = go;
 
-        Debug.Log($"[Inventory] Deployed: {entry.enemyName}");
+        
         OnInventoryChanged?.Invoke();
         return true;
     }
@@ -101,7 +102,7 @@ public class MonsterInventory : MonoBehaviour
     public void RemoveCaptureItem(CaptureItem item)
     {
         captureItems.Remove(item);
-        Debug.Log($"[Inventory] {item.itemName} consumed. Remaining: {captureItems.Count}");
+        
     }
 
     public void Recall(int index)
@@ -111,15 +112,14 @@ public class MonsterInventory : MonoBehaviour
             var entry = capturedEnemies[index];
             if (!entry.isDeployed || entry.deployedInstance == null) return;
 
-            // Save current HP before recalling
+            
             var stats = entry.deployedInstance.GetComponent<EnemyStats>();
-           // if (stats != null) entry.capturedAtHealth = stats.currentHealth;
+           
 
             Destroy(entry.deployedInstance);
             entry.isDeployed = false;
             entry.deployedInstance = null;
 
-            Debug.Log($"[Inventory] Recalled: {entry.enemyName}");
             OnInventoryChanged?.Invoke();
         }
 
@@ -135,6 +135,6 @@ public class MonsterInventory : MonoBehaviour
         item.Use(target, this);
          }
 
-        public event System.Action OnInventoryChanged;
+        
 }
 
