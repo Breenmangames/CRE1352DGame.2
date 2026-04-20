@@ -4726,6 +4726,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 273
+      m_TileSpriteIndex: 273
+      m_TileMatrixIndex: 1
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -100, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -9314,6 +9324,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fa47b17ac7f399f47a34fa490e884f11, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 19be37c1ec54ffa4da9c35d619e9d7e9, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 35d7d435a73a09f48bf6096253c20ded, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 11
     m_Data: {fileID: 516594893, guid: 052f2b27b7ee7854c914ba132962a3e1, type: 3}
@@ -9861,6 +9873,8 @@ Tilemap:
     m_Data: {fileID: -907922353, guid: 052f2b27b7ee7854c914ba132962a3e1, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -885730786, guid: 052f2b27b7ee7854c914ba132962a3e1, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -4116040823106012581, guid: a1ee0d9ea26653e4b86df4ba0780db7b, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 22
     m_Data:
@@ -9880,7 +9894,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 693
+  - m_RefCount: 694
     m_Data:
       e00: 1
       e01: 0
@@ -9953,7 +9967,7 @@ Tilemap:
       e32: 6.95e-43
       e33: 6.91e-43
   m_TileColorArray:
-  - m_RefCount: 727
+  - m_RefCount: 728
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 0, g: 0, b: 0, a: 0}
@@ -35426,7 +35440,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -98.91828, y: 102.564896, z: -10}
+  m_LocalPosition: {x: -99.99567, y: 102.562454, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50330,6 +50344,7 @@ Transform:
   - {fileID: 1617603750}
   - {fileID: 1322559219}
   - {fileID: 1557112132}
+  - {fileID: 1539450870}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &977991164
@@ -383405,7 +383420,7 @@ GameObject:
   - component: {fileID: 1539450869}
   - component: {fileID: 1539450868}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: HouseTeleporter
   m_TagString: Teleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383478,12 +383493,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539450867}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.419, y: 0.606, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.0580897, y: -18.096869, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 954127536}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541157804
 GameObject:
@@ -485988,7 +486003,6 @@ SceneRoots:
   - {fileID: 805679473}
   - {fileID: 1904889104}
   - {fileID: 1280141615}
-  - {fileID: 1539450870}
   - {fileID: 654741622}
   - {fileID: 8525724057728393578}
   - {fileID: 951666621}
