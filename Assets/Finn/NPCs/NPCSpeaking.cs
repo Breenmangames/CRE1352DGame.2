@@ -5,9 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPCSpeaking : MonoBehaviour //, IInteractable2
+public class NPCSpeaking : MonoBehaviour , IInteractable2
 {
-    /* public NPCDialogue dialogueData;
+    /public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
@@ -203,5 +203,5 @@ public class NPCSpeaking : MonoBehaviour //, IInteractable2
     void HandleQuestCompletion(Quest quest)
     {
         QuestController.Instance.HandInQuest(quest.questID);
-    } */
+    } 
 }

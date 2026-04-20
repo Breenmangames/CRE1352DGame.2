@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class QuestController : MonoBehaviour
 {
-    /* public static QuestController Instance {  get; private set; }
+     public static QuestController Instance {  get; private set; }
     public List<QuestProgress> activateQuests = new();
     private QuestUI questUI;
 
@@ -127,5 +127,5 @@ public class QuestController : MonoBehaviour
 
         CheckInventoryForQuests();
         questUI.UpdateQuestUI();
-    } */
+    } 
 }
