@@ -35440,7 +35440,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -99.99567, y: 102.562454, z: -10}
+  m_LocalPosition: {x: -98.91828, y: 102.564896, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55340,8 +55340,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Helloooo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e030d640260625d42b8115de561d86e1, type: 2}
-  m_sharedMaterial: {fileID: -8067267517588659450, guid: e030d640260625d42b8115de561d86e1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9a14a8a1184c5f14fbce3338ea4d7a35, type: 2}
+  m_sharedMaterial: {fileID: 1260715531048141648, guid: 9a14a8a1184c5f14fbce3338ea4d7a35, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -55371,7 +55371,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
