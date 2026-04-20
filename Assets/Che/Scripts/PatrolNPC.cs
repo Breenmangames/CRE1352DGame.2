@@ -5,12 +5,11 @@ public class PatrolNPC : MonoBehaviour
 {
     public Transform pointA;
     public Transform pointB;
+    // public Transform pointC; 
     public float speed = 2f;
     public float waitTime = 1.5f;
-
     private Transform target;
-    private Animator animator;
-
+    private Animator animator
     private bool isWaiting = false;
     private float waitCounter;
     private bool isMoving = false;
@@ -50,12 +49,13 @@ public class PatrolNPC : MonoBehaviour
             lastDirection = direction;
         }
 
-        // Update animation
+  
         animator.SetFloat("MoveX", direction.x);
         animator.SetFloat("MoveY", direction.y);
         animator.SetBool("IsMoving", true);
 
-        // Check if reached target
+
+        // checking if the NPC has reached the target position
         if (Vector2.Distance(transform.position, target.position) < 0.01f)
         {
             transform.position = target.position;

@@ -47,7 +47,6 @@ public class ProjectileShoot : MonoBehaviour
         mouseWorld.z = 0f;
 
         Vector2 rawDirection = (mouseWorld - _gunOffset.position);
-
         if (rawDirection.sqrMagnitude > 0.001f)
         {
             _aimDirection = rawDirection.normalized;
@@ -58,11 +57,9 @@ public class ProjectileShoot : MonoBehaviour
     public void FireBullet()
     {
         Debug.Log($"Firing in direction: {_aimDirection}");
-
         Quaternion aimRotation = Quaternion.FromToRotation(Vector2.up, _aimDirection);
         GameObject bullet = Instantiate(_bulletPrefab, _gunOffset.position, aimRotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-
         Debug.Log($"Rigidbody found: {rb != null}");
         rb.linearVelocity = _bulletSpeed * _aimDirection;
         Debug.Log($"Velocity set to: {rb.linearVelocity}");

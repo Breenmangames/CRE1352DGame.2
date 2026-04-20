@@ -6,13 +6,13 @@ public class TopDownFollower : MonoBehaviour
     public Transform target; // Player to follow
 
     [Header("Follow Settings")]
-    public float followSpeed = 5f; // Movement speed
-    public float stoppingDistance = 0.1f;
+    public float speed = 5f; // movement speed
+    public float stop_distance = 0.1f; // prevents jittering when near the player
     [Range(0.01f, 1f)] public float turnSmoothness = 0.15f;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private Vector2 smoothDirection;
+    private Vector2 moveSmooth;
     private Vector2 lastTargetPosition;
 
     public Transform owner { get; internal set; }
@@ -36,7 +36,7 @@ public class TopDownFollower : MonoBehaviour
         Vector2 currentPosition = rb.position;
         Vector2 targetPosition = target.position;
 
-        // --- Snap instantly if player teleported ---
+        // teleport with the player
         if (Vector2.Distance(lastTargetPosition, targetPosition) > 2f)
         {
             SnapToTarget();
@@ -47,16 +47,16 @@ public class TopDownFollower : MonoBehaviour
         float distance = toTarget.magnitude;
         Vector2 velocity = Vector2.zero;
 
-        if (distance > stoppingDistance)
+        if (distance > stop_distance)
         {
             Vector2 desiredDirection = toTarget.normalized;
-            smoothDirection = Vector2.Lerp(smoothDirection, desiredDirection, turnSmoothness).normalized;
-            velocity = smoothDirection * followSpeed;
+            moveSmooth = Vector2.Lerp(moveSmooth, desiredDirection, turnSmoothness).normalized;
+            velocity = moveSmooth * speed;
         }
 
         rb.linearVelocity = velocity;
 
-        // Flip sprite
+        // flip sprite based on movement direction
         if (velocity.x > 0.05f)
             spriteRenderer.flipX = true;
         else if (velocity.x < -0.05f)
@@ -65,9 +65,7 @@ public class TopDownFollower : MonoBehaviour
         lastTargetPosition = targetPosition;
     }
 
-    /// <summary>
-    /// Instantly move the follower to the target's position.
-    /// </summary>
+
     public void SnapToTarget()
     {
         if (target != null)
