@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SaveController : MonoBehaviour
 {
-    /* private string saveLocation;
+    private string saveLocation;
     private InventoryController1 inventoryController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,5 +47,5 @@ public class SaveController : MonoBehaviour
 
             inventoryController.SetInventoryItems(new List<InventorySaveData>());
         }
-    } */
+    } 
 }
