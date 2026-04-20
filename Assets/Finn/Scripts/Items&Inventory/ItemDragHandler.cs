@@ -122,8 +122,9 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         Vector2 dropOffset = Random.insideUnitCircle.normalized * Random.Range(minDropDistance, maxDropDistance);
         Vector2 dropPosition = (Vector2)playerTransform.position + dropOffset;
 
-        //Instantiate drop item
-        Instantiate(gameObject, dropPosition, Quaternion.identity);
+        //Instantiate drop item and bounce
+        GameObject dropItem = Instantiate(gameObject, dropPosition, Quaternion.identity);
+        dropItem.GetComponent<BounceEffect>().StartBounce();
 
         //Destroy the UI one
         Destroy(gameObject);
