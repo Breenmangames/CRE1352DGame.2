@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class NPCSpeaking : MonoBehaviour , IInteractable2
 {
-    /public NPCDialogue dialogueData;
+    public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
@@ -85,7 +85,7 @@ public class NPCSpeaking : MonoBehaviour , IInteractable2
         string questID = dialogueData.quest.questID;
 
         //Future update add completing quest and handing in!
-        if(questController.Instance.IsQuestCompleted(questID) || QuestController.Instance.IsQuestHandedIn(questID))
+        if(QuestController.Instance.IsQuestCompleted(questID) || QuestController.Instance.IsQuestHandedIn(questID))
         {
             questState = QuestState.Completed;
         }
@@ -172,7 +172,7 @@ public class NPCSpeaking : MonoBehaviour , IInteractable2
     {
         if (givesQuest)
         {
-           questController.Instance.AcceptQuest(dialogueData.quest);
+           QuestController.Instance.AcceptQuest(dialogueData.quest);
             questState = QuestState.InProgress;
         }
         dialogueIndex = nextIndex;

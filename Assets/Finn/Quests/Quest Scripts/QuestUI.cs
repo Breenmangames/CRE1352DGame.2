@@ -24,7 +24,7 @@ public class QuestUI : MonoBehaviour
         }
 
         //Creating Quest Entries
-        /* foreach (var quest in QuestController.Instance.activateQuests)
+        foreach (var quest in QuestController.Instance.activateQuests)
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
             TMP_Text questNameText = entry.transform.Find("QuestNameText").GetComponent<TMP_Text>();
@@ -38,6 +38,6 @@ public class QuestUI : MonoBehaviour
                 TMP_Text objText = objTextGO.GetComponent<TMP_Text>();
                 objText.text = $"{objective.description} ({objective.currentAmount}/{objective.requiredAmount})"; //Collect 5 speed potions (0/5)
             }
-        } */
+        } 
     }
 }
