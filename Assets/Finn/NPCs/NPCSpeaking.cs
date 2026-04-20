@@ -67,7 +67,6 @@ public class NPCSpeaking : MonoBehaviour , IInteractable2
             dialogueIndex = dialogueData.questCompletedIndex;
         }
 
-
         isDialogueActive = true;
 
         dialogueUI.SetNPCinfo(dialogueData.npcName, dialogueData.npcPortrait);
@@ -89,7 +88,7 @@ public class NPCSpeaking : MonoBehaviour , IInteractable2
         {
             questState = QuestState.Completed;
         }
-        if(QuestController.Instance.IsQuestActive(questID))
+        else if(QuestController.Instance.IsQuestActive(questID))
         {
             questState = QuestState.InProgress;
         }
