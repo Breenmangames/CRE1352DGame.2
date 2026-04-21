@@ -118,6 +118,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4671771311382629757}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1986707391226329659}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
 --- !u!4 &5824796168147327236 stripped
 Transform:
@@ -152,7 +155,7 @@ MonoBehaviour:
   firePoint: {fileID: 5915928323150952805}
   projectileSpeed: 8
   projectileDamage: 1
-  knockbackForce: 6
+  knockbackForce: 0
   projectileAttackCooldown: 2
 --- !u!61 &8998890976324154179
 BoxCollider2D:
@@ -256,3 +259,16 @@ MonoBehaviour:
   defensePower: 5
   currentHP: 0
   isCaptured: 0
+--- !u!114 &1986707391226329659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717171412160606561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679bd09054e569a4192d50c003bc1553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 930
