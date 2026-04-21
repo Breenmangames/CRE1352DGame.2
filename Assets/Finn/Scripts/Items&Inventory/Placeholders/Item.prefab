@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bae5ca08631f7438d07a6d79a723dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 10
+  ID: 1
   Name: Placeholder
   quantity: 1
   quantityText: {fileID: 0}

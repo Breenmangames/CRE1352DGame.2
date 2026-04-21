@@ -64,7 +64,7 @@ public class QuestController : MonoBehaviour
     public void HandInQuest(string questID)
     {
         //Try remove required items
-        if (RemoveRequiredItemsFromInventory(questID))
+        if (!RemoveRequiredItemsFromInventory(questID))
         {
             //Quest couldn't be completed - missing items
             return;

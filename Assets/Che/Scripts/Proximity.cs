@@ -3,17 +3,14 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class NPCProximity2D : MonoBehaviour, IInteractable
 {
-    [Header("References")]
     public Dialogue dialogueUI;
-    [Header("Dialogue Data")]
-    public string speakerName = "";
+    public string npcName = "";
     [TextArea(2, 5)] public string[] lines;
-    [Header("Behaviour")]
-    public bool autoStartOnEnter = true;
+    public bool startOnTriggerEnter = true;
     public bool playOnce = false;
     public string playerTag = "Player";
 
-    private bool hasPlayed = false;
+    private bool hasPlayed = false; // cant play again if true and playOnce is true
     private bool playerInRange = false;  // track if player is nearby
 
     private void Reset()
@@ -24,13 +21,12 @@ public class NPCProximity2D : MonoBehaviour, IInteractable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("NPC trigger hit by: " + other.name + " | tag: " + other.tag);
+        Debug.Log("NPC trigger hit by: " + other.name);
 
         if (!other.CompareTag(playerTag) && other.name != "Player") return;
         playerInRange = true;
-
         if (playOnce && hasPlayed) return;
-        if (autoStartOnEnter)
+        if (startOnTriggerEnter)
             StartDialogue();
     }
 
@@ -40,7 +36,7 @@ public class NPCProximity2D : MonoBehaviour, IInteractable
             playerInRange = false;
     }
 
-    public void Interact()  // called by PlayerController when E is pressed
+    public void Interact()  // when you press E
     {
         if (!playerInRange) return;
         if (playOnce && hasPlayed) return;
@@ -49,17 +45,7 @@ public class NPCProximity2D : MonoBehaviour, IInteractable
 
     public void StartDialogue()
     {
-        if (dialogueUI == null)
-        {
-            Debug.LogWarning($"{name}: Dialogue UI not assigned.");
-            return;
-        }
-        if (lines == null || lines.Length == 0)
-        {
-            Debug.LogWarning($"{name}: No dialogue lines assigned.");
-            return;
-        }
-        dialogueUI.Begin(lines, speakerName);
+        dialogueUI.Begin(lines, npcName);
         hasPlayed = true;
     }
 }

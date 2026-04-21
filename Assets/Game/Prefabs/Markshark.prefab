@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 4322049985317781474}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.22, y: 0.22, z: 0}
+  m_LocalPosition: {x: -1, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,7 +188,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.305}
+  m_Offset: {x: 0, y: 0.4620755}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4464286, y: -0.12727273}
@@ -198,7 +198,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.4, y: 0.61}
+  m_Size: {x: 0.4, y: 0.7341507}
   m_EdgeRadius: 0
 --- !u!114 &4930764465062516309
 MonoBehaviour:
@@ -261,10 +261,10 @@ MonoBehaviour:
   SpawntestObject: {fileID: 0}
   projectilePrefab: {fileID: 4094226315209392998, guid: 85a9c1cc718d4c540958315205b3133f, type: 3}
   firePoint: {fileID: 8391476917826728632}
-  projectileSpeed: 2
-  projectileDamage: 5
+  projectileSpeed: 3
+  projectileDamage: 4
   knockbackForce: 0
-  projectileAttackCooldown: 2
+  projectileAttackCooldown: 10
 --- !u!58 &732729389142223631
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -299,8 +299,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0012094553, y: 0.35782006}
-  m_Radius: 0.25176084
+  m_Offset: {x: 0, y: 0.4}
+  m_Radius: 0.34
 --- !u!114 &86917875906325582
 MonoBehaviour:
   m_ObjectHideFlags: 0
