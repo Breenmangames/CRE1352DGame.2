@@ -72,9 +72,16 @@ public class PlayerController : MonoBehaviour, IInteractable2
                 targetPosition.y += input.y;
 
                 if (isWalkable(targetPosition))
+                {
                     StartCoroutine(Move(targetPosition));
+                }
+                else
+                {
+                    animator.SetBool("isMoving", false);
+                }
 
-                SoundEffectManager.PlaySoundEffect("Walking");
+
+                    SoundEffectManager.PlaySoundEffect("Walking");
             }
         }
         animator.SetBool("isMoving", isMoving);
@@ -224,14 +231,14 @@ public class PlayerController : MonoBehaviour, IInteractable2
     {
         isMoving = true;
 
-        while (((Vector2)targetPosition - rb.position).sqrMagnitude > Mathf.Epsilon)
+        while (((Vector2)targetPosition - (Vector2)transform.position).sqrMagnitude > Mathf.Epsilon)
         {
-            Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime);
-            rb.MovePosition(newPos);
+            Vector2 newPos = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            transform.position = newPos;
             yield return new WaitForFixedUpdate();
         }
 
-        rb.MovePosition(targetPosition);
+        transform.position = targetPosition;
         isMoving = false;
 
         CheckForEncounters();
