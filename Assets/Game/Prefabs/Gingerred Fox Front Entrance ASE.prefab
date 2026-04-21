@@ -154,7 +154,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 9140266400167075838, guid: 7ab2a4ee670374d419edc97a63f52816, type: 3}
   firePoint: {fileID: 5915928323150952805}
   projectileSpeed: 8
-  projectileDamage: 1
+  projectileDamage: 2
   knockbackForce: 0
   projectileAttackCooldown: 2
 --- !u!61 &8998890976324154179

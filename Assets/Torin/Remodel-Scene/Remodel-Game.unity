@@ -569,7 +569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 176508.88, y: 831104.3}
+  m_AnchoredPosition: {x: 188588.02, y: 891709.44}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &49694613
@@ -19944,7 +19944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3128900.2, y: 857764.9}
+  m_AnchoredPosition: {x: -3342981.5, y: 919245}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &269938610
@@ -79306,7 +79306,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e4f14bc309af87f4fa59861a48dd2050, type: 2}
+  - {fileID: 2100000, guid: 1896708c719443941a337dbafdc4d7a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -459409,6 +459409,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: maxHealth
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 168678816883394500, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+      propertyPath: currentHealth
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 108.9
