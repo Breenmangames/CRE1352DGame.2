@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using System;
 public class MonsterInventory : MonoBehaviour
 {
 
@@ -22,6 +23,8 @@ public class MonsterInventory : MonoBehaviour
     public float deployOffset = 2f;
     public int maxDeployed = 1;
     public bool HasCaptureItems() => capturedEnemies.Count > 0;
+
+    public EnemyStats enemyStats; // Reference to the player's EnemyStats for capture calculations
     private void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
@@ -56,25 +59,36 @@ public class MonsterInventory : MonoBehaviour
 
     public bool Deploy(int index)
     {
-        if (index < 0 || index >= capturedEnemies.Count) return false;
+        if (index < 0 || index >= capturedEnemies.Count)
+            return false;
+
+        // Guard against null entries in the list
+        capturedEnemies.RemoveAll(e => e == null);
+
+        if (index >= capturedEnemies.Count)
+            return false;
 
         var entry = capturedEnemies[index];
-        if (entry.isDeployed)
+        if (entry == null)
         {
-            
+            Debug.LogWarning("[Inventory] Entry at index is null.");
             return false;
         }
 
-        int currentlyDeployed = capturedEnemies.FindAll(e => e.isDeployed).Count;
+        if (entry.isDeployed)
+            return false;
+
+        
+        int currentlyDeployed = capturedEnemies.Count(e => e != null && e.isDeployed);
         if (currentlyDeployed >= maxDeployed)
         {
-            
+            Debug.LogWarning("[Inventory] Max deployed reached.");
             return false;
         }
 
         if (entry.enemyPrefab == null)
         {
-            
+            Debug.LogWarning("[Inventory] enemyPrefab is null on entry.");
             return false;
         }
 
@@ -84,14 +98,13 @@ public class MonsterInventory : MonoBehaviour
         var stats = go.GetComponent<EnemyStats>();
         if (stats != null)
         {
-            // stats.currentHealth = entry.capturedAtHealth;
-            // stats.OnDeployed(transform);
+            stats.currentHealth = entry.capturedAtHealth;
+            stats.OnDeployed(transform);
         }
 
         entry.isDeployed = true;
         entry.deployedInstance = go;
 
-        
         OnInventoryChanged?.Invoke();
         return true;
     }
@@ -106,11 +119,13 @@ public class MonsterInventory : MonoBehaviour
     }
 
     public void Recall(int index)
-        {
-            if (index < 0 || index >= capturedEnemies.Count) return;
+       {
+            if (index < 0 || index >= capturedEnemies.Count)
+            return;
 
             var entry = capturedEnemies[index];
-            if (!entry.isDeployed || entry.deployedInstance == null) return;
+            if (!entry.isDeployed || entry.deployedInstance == null) 
+            return;
 
             
             var stats = entry.deployedInstance.GetComponent<EnemyStats>();
@@ -132,8 +147,9 @@ public class MonsterInventory : MonoBehaviour
         }
 
         CaptureItem item = captureItems[0];
-        item.Use(target, this);
-         }
+        item.Use(target);
+         
+    }
 
         
 }

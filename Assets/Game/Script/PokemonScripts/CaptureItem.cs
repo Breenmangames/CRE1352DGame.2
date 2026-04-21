@@ -2,13 +2,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;         
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static EnemyAI;
 using static UnityEngine.UI.Image;
 using Object = UnityEngine.Object;
 using RangeAttribute = UnityEngine.RangeAttribute;
-
 
 public class CaptureItem : MonoBehaviour
 {
@@ -42,6 +43,9 @@ public class CaptureItem : MonoBehaviour
 
     CaptureNet captureNet;
 
+    public EnemyStats enemystats;
+
+
 
     private bool _hasTriggered = false;
 
@@ -53,6 +57,14 @@ public class CaptureItem : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _audio = GetComponent<AudioSource>();
+        captureNet = GetComponent<CaptureNet>();
+        captureSuccessSound = GetComponent<AudioClip>();
+        captureFailSound = GetComponent<AudioClip>();
+        FindPlayerTransform();
+
+
+        //an singleton class instance  - availavke globally (example)
+        MonsterInventory.Instance.AddCapturedEnemy(new CapturedEnemy(enemystats));
     }
 
 
@@ -77,7 +89,7 @@ public class CaptureItem : MonoBehaviour
         if (target == null) return;
 
         _hasTriggered = true;
-        Use(target, MonsterInventory.Instance);
+        Use(target);
     }
 
 
@@ -90,8 +102,8 @@ public class CaptureItem : MonoBehaviour
 
         if (target != null)
         {
-            //nsterInventory inventory = GetComponent<MonsterInventory>();
-            Use(target, MonsterInventory.Instance);
+            //MonsterInventory inventory = GetComponent<MonsterInventory>();
+            Use(target);
             return;
 
         }
@@ -100,7 +112,7 @@ public class CaptureItem : MonoBehaviour
 
     }
 
-    public void Use(Monster target, MonsterInventory inventory)
+    public void Use(Monster target)
     {
         if (target == null || target.isCaptured)
         {
@@ -108,17 +120,20 @@ public class CaptureItem : MonoBehaviour
             return;
         }
 
-        StartCoroutine(AttemptCapture(target, inventory));
+        StartCoroutine(AttemptCapture(target));
     }
 
-    private IEnumerator AttemptCapture(Monster target, MonsterInventory inventory)
+    private IEnumerator AttemptCapture(Monster target)
     {
-       
-        
+
+
         if (capturePrefab != null)
+        {
             Instantiate(capturePrefab, target.transform.position, Quaternion.identity);
+        }
 
         PlaySound(captureSound);
+
 
        
         target.gameObject.SetActive(false);
@@ -134,7 +149,7 @@ public class CaptureItem : MonoBehaviour
        
         if (success)
         {
-            OnCaptureSuccess(target, inventory);
+            OnCaptureSuccess(target);
         }
         else
         {
@@ -142,22 +157,18 @@ public class CaptureItem : MonoBehaviour
         }
 
         
-        ConsumeItem(inventory);
+        ConsumeItem();
     }
 
-    private float CalculateCaptureChance(EnemyStats enemy)
-    {
+    
 
-        float healthFactor = 1f - enemy.HealthPercent;
-        return Mathf.Clamp01(baseCaptureChance * (1f + healthFactor * (lowHealthMultiplier - 1f)));
-    }
-
-    private void OnCaptureSuccess(Monster target, MonsterInventory inventory)
+    private void OnCaptureSuccess(Monster target)
     {
         target.isCaptured = true;
-        target.gameObject.SetActive(false);         
+        target.gameObject.SetActive(false);
 
-        inventory.AddMonster(target);
+        //CapturedEnemy entry = new CapturedEnemy(enemyStats);
+        //MonsterInventory.Instance.AddCapturedEnemy(entry);
 
         PlaySound(captureSuccessSound);
         Debug.Log($"{target.monsterName} was captured! Added to inventory.");
@@ -167,6 +178,7 @@ public class CaptureItem : MonoBehaviour
     {
         target.BreakFree();                          
         PlaySound(captureFailSound);
+        StartCoroutine(DestroyAfterEffects(1f)); // Wait a moment before destroying the item
         Debug.Log($"{target.monsterName} broke free!");
     }
 
@@ -204,13 +216,15 @@ public class CaptureItem : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void ConsumeItem(MonsterInventory inventory)
+    private void ConsumeItem()
     {
-        inventory.RemoveCaptureItem(this);
+        MonsterInventory.Instance.RemoveCaptureItem(this);
+        
         Destroy(gameObject);
     }
     private void PlaySound(AudioClip clip)
     {
+        PlayEffects(null, clip);
         if (_audio != null && clip != null)
             _audio.PlayOneShot(clip);
     }
