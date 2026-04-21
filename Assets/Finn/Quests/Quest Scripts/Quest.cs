@@ -10,6 +10,7 @@ public class Quest : ScriptableObject
     public string questName;
     public string questDescription;
     public List<QuestObjective> objectives;
+    public List<QuestReward> questRewards;
 
     //Called when scriptable object is edited
     private void OnEnable()
@@ -64,3 +65,14 @@ public class QuestProgress
 
     public string QuestID => quest.questID;
 }
+
+[System.Serializable]
+
+public class QuestReward
+{
+    public RewardType type;
+    public int rewardID; //ItemID etc
+    public int amount = 1;
+}
+
+public enum RewardType {  Item, Gold, Experience, Custom }

@@ -201,6 +201,7 @@ public class NPCSpeaking : MonoBehaviour , IInteractable2
 
     void HandleQuestCompletion(Quest quest)
     {
+        //Give reward
         QuestController.Instance.HandInQuest(quest.questID);
     } 
 }
