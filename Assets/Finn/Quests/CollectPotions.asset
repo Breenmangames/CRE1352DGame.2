@@ -17,7 +17,7 @@ MonoBehaviour:
   questDescription: Find the man's 5 potions!
   objectives:
   - objectiveID: 1
-    description: Collect 5 speed potions
+    description: Collect 5 potions
     type: 0
     requiredAmount: 5
     currentAmount: 0
