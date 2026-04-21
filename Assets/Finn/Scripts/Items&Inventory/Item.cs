@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,11 +7,17 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
+
+    public Loot sourceLoot; // Reference to the original loot for item data
     public int ID;
     public string Name;
     public int quantity = 1;
 
     public TMP_Text quantityText;
+
+
+    public static event Action<ItemsSO, int> OnItemLooted;
+
 
     private void Awake()
     {
@@ -40,12 +47,14 @@ public class Item : MonoBehaviour
         return removed;
     }
 
+    
     public GameObject CloneItem(int newQuantity)
     {
         GameObject clone = Instantiate(gameObject);
         Item cloneItem = clone.GetComponent<Item>();
         cloneItem.quantity = newQuantity;
         cloneItem.UpdateQuantityDisplay();
+        
         return clone;
     }
 

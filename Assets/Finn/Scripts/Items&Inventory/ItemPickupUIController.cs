@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,11 +9,15 @@ public class ItemPickupUIController : MonoBehaviour
 {
     public static ItemPickupUIController Instance {  get; private set; }
 
+    public static event Action<ItemsSO, int> OnItemLooted;
+
     public GameObject popupPrefab;
     public int maxPopups = 5;
     public float popupDuration = 3f;
 
     private readonly Queue<GameObject> activePopups = new();
+
+
 
     private void Awake()
     {
