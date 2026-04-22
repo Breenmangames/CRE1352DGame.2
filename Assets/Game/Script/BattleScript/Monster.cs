@@ -6,6 +6,8 @@ public class Monster : MonoBehaviour
     public string monsterName;
     public int level = 1;
 
+    public CapturedEnemy capturedEnemy;  // This will hold the data when captured
+
     [Header("Capture Settings")]
     [Range(0f, 1f)]
     [Tooltip("Base chance (0-1) that a capture attempt succeeds. Lower HP can modify this at runtime.")]

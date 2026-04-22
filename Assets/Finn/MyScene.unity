@@ -594,6 +594,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 127706038}
   m_CullTransparentMesh: 1
 --- !u!1001 &140610150
+PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -4988,7 +4989,7 @@ Transform:
   m_GameObject: {fileID: 623774423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52, y: -0.44, z: 0}
+  m_LocalPosition: {x: 1.32, y: -0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5012,6 +5013,7 @@ MonoBehaviour:
   nameText: {fileID: 939865484}
   portraitImage: {fileID: 1435505718}
   playerController: {fileID: 0}
+  questController: {fileID: 0}
 --- !u!1001 &625173829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10572,6 +10574,7 @@ GameObject:
   - component: {fileID: 1337695434}
   - component: {fileID: 1337695435}
   - component: {fileID: 1337695436}
+  - component: {fileID: 1337695437}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -10636,6 +10639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateQuests: []
+  handinQuestIDs: []
 --- !u!114 &1337695434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10686,6 +10690,18 @@ MonoBehaviour:
   inventorySize: 0
   itemPrefabs:
   - {fileID: 5561854657608581215, guid: 094af8460af3efb4fa1bee8125e00d4d, type: 3}
+--- !u!114 &1337695437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337695429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8054c0a41113784cbacd92a85a5d9a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1352009059
 GameObject:
   m_ObjectHideFlags: 0
@@ -67533,7 +67549,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.55
+      value: 4.68
       objectReference: {fileID: 0}
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.y

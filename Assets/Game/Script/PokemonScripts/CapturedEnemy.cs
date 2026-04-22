@@ -1,5 +1,8 @@
 using UnityEngine;
+using System.Linq;
 
+
+[System.Serializable]
 public class CapturedEnemy : MonoBehaviour
 {
    
@@ -23,4 +26,6 @@ public class CapturedEnemy : MonoBehaviour
         icon = stats.icon;
         isDeployed = false;
     }
+
+
 }
