@@ -9,7 +9,7 @@ public class PatrolNPC : MonoBehaviour
     public float speed = 2f;
     public float waitTime = 1.5f;
     private Transform target;
-    private Animator animator
+    private Animator animator;
     private bool isWaiting = false;
     private float waitCounter;
     private bool isMoving = false;
