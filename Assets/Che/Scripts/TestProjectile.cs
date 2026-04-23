@@ -42,34 +42,24 @@ public class TestProjectile : MonoBehaviour
 
         Vector2 rawDirection = (mouseWorld - _gunOffset.position);
 
-        Debug.Log($"Mouse world pos: {mouseWorld}, Gun pos: {_gunOffset.position}, Raw dir: {rawDirection}");
-
         if (rawDirection.sqrMagnitude > 0.001f)
         {
             _aimDirection = rawDirection.normalized;
         }
 
-        Debug.Log($"Final aim direction: {_aimDirection}");
     }
 
     public void FireBullet()
     {
-        Debug.Log($"Firing in direction: {_aimDirection}");
-
         Quaternion aimRotation = Quaternion.FromToRotation(Vector2.up, _aimDirection);
         GameObject bullet = Instantiate(_bulletPrefab, _gunOffset.position, aimRotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-        Debug.Log($"Rigidbody found: {rb != null}");
         rb.linearVelocity = _bulletSpeed * _aimDirection;
-        Debug.Log($"Velocity set to: {rb.linearVelocity}");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Projectile collision with: " + other.gameObject.name +
-                  " | Layer: " + LayerMask.LayerToName(other.gameObject.layer) +
-                  " | Tag: " + other.gameObject.tag);
         Destroy(gameObject);
     }
 

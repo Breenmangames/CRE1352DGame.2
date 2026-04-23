@@ -24,6 +24,7 @@ public class PatrolNPC : MonoBehaviour
 
     void Update()
     {
+        // small delay before turning
         if (isWaiting)
         {
             Wait();
@@ -74,7 +75,7 @@ public class PatrolNPC : MonoBehaviour
     {
         waitCounter -= Time.deltaTime;
 
-        if (waitCounter <= 0.1f)
+        if (waitCounter <= 0.1f) // when waiting is done, switch target
         {
             target = target == pointA ? pointB : pointA;
             isWaiting = false;
