@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: 8a810671712048245877290ad3c0c858, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1160356261127867848, guid: 8a810671712048245877290ad3c0c858, type: 3}
       propertyPath: m_Enabled
@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 79f78267bea9e7b47b3fdbe7bea44ee5, type: 2}
+    - target: {fileID: 7878350319992209165, guid: 8a810671712048245877290ad3c0c858, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 8a810671712048245877290ad3c0c858, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 8a810671712048245877290ad3c0c858, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2464521
@@ -124,7 +132,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

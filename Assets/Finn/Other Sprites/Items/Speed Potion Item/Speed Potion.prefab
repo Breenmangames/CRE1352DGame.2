@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bae5ca08631f7438d07a6d79a723dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sourceLoot: {fileID: 0}
   ID: 2
   Name: Speed Potion
   quantity: 1
