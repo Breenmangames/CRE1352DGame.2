@@ -13,7 +13,6 @@ public class TopDownFollower : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Vector2 moveSmooth;
-    private Vector2 lastTargetPosition;
 
     public Transform owner { get; internal set; }
 
@@ -23,12 +22,7 @@ public class TopDownFollower : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Start()
-    {
-        if (target != null)
-            lastTargetPosition = target.position;
-    }
-
+    
     private void LateUpdate()
     {
         if (target == null) return;
@@ -37,12 +31,11 @@ public class TopDownFollower : MonoBehaviour
         Vector2 targetPosition = target.position;
 
         // teleport with the player
-        if (Vector2.Distance(lastTargetPosition, targetPosition) > 2f)
+        if (Vector2.Distance(currentPosition, targetPosition) > 2f)
         {
             SnapToTarget();
             return;
         }
-
         Vector2 toTarget = targetPosition - currentPosition;
         float distance = toTarget.magnitude;
         Vector2 velocity = Vector2.zero;
@@ -62,9 +55,7 @@ public class TopDownFollower : MonoBehaviour
         else if (velocity.x < -0.05f)
             spriteRenderer.flipX = false;
 
-        lastTargetPosition = targetPosition;
     }
-
 
     public void SnapToTarget()
     {
@@ -72,7 +63,6 @@ public class TopDownFollower : MonoBehaviour
         {
             rb.position = target.position;
             rb.linearVelocity = Vector2.zero;
-            lastTargetPosition = target.position;
         }
     }
 }
