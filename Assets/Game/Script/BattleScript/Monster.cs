@@ -25,6 +25,8 @@ public class Monster : MonoBehaviour
     private Vector2 _originalPosition;
     private Quaternion _originalRotation;
 
+    [SerializeField] private GameObject hitEffect;
+
     private void Awake()
     {
         currentHP = maxHP;
@@ -49,10 +51,20 @@ public class Monster : MonoBehaviour
         Debug.Log($"{monsterName} broke free and returned to its original position!");
     }
     
-    public bool TakeDamage(int amount) 
+public bool TakeDamage(int amount)
     {
         currentHP = Mathf.Max(0, currentHP - amount);
         Debug.Log($"{monsterName} took {amount} damage. HP: {currentHP}/{maxHP}");
-        return currentHP <= 0;
+        Instantiate(hitEffect, transform.position, Quaternion.identity);
+        if (currentHP <= 0)
+        {
+            Die();
+            return true;
+        }
+        return false;
+    }
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }
