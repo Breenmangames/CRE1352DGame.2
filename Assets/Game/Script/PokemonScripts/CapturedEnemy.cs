@@ -15,16 +15,16 @@ public class CapturedEnemy : MonoBehaviour
 
   
     [System.NonSerialized]
-    public GameObject deployedInstance;
+    public GameObject deployedInstance; // Reference to the instantiated GameObject when deployed, not serialized to avoid issues with prefab references
 
     public CapturedEnemy(EnemyStats stats)
     {
-        enemyName = stats.enemyName;
-        enemyPrefab = stats.sourcePrefab;
-        maxHealth = stats.maxHealth;
-        capturedAtHealth = stats.currentHealth;
-        icon = stats.icon;
-        isDeployed = false;
+        enemyName = stats.enemyName;  // Copy the enemy's name from the stats
+        enemyPrefab = stats.sourcePrefab; //Copy the prefab reference from the stats
+        maxHealth = stats.maxHealth; //Copy the max health from the stats
+        capturedAtHealth = stats.currentHealth; //Copy the current health at the time of capture from the stats
+        icon = stats.icon; //Copy the icon from the stats
+        isDeployed = false; // Initially, the captured enemy is not deployed
     }
 
 
