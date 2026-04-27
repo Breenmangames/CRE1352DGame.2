@@ -187,8 +187,9 @@ public class PlayerController : MonoBehaviour, IInteractable2
             animator.SetTrigger("Hit");
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        
-        UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
+
+        if (UIHandler.instance != null)
+            UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
