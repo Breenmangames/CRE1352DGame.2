@@ -34942,8 +34942,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
-  prewarm: 1
+  looping: 0
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -35117,7 +35117,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.735849, g: 0.2013171, b: 0.2013171, a: 1}
+      maxColor: {r: 0.6603774, g: 0.14370169, b: 0.0643763, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -35497,7 +35497,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    gravitySource: 0
+    gravitySource: 1
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
@@ -63947,14 +63947,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 73675299303460005, guid: 070fe2e64c3e63d4b88844da43235cc9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1282750558191753042, guid: 070fe2e64c3e63d4b88844da43235cc9, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4618947489749696415, guid: 070fe2e64c3e63d4b88844da43235cc9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 164.68022
@@ -64003,14 +63995,6 @@ PrefabInstance:
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 416966746}
-    - target: {fileID: 8707798546780554816, guid: 070fe2e64c3e63d4b88844da43235cc9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8707798546780554816, guid: 070fe2e64c3e63d4b88844da43235cc9, type: 3}
-      propertyPath: monsterName
-      value: Fieyery
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64685,7 +64669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1187665188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501048,33 +501032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e87226f30cb11489a7bc4f756fe0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &2053808213
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053808201}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &2057898684
 GameObject:
   m_ObjectHideFlags: 0
@@ -502844,30 +502801,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2380997039034336488, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Size.x
-      value: 0.6659064
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380997039034336488, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Size.y
-      value: 0.6659088
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380997039034336488, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380997039034336488, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.010154963
-      objectReference: {fileID: 0}
-    - target: {fileID: 2380997039034336488, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.433136
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613808198972479212, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3493608630442406834, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 161.7
@@ -502908,30 +502841,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5780544471776601376, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_BodyType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5780544471776601376, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 1a211936469b4644e9179ea5cf1c83b3, type: 2}
-    - target: {fileID: 5780544471776601376, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5780544471776601376, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_SleepingMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5780544471776601376, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6074692352627089158, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.008
-      objectReference: {fileID: 0}
     - target: {fileID: 6821790674943569526, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
       propertyPath: 'capturedEnemies.Array.data[0]'
       value: 
@@ -502944,27 +502853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7153489878421892222, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Radius
-      value: 0.91993713
-      objectReference: {fileID: 0}
-    - target: {fileID: 7153489878421892222, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.013772726
-      objectReference: {fileID: 0}
-    - target: {fileID: 7153489878421892222, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.016338348
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2613808198972479212, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-    - {fileID: 5780544471776601376, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6895463637947253494, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2053808213}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d308ba4d36e5c444b878caa3af33b8d, type: 3}
 --- !u!1001 &3064320993884981064
 PrefabInstance:
@@ -503516,10 +503408,6 @@ PrefabInstance:
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 416966746}
-    - target: {fileID: 1255039276474324470, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1404735163916392462, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
       propertyPath: m_Name
       value: Garlick
@@ -503568,12 +503456,7 @@ PrefabInstance:
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 416966746}
-    - target: {fileID: 7219391355201183447, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

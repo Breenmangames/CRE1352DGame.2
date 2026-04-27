@@ -14,7 +14,7 @@ public class ProjectileShoot : MonoBehaviour
     [SerializeField]
     private float _timeBetweenShots;
     [SerializeField]
-    private int _damage = 25;
+    private int _damage = 15;
     public LayerMask EnemyLayer;
 
     CaptureNet captureNet;
