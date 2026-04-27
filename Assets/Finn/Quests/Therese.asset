@@ -16,7 +16,7 @@ MonoBehaviour:
   questName: GetYourPresent
   questDescription: Go get your gift at the old oak tree!
   objectives:
-  - objectiveID: 
+  - objectiveID: 5
     description: Go get your gift at the old oak tree!
     type: 0
     requiredAmount: 1
