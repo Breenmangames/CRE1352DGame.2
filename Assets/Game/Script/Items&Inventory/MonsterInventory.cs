@@ -6,31 +6,35 @@ public class MonsterInventory : MonoBehaviour
 {
 
 
-    public static MonsterInventory Instance { get; private set; }
+    public static MonsterInventory Instance { get; private set; } // Singleton instance for global access
 
-    public event System.Action OnInventoryChanged;
+    public event System.Action OnInventoryChanged; // Event to notify UI or other systems of inventory changes
 
     [Header("Captured Enemies")]
-    public List<CapturedEnemy> capturedEnemies = new();
+    public List<CapturedEnemy> capturedEnemies = new(); //List to hold captured enemy data
 
     [Header("Capture Items")]
-    public List<CaptureItem> captureItems = new List<CaptureItem>();
+    public List<CaptureItem> captureItems = new List<CaptureItem>(); // List to hold capture items
 
-    private List<Monster> _capturedMonsters = new List<Monster>();
+    private List<Monster> _capturedMonsters = new List<Monster>(); // Internal list to hold references to captured Monster instances
 
     [Header("Deploy Settings")]
     [Tooltip("How far in front of the player to spawn a deployed enemy.")]
-    public float deployOffset = 2f;
-    public int maxDeployed = 1;
-    public bool HasCaptureItems() => capturedEnemies.Count > 0;
+    public float deployOffset = 2f; // Distance in front of player to spawn deployed enemies
+    public int maxDeployed = 1; // Maximum number of enemies that can be deployed at once   
+    public bool HasCaptureItems() => capturedEnemies.Count > 0; // Check if there are any capture items available
 
     public EnemyStats enemyStats; // Reference to the player's EnemyStats for capture calculations
     private void Awake()
     {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        if (Instance != null && Instance != this) // Ensure only one instance of MonsterInventory exists
+        { 
+            Destroy(gameObject);
+            return; 
+        }
         Instance = this;
     }
-    public void AddMonster(Monster monster)
+    public void AddMonster(Monster monster) // Method to add a captured Monster to the inventory
     {
         if (!_capturedMonsters.Contains(monster))
         {
@@ -39,17 +43,17 @@ public class MonsterInventory : MonoBehaviour
         }
     }
 
-    public void RemoveMonster(Monster monster)
+    public void RemoveMonster(Monster monster) // Method to remove a Monster from the inventory (e.g., if it faints or is released)
     {
         if (_capturedMonsters.Remove(monster));
             
     }
 
-    public List<Monster> GetAllMonsters() => new List<Monster>(_capturedMonsters);
+    public List<Monster> GetAllMonsters() => new List<Monster>(_capturedMonsters); // Method to get a copy of the list of captured Monsters
 
-    public bool HasMonsters() => _capturedMonsters.Count > 0;
+    public bool HasMonsters() => _capturedMonsters.Count > 0; // Check if there are any captured Monsters in the inventory
 
-    public void AddCapturedEnemy(CapturedEnemy entry)
+    public void AddCapturedEnemy(CapturedEnemy entry) // Method to add a captured enemy entry to the inventory
     {
         capturedEnemies.Add(entry);
         
@@ -57,7 +61,7 @@ public class MonsterInventory : MonoBehaviour
     }
 
 
-    public bool Deploy(int index)
+    public bool Deploy(int index) // Method to deploy a captured enemy by index
     {
         if (index < 0 || index >= capturedEnemies.Count)
             return false;
@@ -69,9 +73,9 @@ public class MonsterInventory : MonoBehaviour
             return false;
 
         var entry = capturedEnemies[index];
-        if (entry == null)
+        if (entry == null) // This should not happen due to the RemoveAll above, but just in case
         {
-            Debug.LogWarning("[Inventory] Entry at index is null.");
+            
             return false;
         }
 
@@ -79,16 +83,16 @@ public class MonsterInventory : MonoBehaviour
             return false;
 
         
-        int currentlyDeployed = capturedEnemies.Count(e => e != null && e.isDeployed);
+        int currentlyDeployed = capturedEnemies.Count(e => e != null && e.isDeployed); // Count how many enemies are currently deployed
         if (currentlyDeployed >= maxDeployed)
         {
-            Debug.LogWarning("[Inventory] Max deployed reached.");
+          
             return false;
         }
 
-        if (entry.enemyPrefab == null)
+        if (entry.enemyPrefab == null)  // Ensure the prefab reference is valid before trying to deploy
         {
-            Debug.LogWarning("[Inventory] enemyPrefab is null on entry.");
+            
             return false;
         }
 
@@ -96,7 +100,7 @@ public class MonsterInventory : MonoBehaviour
         GameObject go = Instantiate(entry.enemyPrefab, spawnPos, Quaternion.identity);
 
         var stats = go.GetComponent<EnemyStats>();
-        if (stats != null)
+        if (stats != null) //   Set the deployed enemy's health to the captured health value
         {
             stats.currentHealth = entry.capturedAtHealth;
             stats.OnDeployed(transform);
@@ -108,7 +112,7 @@ public class MonsterInventory : MonoBehaviour
         OnInventoryChanged?.Invoke();
         return true;
     }
-    public Monster GetFirstAvailableMonster()
+    public Monster GetFirstAvailableMonster() // Method to get the first captured Monster that is still alive (currentHP > 0)
     {
         return _capturedMonsters.Find(m => m.currentHP > 0);
     }
@@ -118,8 +122,8 @@ public class MonsterInventory : MonoBehaviour
         
     }
 
-    public void Recall(int index)
-       {
+    public void Recall(int index) // Method to recall a deployed enemy back to the inventory by index
+    {
             if (index < 0 || index >= capturedEnemies.Count)
             return;
 
@@ -138,18 +142,17 @@ public class MonsterInventory : MonoBehaviour
             OnInventoryChanged?.Invoke();
         }
 
-        public void UseCaptureItemOn(Monster target)
-        {
+        public void UseCaptureItemOn(Monster target) // Method to use a capture item on a target Monster, attempting to capture it
+    {
         if (!HasCaptureItems())
         {
-            Debug.LogWarning("[Inventory] No capture items left!");
+           
             return;
         }
 
         CaptureItem item = captureItems[0];
         item.Use(target);
-         
-    }
+        }
 
         
 }
