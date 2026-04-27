@@ -28,7 +28,7 @@ public class TestCombat : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemyHealth>()?.TakeDamage(attackDamage);
+            enemy.GetComponent<Monster>()?.TakeDamage(attackDamage);
         }
     }
 

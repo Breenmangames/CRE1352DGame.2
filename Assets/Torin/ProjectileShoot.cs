@@ -65,7 +65,7 @@ public class ProjectileShoot : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         
-        EnemyHealth enemyHP = other.GetComponentInParent<EnemyHealth>();
+        Monster enemyHP = other.GetComponentInParent<Monster>();
 
         if (enemyHP != null)
         {
