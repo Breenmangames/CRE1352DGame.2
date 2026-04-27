@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   npcName: Test
-  npcPortrait: {fileID: -2324715518332284020, guid: 776b4b02ee795f84dae03132e6a6d3e6, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 66bc4269242c78141864808ac579f7ce, type: 2}
   dialogueLines:
   - Hello, neighbour!
   - Sorry to bother you on your journey, but could you assist me? I lost my potions...
