@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7b6130db3c526479284c1adfa58972, type: 3}
+  m_Name: Therese
+  m_EditorClassIdentifier: 
+  npcName: Mom
+  npcPortrait: {fileID: 5001900695801274064, guid: ea00ea5ae3868b042ac0e87b8af64bc8, type: 3}
+  dialogueLines:
+  - Yawn...
+  - Good morning, son!
+  - Ready for the big day? Graduation!! We're so proud of you.
+  - I can't wait for the ceremony, and neither can your father.
+  - Make sure you speak to him before you leave!
+  - I'm sure you know, but your graduation is being held at the castle in the nearest
+    city.
+  - Take care on your journey!
+  - Ah, I just remembered, we forgot to bring back your gift...
+  - This is a great opportunity for some sight-seeing!
+  - You'll find your gift at the old oak tree, north of town.
+  - Bye now, good luck!
+  autoProgressLines: 01
+  endDialogueLines: 0000000000000000000001
+  autoProgressDelay: 1.5
+  typingSpeed: 0.025
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  choices: []
+  questInProgressIndex: 0
+  questCompletedIndex: 0
+  quest: {fileID: 0}
