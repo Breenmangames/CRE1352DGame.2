@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7b6130db3c526479284c1adfa58972, type: 3}
+  m_Name: Daryll
+  m_EditorClassIdentifier: 
+  npcName: Daryll
+  npcPortrait: {fileID: -1796799955465841644, guid: da4b197b3f7e81c479df3ccf4972c0a6, type: 3}
+  dialogueLines:
+  - Hey!
+  - Good morning, sleepyhead, you missed breakfast.
+  - You and your "Moustatic" Monster have got a big day today.
+  - Hope you're not stressing too much, you're the best Ranger there is.
+  autoProgressLines: 01
+  endDialogueLines: 00000001
+  autoProgressDelay: 1.5
+  typingSpeed: 0.025
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  choices: []
+  questInProgressIndex: 0
+  questCompletedIndex: 0
+  quest: {fileID: 0}
