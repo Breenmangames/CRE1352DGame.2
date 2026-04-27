@@ -39480,14 +39480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd44d37cdfd8acf49a2f9c2e12725312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSystem
-  playerUnit: {fileID: 0}
-  EnemyUnit: {fileID: 0}
-  PlayerHUD: {fileID: 0}
-  EnemyHUD: {fileID: 0}
-  DialogueBox: {fileID: 0}
-  battleState: 0
-  currentAction: 0
-  currentMove: 0
 --- !u!4 &597569644
 Transform:
   m_ObjectHideFlags: 0
@@ -495946,6 +495938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hitEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 5581598527493300507, guid: 51279a4af80978440a6885eebac35782, type: 3}
+      propertyPath: ShapeModule.arc.value
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -496086,7 +496082,7 @@ PrefabInstance:
     - target: {fileID: -5657571826746674108, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
       propertyPath: hitEffect
       value: 
-      objectReference: {fileID: 416966746}
+      objectReference: {fileID: 416966748}
     - target: {fileID: 1404735163916392462, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
       propertyPath: m_Name
       value: Garlick
