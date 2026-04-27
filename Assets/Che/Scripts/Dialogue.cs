@@ -15,7 +15,7 @@ public class Dialogue : MonoBehaviour
     private int index;
     private bool dialogueActive = false;
     private Coroutine typingRoutine;
-    public static bool IsActive { get; private set; }
+    public static bool IsActive { get; private set; } // any code can check if dialogue is active by calling Dialogue.IsActive
 
     void Awake()
     {
@@ -25,13 +25,13 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (!dialogueActive) return;
+        if (!dialogueActive) return; // only check for input if dialogue is active
 
         if (Input.GetMouseButtonDown(0))
         {
             if (dialogueText.text == currentLines[index])
             {
-                NextLine();
+                NextLine(); // left click advances dialogue IF the current line is fully displayed
             }
 
             else
@@ -63,17 +63,17 @@ public class Dialogue : MonoBehaviour
         Show();
 
 
-        if (typingRoutine != null) StopCoroutine(typingRoutine);
+        if (typingRoutine != null) StopCoroutine(typingRoutine); // stop the typewriter before starting a new one
         typingRoutine = StartCoroutine(TypeLine());
     }
 
     private IEnumerator TypeLine()
     {
-        dialogueText.text = "";
+        dialogueText.text = ""; // clear text before typing new line
         foreach (char c in currentLines[index])
         {
             dialogueText.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSeconds(textSpeed); // delay between each character
         }
     }
 
@@ -83,7 +83,7 @@ public class Dialogue : MonoBehaviour
         {
             index++;
             if (typingRoutine != null) StopCoroutine(typingRoutine);
-            typingRoutine = StartCoroutine(TypeLine());
+            typingRoutine = StartCoroutine(TypeLine()); // start typing the next line
         }
 
         else
@@ -91,11 +91,11 @@ public class Dialogue : MonoBehaviour
             EndDialogue();
         }
     }
-    public void EndDialogue()
+    public void EndDialogue() // can be called by other scripts to end dialogue early
     {
         IsActive = false;
         dialogueActive = false;
-        if (typingRoutine != null) StopCoroutine(typingRoutine);
+        if (typingRoutine != null) StopCoroutine(typingRoutine); // stop any ongoing typewriter effect
         Hide();
 
     }

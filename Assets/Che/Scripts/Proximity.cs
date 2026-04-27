@@ -36,7 +36,7 @@ public class NPCProximity2D : MonoBehaviour, IInteractable
             playerInRange = false;
     }
 
-    public void Interact()  // when you press E
+    public void Interact()  // when you press space
     {
         if (!playerInRange) return;
         if (playOnce && hasPlayed) return;

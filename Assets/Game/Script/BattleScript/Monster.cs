@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 public class Monster : MonoBehaviour
@@ -25,7 +26,8 @@ public class Monster : MonoBehaviour
     private Vector2 _originalPosition;
     private Quaternion _originalRotation;
 
-    [SerializeField] private GameObject hitEffect;
+    [SerializeField] private ParticleSystem hitEffect; // Assign a hit effect prefab in the inspector
+    private ParticleSystem hitEffectInstance;
 
     private void Awake()
     {
@@ -55,13 +57,24 @@ public bool TakeDamage(int amount)
     {
         currentHP = Mathf.Max(0, currentHP - amount);
         Debug.Log($"{monsterName} took {amount} damage. HP: {currentHP}/{maxHP}");
-        Instantiate(hitEffect, transform.position, Quaternion.identity);
+
+        SpawnHitEffect();
+
         if (currentHP <= 0)
         {
             Die();
             return true;
         }
         return false;
+    }
+
+    private void SpawnHitEffect()
+    {
+        if (hitEffect == null) return;
+
+        ParticleSystem fx = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        fx.Play();
+        Destroy(fx.gameObject, fx.main.duration);
     }
     void Die()
     {

@@ -123,9 +123,6 @@ PrefabInstance:
       addedObject: {fileID: 130378406750530061}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1282750558191753042}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7264511078579178371}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       insertIndex: -1
@@ -196,20 +193,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.75, y: 0.49}
   m_EdgeRadius: 0
---- !u!114 &1282750558191753042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5617174879082239994}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 679bd09054e569a4192d50c003bc1553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 150
-  hitEffect: {fileID: 0}
 --- !u!50 &7264511078579178371
 Rigidbody2D:
   serializedVersion: 5
