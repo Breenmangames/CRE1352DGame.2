@@ -309,7 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterName: Garlick
   level: 1
-  capturedEnemy: {fileID: 0}
+  capturedEnemy: {fileID: 191718573840574003}
   baseCaptureRate: 0.986
   maxHP: 100
   attackPower: 10

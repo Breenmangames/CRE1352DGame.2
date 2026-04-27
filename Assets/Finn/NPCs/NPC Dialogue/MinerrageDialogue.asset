@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7b6130db3c526479284c1adfa58972, type: 3}
   m_Name: MinerrageDialogue
   m_EditorClassIdentifier: 
-  npcName: Cheryl
+  npcName: Distressed Teacher
   npcPortrait: {fileID: -2618618111374563509, guid: b590a7f5b228b17499386a794aa78123, type: 3}
   dialogueLines:
   - AAAHHH!!!
-  - You! Yeah, you! You're a Ranger, right?
-  - You gotta help! There's a Minerrage in the castle to the north, and it's on a
-    rampage!
+  - You! Yeah, you! You're meant to be graduating today, right?
+  - You gotta help! There's a Minerrage in the castle to the north, where you were
+    meant to graduate, and it's on a rampage!
   - Please defeat it and talk to me once you do!
   - Yay!
   - You defeated the Minerrage! I'm so grateful!
   - Unfortunately, that's all we have for the demo of Monsters And Rangers.
   - Please check out the finished version when it releases!
-  autoProgressLines: 0100000001000000
-  endDialogueLines: 0000000100000001
+  autoProgressLines: 0101010001010101
+  endDialogueLines: 0000000001000001
   autoProgressDelay: 1.5
   typingSpeed: 0.025
   voiceSound: {fileID: 0}
