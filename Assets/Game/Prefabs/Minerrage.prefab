@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Name
-      value: Fieyery (11)
+      value: Minerrage
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Layer
@@ -50,7 +50,7 @@ PrefabInstance:
     - target: {fileID: 1160356261127867848, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 802397313b711bf47a75e03458f97ab5, type: 2}
+      objectReference: {fileID: 9100000, guid: fa1b4c483647e194297f6b9c983ab072, type: 2}
     - target: {fileID: 3626916397498700004, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Size.x
       value: 2
