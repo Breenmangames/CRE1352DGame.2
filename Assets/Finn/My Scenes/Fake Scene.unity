@@ -2068,6 +2068,99 @@ MonoBehaviour:
   portraitImage: {fileID: 2059606058}
   playerController: {fileID: 0}
   questController: {fileID: 0}
+--- !u!1001 &113009011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1172507030}
+    m_Modifications:
+    - target: {fileID: 4564438223847314148, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 31e1d1b102828a540bebc22694054322, type: 2}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -53.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_Name
+      value: My_NPC (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 113009014}
+  m_SourcePrefab: {fileID: 100100000, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+--- !u!4 &113009012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+  m_PrefabInstance: {fileID: 113009011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &113009013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+  m_PrefabInstance: {fileID: 113009011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &113009014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113009013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ee289ecb1a45f498d47bec2c0bae72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueData: {fileID: 11400000, guid: 69c71faafa75cb2428efda27e4b18a52, type: 2}
+  dialoguePanel: {fileID: 1034524771}
+  dialogueText: {fileID: 1412908918}
+  nameText: {fileID: 1067165251}
+  portraitImage: {fileID: 2059606058}
+  playerController: {fileID: 0}
+  questController: {fileID: 0}
 --- !u!1 &117101061
 GameObject:
   m_ObjectHideFlags: 0
@@ -10749,9 +10842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94adc6aa099d95843b7a4b08b37b9713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  _base: {fileID: 0}
-  level: 5
-  isPlayerUnit: 0
 --- !u!1001 &127048357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33239,9 +33329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f173532a763134281ac03ac8561943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleHUD
-  nameText: {fileID: 1739407371}
-  levelText: {fileID: 630748812}
-  hpBar: {fileID: 1847858243}
 --- !u!1 &401498144
 GameObject:
   m_ObjectHideFlags: 0
@@ -38008,11 +38095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd44d37cdfd8acf49a2f9c2e12725312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSystem
-  playerUnit: {fileID: 0}
-  EnemyUnit: {fileID: 0}
-  PlayerHUD: {fileID: 0}
-  EnemyHUD: {fileID: 0}
-  DialogueBox: {fileID: 0}
 --- !u!4 &597569644
 Transform:
   m_ObjectHideFlags: 0
@@ -39688,22 +39770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa64ba09d79ae7046bc4af5dc24a64b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleDialogueBox
-  dialogText: {fileID: 554740178}
-  lettersPerSecond: 1
-  highlightedColor: {r: 0.10703685, g: 0.31289467, b: 0.8301887, a: 0}
-  actionSelector: {fileID: 1095565703}
-  moveSelector: {fileID: 68867302}
-  moveDetails: {fileID: 2057898684}
-  actionTexts:
-  - {fileID: 1826247811}
-  - {fileID: 1881069625}
-  moveTexts:
-  - {fileID: 768963223}
-  - {fileID: 376247301}
-  - {fileID: 365637551}
-  - {fileID: 983840566}
-  ppTexts: {fileID: 919862671}
-  typeTexts: {fileID: 1270745021}
 --- !u!1 &670545062
 GameObject:
   m_ObjectHideFlags: 0
@@ -56269,11 +56335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd44d37cdfd8acf49a2f9c2e12725312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSystem
-  playerUnit: {fileID: 1495382158}
-  EnemyUnit: {fileID: 119540454}
-  PlayerHUD: {fileID: 392876984}
-  EnemyHUD: {fileID: 1547495039}
-  DialogueBox: {fileID: 667484841}
 --- !u!1 &1172507029
 GameObject:
   m_ObjectHideFlags: 0
@@ -56304,6 +56365,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1659952630}
+  - {fileID: 113009012}
   - {fileID: 1418613053}
   - {fileID: 908258519}
   m_Father: {fileID: 0}
@@ -61707,7 +61769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ee289ecb1a45f498d47bec2c0bae72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 11400000, guid: c808ff15a02741b4e88bae1101d652c5, type: 2}
+  dialogueData: {fileID: 11400000, guid: 752b2019dc17b634ea650225c4cdcb21, type: 2}
   dialoguePanel: {fileID: 1034524771}
   dialogueText: {fileID: 1412908918}
   nameText: {fileID: 1067165251}
@@ -81677,9 +81739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94adc6aa099d95843b7a4b08b37b9713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  _base: {fileID: 0}
-  level: 7
-  isPlayerUnit: 1
 --- !u!1 &1496306199
 GameObject:
   m_ObjectHideFlags: 0
@@ -389204,9 +389263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f173532a763134281ac03ac8561943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleHUD
-  nameText: {fileID: 2053708282}
-  levelText: {fileID: 1436843187}
-  hpBar: {fileID: 817427952}
 --- !u!1 &1557112131
 GameObject:
   m_ObjectHideFlags: 0
@@ -389714,7 +389770,7 @@ PrefabInstance:
     - target: {fileID: 4564438223847314148, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6435715130414583024, guid: 3cb794e002065d8458f4d924beb704bd, type: 3}
+      objectReference: {fileID: -2618618111374563509, guid: b590a7f5b228b17499386a794aa78123, type: 3}
     - target: {fileID: 4564438223847314148, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
