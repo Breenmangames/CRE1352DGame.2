@@ -12,25 +12,25 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour, IInteractable2
 {
 
-    IInteractable2 interactable2;
-    Chest chest2;
+    IInteractable2 interactable2; // Reference to the IInteractable2 component for interaction logic
+    Chest chest2; // Reference to the Chest component for chest-specific interactions
 
 
-    public LayerMask solidObjectsLayer;
-    public LayerMask GrassLayer;
-    public LayerMask InteractablesLayer;
-    private Rigidbody2D rb;
-    public float moveSpeed;
-    private bool isMoving;
-    private Vector2 input;
+    public LayerMask solidObjectsLayer; // Layer for solid objects that block movement  
+    public LayerMask GrassLayer; // Layer for grass that can trigger encounters
+    public LayerMask InteractablesLayer;  //    Layer for objects that can be interacted with (NPCs, chests, etc.)
+    private Rigidbody2D rb; //  Reference to the Rigidbody2D component for movement
+    public float moveSpeed; //  Speed at which the player moves
+    private bool isMoving; //   Flag to track if the player is currently moving
+    private Vector2 input; //   input vector to store player input for movement
 
     Animator animator;
     //Vector2 moveDirection = new Vector2(1, 0);
 
-    public GameObject projectilePrefab;
+    public GameObject projectilePrefab; // Prefab for the projectile to be launched
 
     public int maxHealth;
-    public int health { get { return currentHealth; } }
+    public int health { get { return currentHealth; } }  // Property to access current health istance variable
     public int currentHealth;
     public float timeInvincible = 2.0f;
     bool isInvincible;
@@ -39,10 +39,10 @@ public class PlayerController : MonoBehaviour, IInteractable2
 
     private void Awake()    
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); // Get the Animator component attached to the player
     }
 
-    private void Start()
+    private void Start() 
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
@@ -56,18 +56,18 @@ public class PlayerController : MonoBehaviour, IInteractable2
     {
         if (!isMoving)
         {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
+            input.x = Input.GetAxisRaw("Horizontal"); // Get horizontal input
+            input.y = Input.GetAxisRaw("Vertical");  // Get vertical input
 
-            if(input.x != 0) input.y = 0; // Prevent diagonal movement
+            if (input.x != 0) input.y = 0; // Prevent diagonal movement
 
-            if (input != Vector2.zero)
+            if (input != Vector2.zero) // If there is input, attempt to move
             {
                 animator.SetFloat("MoveX", input.x);
                 
                 animator.SetFloat("MoveY", input.y);
                 
-                var targetPosition = transform.position;
+                var targetPosition = transform.position; // Start with the current position
                 targetPosition.x += input.x;
                 targetPosition.y += input.y;
 
@@ -81,17 +81,17 @@ public class PlayerController : MonoBehaviour, IInteractable2
                 }
 
 
-                    SoundEffectManager.PlaySoundEffect("Walking");
+                    SoundEffectManager.PlaySoundEffect("Walking");  // walking sound effect in sound manager
             }
         }
-        animator.SetBool("isMoving", isMoving);
+        animator.SetBool("isMoving", isMoving); // Update the "isMoving" parameter in the Animator to control walking animations
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) // Interact with objects in front of the player
         {
             Interact();
         }
 
-        if (isInvincible)
+        if (isInvincible) // Handle invincibility cooldown
         {
             damageCooldown -= Time.deltaTime;
             if (damageCooldown < 0)
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour, IInteractable2
     }
   
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) // Handle entering different zones to play corresponding music
     {
         if (other.CompareTag("TutorialZone"))
         {
@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour, IInteractable2
     }
 
     
-    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other) // Handle exiting different zones to stop corresponding music
     {
         if (other.CompareTag("TutorialZone"))
         {
@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour, IInteractable2
         }
     }
 
-    public void ChangeHealth(int amount)   
+    public void ChangeHealth(int amount)   // Method to change the player's health, handling damage and healing logic
     {
         if (amount < 0)
         {
@@ -209,18 +209,18 @@ public class PlayerController : MonoBehaviour, IInteractable2
 
          animator.SetTrigger("Launch");
      }*/
-    public void Interact()
+    public void Interact() // Method to handle interaction with objects in front of the player based on the facing direction
     {
         Vector2 facingDirection = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
         Vector2 interactPosition = (Vector2)transform.position + facingDirection;
 
-        Collider2D hitCollider = Physics2D.OverlapCircle(interactPosition, 0.2f, InteractablesLayer);
+        Collider2D hitCollider = Physics2D.OverlapCircle(interactPosition, 0.2f, InteractablesLayer); // Check for interactable objects in the direction the player is facing
 
         if (hitCollider == null) return;
 
         IInteractable2 target = hitCollider.GetComponent<IInteractable2>();
 
-        if (target != null && target.CanInteract())
+        if (target != null && target.CanInteract()) // Check if the target is interactable and can be interacted with
         {
             Debug.Log("Interacting with " + hitCollider.name);
             target.Interact();
@@ -228,7 +228,7 @@ public class PlayerController : MonoBehaviour, IInteractable2
     }
 
 
-    IEnumerator Move(Vector3 targetPosition)
+    IEnumerator Move(Vector3 targetPosition) // Coroutine to smoothly move the player to the target position while checking for encounters in grass
     {
         isMoving = true;
 
@@ -256,9 +256,9 @@ public class PlayerController : MonoBehaviour, IInteractable2
 
     }
 
-   private void CheckForEncounters()
+   private void CheckForEncounters() // Method to check for encounters in grass after moving, with a % chance to trigger an encounter if the player is near grass
     {
-        Collider2D check = Physics2D.OverlapCircle(transform.position, 20.2f, GrassLayer);
+        Collider2D check = Physics2D.OverlapCircle(transform.position, 20.2f, GrassLayer); // Check for grass around the player with a larger radius to increase encounter chances
         if (check != null)
         {
             Debug.Log(check.transform.position);
@@ -270,7 +270,7 @@ public class PlayerController : MonoBehaviour, IInteractable2
         }
     }
 
-    public bool CanInteract()
+    public bool CanInteract() //Implementation of the CanInteract method from the IInteractable2 interface, allowing the player to be interacted with by other objects
     {
         return interactable2.CanInteract();
     }
