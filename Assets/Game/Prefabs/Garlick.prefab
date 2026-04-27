@@ -182,12 +182,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404735163916392462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 679bd09054e569a4192d50c003bc1553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 90
+  hitEffect: {fileID: 0}
 --- !u!50 &1255039276474324470
 Rigidbody2D:
   serializedVersion: 5
@@ -308,12 +309,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterName: Garlick
   level: 1
+  capturedEnemy: {fileID: 0}
   baseCaptureRate: 0.986
   maxHP: 100
   attackPower: 10
   defensePower: 5
   currentHP: 0
   isCaptured: 0
+  hitEffect: {fileID: 0}
 --- !u!4 &2203216517871120491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
