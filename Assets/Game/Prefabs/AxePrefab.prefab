@@ -13,6 +13,14 @@ PrefabInstance:
       value: AxePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 3106b9f6670447949bb59b73a438e164, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 3106b9f6670447949bb59b73a438e164, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878350319992209165, guid: 3106b9f6670447949bb59b73a438e164, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.842537
       objectReference: {fileID: 0}
