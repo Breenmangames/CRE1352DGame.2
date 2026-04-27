@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 978618117617376948}
   - component: {fileID: -8557458595285443635}
   - component: {fileID: 2297740583862977710}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Jolt_PNG-Sheet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
