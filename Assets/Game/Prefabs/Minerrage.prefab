@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 6388251656454591972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.866, y: 0.562, z: 0}
+  m_LocalPosition: {x: -0.097, y: 0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Name
-      value: Fieyery (11)
+      value: Minerrage
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Layer
@@ -50,7 +50,7 @@ PrefabInstance:
     - target: {fileID: 1160356261127867848, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 802397313b711bf47a75e03458f97ab5, type: 2}
+      objectReference: {fileID: 9100000, guid: fa1b4c483647e194297f6b9c983ab072, type: 2}
     - target: {fileID: 3626916397498700004, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_Size.x
       value: 2
@@ -65,11 +65,11 @@ PrefabInstance:
       objectReference: {fileID: -7382441982169655777, guid: 749a6c72a35c7114797f4086bf32612d, type: 3}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: bc4c3e854a7ae594da3f08ea52193458, type: 3}
       propertyPath: m_LocalPosition.x
@@ -256,12 +256,12 @@ MonoBehaviour:
   attackStandoffDistance: 1.5
   attackCooldown: 2
   SpawntestObject: {fileID: 0}
-  projectilePrefab: {fileID: 4094226315209392998, guid: e6a9ae546e9226346be800fd1710a748, type: 3}
+  projectilePrefab: {fileID: 5860524508182546301, guid: ba130850bc04ad347ba3ba0bb6b5b3db, type: 3}
   firePoint: {fileID: 8313804388978173673}
-  projectileSpeed: 3
-  projectileDamage: 2
+  projectileSpeed: 5
+  projectileDamage: 3
   knockbackForce: 0
-  projectileAttackCooldown: 3.5
+  projectileAttackCooldown: 4
 --- !u!58 &3028901194630555161
 CircleCollider2D:
   m_ObjectHideFlags: 0
