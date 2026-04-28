@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1350
+  hitEffect: {fileID: 0}
 --- !u!50 &1759016939470857616
 Rigidbody2D:
   serializedVersion: 5
@@ -335,8 +336,9 @@ MonoBehaviour:
   level: 1
   capturedEnemy: {fileID: 0}
   baseCaptureRate: 0.986
-  maxHP: 100
+  maxHP: 800
   attackPower: 10
   defensePower: 5
   currentHP: 0
   isCaptured: 0
+  hitEffect: {fileID: 0}
