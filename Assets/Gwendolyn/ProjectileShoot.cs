@@ -60,6 +60,7 @@ public class ProjectileShoot : MonoBehaviour
         GameObject bullet = Instantiate(_bulletPrefab, _gunOffset.position, aimRotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = _bulletSpeed * _aimDirection;
+        SoundEffectManager.PlaySoundEffect("MoustaticLightningAttackSound");
     }
 
     void OnTriggerEnter2D(Collider2D other)
