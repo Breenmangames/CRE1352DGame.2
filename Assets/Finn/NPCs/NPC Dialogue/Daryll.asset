@@ -19,7 +19,7 @@ MonoBehaviour:
   - Good morning, sleepyhead, you missed breakfast.
   - You and your "Moustatic" Monster have got a big day today.
   - Hope you're not stressing too much, you're the best Ranger there is.
-  autoProgressLines: 01
+  autoProgressLines: 01010101
   endDialogueLines: 00000001
   autoProgressDelay: 1.5
   typingSpeed: 0.025
