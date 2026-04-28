@@ -569,7 +569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 246142.42, y: 1171234.1}
+  m_AnchoredPosition: {x: 246830.61, y: 1173740.4}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &49694613
@@ -10076,9 +10076,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94adc6aa099d95843b7a4b08b37b9713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  _base: {fileID: 0}
-  level: 5
-  isPlayerUnit: 0
 --- !u!1 &138814972
 GameObject:
   m_ObjectHideFlags: 0
@@ -19983,7 +19980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4362995.5, y: 1204917}
+  m_AnchoredPosition: {x: -4375191, y: 1207773.2}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &269938610
@@ -21981,9 +21978,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f173532a763134281ac03ac8561943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleHUD
-  nameText: {fileID: 1739407371}
-  levelText: {fileID: 630748812}
-  hpBar: {fileID: 1847858243}
 --- !u!1001 &399156913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27767,22 +27761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa64ba09d79ae7046bc4af5dc24a64b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleDialogueBox
-  dialogText: {fileID: 554740178}
-  lettersPerSecond: 1
-  highlightedColor: {r: 0.10703685, g: 0.31289467, b: 0.8301887, a: 0}
-  actionSelector: {fileID: 1095565703}
-  moveSelector: {fileID: 68867302}
-  moveDetails: {fileID: 2057898684}
-  actionTexts:
-  - {fileID: 1826247811}
-  - {fileID: 1881069625}
-  moveTexts:
-  - {fileID: 768963223}
-  - {fileID: 376247301}
-  - {fileID: 365637551}
-  - {fileID: 983840566}
-  ppTexts: {fileID: 919862671}
-  typeTexts: {fileID: 1270745021}
 --- !u!1 &670545062
 GameObject:
   m_ObjectHideFlags: 0
@@ -64260,11 +64238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd44d37cdfd8acf49a2f9c2e12725312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSystem
-  playerUnit: {fileID: 1495382158}
-  EnemyUnit: {fileID: 119540454}
-  PlayerHUD: {fileID: 392876984}
-  EnemyHUD: {fileID: 1547495039}
-  DialogueBox: {fileID: 667484841}
 --- !u!1 &1176168007
 GameObject:
   m_ObjectHideFlags: 0
@@ -79343,9 +79316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94adc6aa099d95843b7a4b08b37b9713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnit
-  _base: {fileID: 0}
-  level: 7
-  isPlayerUnit: 1
 --- !u!1 &1496306199
 GameObject:
   m_ObjectHideFlags: 0
@@ -386666,9 +386636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f173532a763134281ac03ac8561943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleHUD
-  nameText: {fileID: 2053708282}
-  levelText: {fileID: 1436843187}
-  hpBar: {fileID: 817427952}
 --- !u!1 &1557112131
 GameObject:
   m_ObjectHideFlags: 0
