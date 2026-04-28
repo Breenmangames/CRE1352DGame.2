@@ -21,7 +21,7 @@ MonoBehaviour:
   - Oh... If you won't help, how will I deal with the Fieyery...
   - Did you find my coins yet?
   - Yay! Thanks for getting the coins!
-  autoProgressLines: 0101
+  autoProgressLines: 010101
   endDialogueLines: 000001010101
   autoProgressDelay: 1.5
   typingSpeed: 0.025
