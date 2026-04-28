@@ -50,7 +50,6 @@ public class Monster : MonoBehaviour
         transform.rotation = _originalRotation;
         gameObject.SetActive(true);
 
-        Debug.Log($"{monsterName} broke free and returned to its original position!");
     }
     
 public bool TakeDamage(int amount)
@@ -68,7 +67,7 @@ public bool TakeDamage(int amount)
         return false;
     }
 
-    private void SpawnHitEffect()
+    private void SpawnHitEffect() /// Spawns a particle effect at the monsters position when it gets hit
     {
         if (hitEffect == null) return;
 

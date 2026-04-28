@@ -40,11 +40,11 @@ public class TopDownFollower : MonoBehaviour
         float distance = toTarget.magnitude;
         Vector2 velocity = Vector2.zero;
 
-        if (distance > stop_distance)
+        if (distance > stop_distance) // only move if we're farther than the stop distance to prevent jittering
         {
             Vector2 desiredDirection = toTarget.normalized;
             moveSmooth = Vector2.Lerp(moveSmooth, desiredDirection, turnSmoothness).normalized;
-            velocity = moveSmooth * speed;
+            velocity = moveSmooth * speed; // move in the smoothed direction at the set speed
         }
 
         rb.linearVelocity = velocity;

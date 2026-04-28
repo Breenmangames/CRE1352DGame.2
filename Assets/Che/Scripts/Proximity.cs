@@ -16,18 +16,17 @@ public class NPCProximity2D : MonoBehaviour, IInteractable
     private void Reset()
     {
         var col = GetComponent<Collider2D>();
-        if (col) col.isTrigger = true;
+        if (col) col.isTrigger = true; // ensure the collider is set to trigger so it doesnt block movement
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("NPC trigger hit by: " + other.name);
-
         if (!other.CompareTag(playerTag) && other.name != "Player") return;
         playerInRange = true;
         if (playOnce && hasPlayed) return;
+
         if (startOnTriggerEnter)
-            StartDialogue();
+            StartDialogue(); // automatically start dialogue when player enters trigger
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -45,7 +44,7 @@ public class NPCProximity2D : MonoBehaviour, IInteractable
 
     public void StartDialogue()
     {
-        dialogueUI.Begin(lines, npcName);
+        dialogueUI.Begin(lines, npcName); // start the dialogue with the specified lines and npc name
         hasPlayed = true;
     }
 }
