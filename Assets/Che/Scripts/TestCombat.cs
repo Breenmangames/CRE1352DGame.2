@@ -10,11 +10,6 @@ public class TestCombat : MonoBehaviour
 
     void Update()
     {
-        // cant attack during dialogue
-        if (Dialogue.IsActive) return;
-        {
-            
-        }
         // left click
         if (Input.GetMouseButtonDown(0))
         {
