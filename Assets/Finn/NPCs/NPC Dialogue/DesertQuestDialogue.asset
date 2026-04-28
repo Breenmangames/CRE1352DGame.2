@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7b6130db3c526479284c1adfa58972, type: 3}
+  m_Name: DesertQuestDialogue
+  m_EditorClassIdentifier: 
+  npcName: Nervous Child
+  npcPortrait: {fileID: 21300000, guid: 66bc4269242c78141864808ac579f7ce, type: 2}
+  dialogueLines:
+  - Um....
+  - Hey you, I lost my coins down in the desert. Think you could get them for me?
+  - Yay! Thank you! Be careful for the Fieyery Monsters down there though!
+  - Oh... If you won't help, how will I deal with the Fieyery...
+  - Did you find my coins yet?
+  - Yay! Thanks for getting the coins!
+  autoProgressLines: 0101
+  endDialogueLines: 000001010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.025
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - No problem!
+    - Get them yourself...
+    nextDialogueIndexes: 0200000003000000
+    givesQuest: 
+  questInProgressIndex: 4
+  questCompletedIndex: 5
+  quest: {fileID: 11400000, guid: 95ca0d25c237edf44b0e22e81e5a430d, type: 2}
