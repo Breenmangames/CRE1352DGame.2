@@ -71,7 +71,7 @@ public class PatrolNPC : MonoBehaviour
         }
     }
 
-    void Wait()
+    void Wait() // AI was used to implement a waiting state that triggers when the NPC reaches its target, allowing for a pause before switching direction. This creates a more natural patrol behavior.
     {
         waitCounter -= Time.deltaTime;
 

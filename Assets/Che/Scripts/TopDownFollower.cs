@@ -46,6 +46,7 @@ public class TopDownFollower : MonoBehaviour
             moveSmooth = Vector2.Lerp(moveSmooth, desiredDirection, turnSmoothness).normalized;
             velocity = moveSmooth * speed; // move in the smoothed direction at the set speed
         }
+        // AI was used to debug movement jittering and ensure the follower moves smoothly, and teleports with the player
 
         rb.linearVelocity = velocity;
 
