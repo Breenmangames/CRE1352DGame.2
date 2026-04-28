@@ -125080,14 +125080,14 @@ PrefabInstance:
     - target: {fileID: 4564438223847314148, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2618618111374563509, guid: b590a7f5b228b17499386a794aa78123, type: 3}
+      objectReference: {fileID: -8228252400309765766, guid: e409eeb1ac5340c49881b688473b5008, type: 3}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.52
+      value: 90.89
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -75.25
+      value: -10.44
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -125123,7 +125123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_Name
-      value: Spare_NPC
+      value: Markshark_NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -125155,7 +125155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ee289ecb1a45f498d47bec2c0bae72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 11400000, guid: 69c71faafa75cb2428efda27e4b18a52, type: 2}
+  dialogueData: {fileID: 11400000, guid: d3466ab81c5ab874a991b699fadf138d, type: 2}
   dialoguePanel: {fileID: 240429973}
   dialogueText: {fileID: 944526919}
   nameText: {fileID: 459493323}
