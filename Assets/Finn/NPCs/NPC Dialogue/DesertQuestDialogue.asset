@@ -33,7 +33,7 @@ MonoBehaviour:
     - No problem!
     - Get them yourself...
     nextDialogueIndexes: 0200000003000000
-    givesQuest: 
+    givesQuest: 000001000000
   questInProgressIndex: 4
   questCompletedIndex: 5
   quest: {fileID: 11400000, guid: 95ca0d25c237edf44b0e22e81e5a430d, type: 2}

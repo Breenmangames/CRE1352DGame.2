@@ -36,7 +36,7 @@ MonoBehaviour:
     - Sure!
     - Eh, I'm kinda busy...
     nextDialogueIndexes: 0200000003000000
-    givesQuest: 0100
+    givesQuest: 000001000000
   - dialogueIndex: 1
     choices:
     - Sure!
