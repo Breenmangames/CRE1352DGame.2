@@ -27,7 +27,7 @@ MonoBehaviour:
   - This is a great opportunity for some sight-seeing!
   - You'll find your gift at the old oak tree, north of town.
   - Bye now, good luck!
-  autoProgressLines: 01
+  autoProgressLines: 0101010101010101010100
   endDialogueLines: 0000000000000000000001
   autoProgressDelay: 1.5
   typingSpeed: 0.025
