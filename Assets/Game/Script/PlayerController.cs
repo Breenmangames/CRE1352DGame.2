@@ -37,10 +37,12 @@ public class PlayerController : MonoBehaviour, IInteractable2
     float damageCooldown;
     private int m_CurrentCoins = 0;
 
-    private void Awake()    
+    private void Awake()
     {
         animator = GetComponent<Animator>(); // Get the Animator component attached to the player
+
     }
+       
 
     private void Start() 
     {
