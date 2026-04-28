@@ -32621,12 +32621,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302440466}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17495733651279540bd9089dd8528a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 1404735163916392462, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
+  _enemyPrefab: {fileID: 5617174879082239994, guid: 070fe2e64c3e63d4b88844da43235cc9, type: 3}
   _minimumSpawnTime: 1
   _maximumSpawnTime: 2
   player: {fileID: 2053808201}
@@ -135956,7 +135956,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -136341,16 +136341,16 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -4013993407222139323, guid: 818b79b8b1e44aa42907c61b23524429, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 7290122115929751355, guid: 818b79b8b1e44aa42907c61b23524429, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1412849347507625364, guid: 818b79b8b1e44aa42907c61b23524429, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -4013993407222139323, guid: 818b79b8b1e44aa42907c61b23524429, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 699864182658200353, guid: 818b79b8b1e44aa42907c61b23524429, type: 3}
   - m_RefCount: 6
@@ -138121,7 +138121,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -74.39211, y: 79.17928, z: -10}
+  m_LocalPosition: {x: -98.07154, y: 101.96219, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -140810,6 +140810,7 @@ GameObject:
   - component: {fileID: 661753518}
   - component: {fileID: 661753517}
   - component: {fileID: 661753516}
+  - component: {fileID: 661753520}
   m_Layer: 5
   m_Name: ItemPopupContainer
   m_TagString: Untagged
@@ -140915,6 +140916,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661753514}
   m_CullTransparentMesh: 1
+--- !u!114 &661753520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661753514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f73212267fee84c9678c33c0c7bfa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterName: Gingerred Fox
+  level: 1
+  capturedEnemy: {fileID: 2110185441}
+  baseCaptureRate: 0.986
+  maxHP: 100
+  attackPower: 10
+  defensePower: 5
+  currentHP: 0
+  isCaptured: 0
+  hitEffect: {fileID: 416966748}
 --- !u!1001 &669916768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163386,6 +163409,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1408077869}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1408077876}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
 --- !u!1 &1408077867 stripped
 GameObject:
@@ -163504,6 +163530,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 56f089e7fc2804e48ae4af8fb23b6c0f, type: 3}
   m_PrefabInstance: {fileID: 1408077866}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1408077876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408077867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f73212267fee84c9678c33c0c7bfa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterName: Gingerred Fox
+  level: 1
+  capturedEnemy: {fileID: 0}
+  baseCaptureRate: 0.986
+  maxHP: 100
+  attackPower: 10
+  defensePower: 5
+  currentHP: 0
+  isCaptured: 0
+  hitEffect: {fileID: 416966748}
 --- !u!1001 &1410366834
 PrefabInstance:
   m_ObjectHideFlags: 0
