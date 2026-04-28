@@ -72,6 +72,9 @@ TagManager:
   - name: player
     uniqueID: 1775667127
     locked: 0
+  - name: Follower
+    uniqueID: 2939744173
+    locked: 0
   - name: solid objects
     uniqueID: 373920751
     locked: 0
