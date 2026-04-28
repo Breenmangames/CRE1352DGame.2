@@ -134501,11 +134501,11 @@ PrefabInstance:
       objectReference: {fileID: -2618618111374563509, guid: b590a7f5b228b17499386a794aa78123, type: 3}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.21
+      value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -53.08
+      value: -75.25
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -134541,7 +134541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_Name
-      value: Finn_NPC (2)
+      value: Spare_NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -138121,7 +138121,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -100.01148, y: 101.9516, z: -10}
+  m_LocalPosition: {x: -99.20361, y: 101.95564, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -158383,6 +158383,7 @@ Transform:
   - {fileID: 1418613053}
   - {fileID: 419216574}
   - {fileID: 1894121729}
+  - {fileID: 1554248083}
   - {fileID: 178731881}
   - {fileID: 1678081515}
   - {fileID: 179485155}
@@ -491246,6 +491247,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7446173728430538733, guid: 9f5db16933043134b9bbbb725eac02f1, type: 3}
   m_PrefabInstance: {fileID: 1657731834}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1554248082
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1172507030}
+    m_Modifications:
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 71.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.919998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      propertyPath: m_Name
+      value: DesertQuest_NPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1554248085}
+  m_SourcePrefab: {fileID: 100100000, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+--- !u!4 &1554248083 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+  m_PrefabInstance: {fileID: 1554248082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1554248084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
+  m_PrefabInstance: {fileID: 1554248082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1554248085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554248084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ee289ecb1a45f498d47bec2c0bae72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueData: {fileID: 11400000, guid: cea24d741b8c3cb4da98498f038c1590, type: 2}
+  dialoguePanel: {fileID: 240429973}
+  dialogueText: {fileID: 944526919}
+  nameText: {fileID: 459493323}
+  portraitImage: {fileID: 1949951818}
+  playerController: {fileID: 0}
+  questController: {fileID: 0}
 --- !u!1 &1557112131
 GameObject:
   m_ObjectHideFlags: 0
@@ -491760,11 +491850,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.339
+      value: 12.89
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -53.08
+      value: 8.61
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -491800,7 +491890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_Name
-      value: Finn_NPC (1)
+      value: DirectionsDialogue_NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -493472,11 +493562,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.93
+      value: -13.11
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -53.08
+      value: 7.77
       objectReference: {fileID: 0}
     - target: {fileID: 4622855524146028052, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -493512,7 +493602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_Name
-      value: Finn_NPC
+      value: PotionsQuest_NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -598829,7 +598919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8462213271798968137, guid: 7ba7b1dfffc9da745b198394c8ac5d0e, type: 3}
       propertyPath: m_Name
-      value: Finn_NPC (3)
+      value: MinerrageQuest_NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
