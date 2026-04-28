@@ -14,6 +14,7 @@ public class TestCombat : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
+            SoundEffectManager.PlaySoundEffect("SwordSwingSound");
         }
     }
 
@@ -24,6 +25,7 @@ public class TestCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Monster>()?.TakeDamage(attackDamage);
+           
         }
     }
 

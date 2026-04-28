@@ -36,4 +36,4 @@ MonoBehaviour:
   choices: []
   questInProgressIndex: 0
   questCompletedIndex: 0
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: 5585837c03a161f4797fa487c574f310, type: 2}
