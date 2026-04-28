@@ -22,10 +22,10 @@ MonoBehaviour:
   - On your left is the way to the forest, with the giant oak tree at the end.
   - I've heard there's a dangerous Monster at the end of the trail though...
   - Enjoy your travels!
-  autoProgressLines: 
-  endDialogueLines: 
+  autoProgressLines: 010101010101
+  endDialogueLines: 000000000001
   autoProgressDelay: 1.5
-  typingSpeed: 0.05
+  typingSpeed: 0.025
   voiceSound: {fileID: 0}
   voicePitch: 1
   choices: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Gift
   itemIcon: {fileID: 1533909394052034002, guid: 1c2765b02505caf46a949dbbc6f49d13, type: 3}
-  itemID: 2
+  itemID: 5
   isStackable: 1
   maxStackSize: 5
   isGold: 0
