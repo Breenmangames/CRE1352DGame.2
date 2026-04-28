@@ -16,7 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 21300000, guid: e855c0bcd7b2a344680e39823df5674a, type: 2}
   dialogueLines:
   - Hey!!
-  - Yo, did you see that giant Monster on the beach down south?
+  - Yo, did you see that giant Monster on the beach you can reach through the desert?
   - It's name is Markshark, it's pretty strong!
   - Bet a Ranger like you could beat it no problem though...
   - Hey, cool! Go fight it then and come back to me!
@@ -38,4 +38,4 @@ MonoBehaviour:
     givesQuest: 0000000001000000
   questInProgressIndex: 0
   questCompletedIndex: 0
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: 6c0e192687247cf48932f2a74d2b747f, type: 2}
