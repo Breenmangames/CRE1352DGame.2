@@ -55,7 +55,7 @@ public class Monster : MonoBehaviour
 public bool TakeDamage(int amount)
     {
         currentHP = Mathf.Max(0, currentHP - amount);
-        Debug.Log($"{monsterName} took {amount} damage. HP: {currentHP}/{maxHP}");
+        SoundEffectManager.PlaySoundEffect("HitSound");
 
         SpawnHitEffect();
 
@@ -78,5 +78,6 @@ public bool TakeDamage(int amount)
     void Die()
     {
         Destroy(gameObject);
+        SoundEffectManager.PlaySoundEffect("DeathSound");
     }
 }

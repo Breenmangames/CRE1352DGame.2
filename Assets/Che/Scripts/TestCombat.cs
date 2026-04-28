@@ -10,15 +10,11 @@ public class TestCombat : MonoBehaviour
 
     void Update()
     {
-        // cant attack during dialogue
-        if (Dialogue.IsActive) return;
-        {
-            
-        }
         // left click
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
+            SoundEffectManager.PlaySoundEffect("SwordSwingSound");
         }
     }
 
@@ -29,6 +25,7 @@ public class TestCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Monster>()?.TakeDamage(attackDamage);
+           
         }
     }
 

@@ -146,7 +146,11 @@ public class EnemyAI : MonoBehaviour
 
 void FireProjectile()
 {
-    if (projectilePrefab == null) return;
+    if (projectilePrefab == null) 
+            return;
+
+
+
 
     
     Vector3 spawnPosition = firePoint != null ? firePoint.position : transform.position; // Use firePoint if assigned, otherwise default to enemy's position, allowing for flexibility in where the projectile spawns based on the presence of a designated fire point
@@ -158,15 +162,17 @@ void FireProjectile()
     {
         Vector2 direction = (target.position - spawnPosition).normalized;
         ep.Init(direction, projectileSpeed, projectileDamage, knockbackForce);
+            
     }
 }
 
     void PerformAttack() // Method to perform the melee attack, allowing the enemy to apply damage to the player when in close proximity based on the attack cooldown
     {
         animator.SetTrigger("attack"); // Hook this up to your attack animation trigger
-        
+         
 
-        
+
+
         float distanceToTarget = Vector3.Distance(transform.position, target.position); // Recalculate distance to target at the moment of attack to ensure accuracy, allowing the enemy to apply damage based on the player's current position even if they moved since the last frame
         if (distanceToTarget <= attackStandoffDistance + 0.5f) // Check if the player is still within a reasonable range to apply damage, allowing for some leniency in the attack range to account for movement and ensure the attack feels responsive
         {

@@ -152474,6 +152474,19 @@ MonoBehaviour:
   - name: DesertTheme
     audioClip:
     - {fileID: 8300000, guid: f73c708f5f27eb04ba58edcd3982465f, type: 3}
+  - name: SwordSwingSound
+    audioClip:
+    - {fileID: 8300000, guid: d0fe1bd2d87de434a8f95b0995d3fb32, type: 3}
+    - {fileID: 8300000, guid: 1adf4fcaefb3c8e46a86ac1de8225c50, type: 3}
+  - name: MoustaticLightningAttackSound
+    audioClip:
+    - {fileID: 8300000, guid: 33b54724ba3b2004bafc81922ac14e12, type: 3}
+  - name: DeathSound
+    audioClip:
+    - {fileID: 8300000, guid: 1d2f348735857f047b7a5defd60d930a, type: 3}
+  - name: HitSound
+    audioClip:
+    - {fileID: 8300000, guid: 6f149027f8269054faca318ed28489b4, type: 3}
 --- !u!82 &827400804
 AudioSource:
   m_ObjectHideFlags: 0
