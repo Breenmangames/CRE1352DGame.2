@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DesertQuestDialogue
   m_EditorClassIdentifier: 
   npcName: Nervous Child
-  npcPortrait: {fileID: 21300000, guid: 66bc4269242c78141864808ac579f7ce, type: 2}
+  npcPortrait: {fileID: 21300000, guid: 46d02787cf7edb941adaa586b849f5fa, type: 2}
   dialogueLines:
   - Um....
   - Hey you, I lost my coins down in the desert. Think you could get them for me?

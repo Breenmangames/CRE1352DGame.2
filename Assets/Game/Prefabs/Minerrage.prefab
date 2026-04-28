@@ -332,7 +332,7 @@ MonoBehaviour:
   level: 1
   capturedEnemy: {fileID: 0}
   baseCaptureRate: 0.986
-  maxHP: 100
+  maxHP: 600
   attackPower: 10
   defensePower: 5
   currentHP: 0
