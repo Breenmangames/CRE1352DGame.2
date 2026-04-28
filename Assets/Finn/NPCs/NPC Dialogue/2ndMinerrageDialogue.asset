@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7b6130db3c526479284c1adfa58972, type: 3}
+  m_Name: 2ndMinerrageDialogue
+  m_EditorClassIdentifier: 
+  npcName: Distressed Teacher
+  npcPortrait: {fileID: -2618618111374563509, guid: b590a7f5b228b17499386a794aa78123, type: 3}
+  dialogueLines:
+  - Ahhhh!
+  - You're a Ranger, right? You're supposed to graduate today, right?
+  - Great! There's a Minerrage causing chaos in the castle you're meant to graduate
+    in! Defeat it and report back to me!
+  - Oh, guess no one will stop that Minerrage then...
+  - Thanks for defeating the Minerrage! This marks the end of our demo for Monsters
+    and Rangers!
+  - Thanks for defeating the Minerrage! This marks the end of our demo for Monsters
+    and Rangers! Keep an eye out for the full release!
+  autoProgressLines: 0100
+  endDialogueLines: 000001010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.025
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - Sure!
+    - Eh, I'm kinda busy...
+    nextDialogueIndexes: 0200000003000000
+    givesQuest: 0100
+  - dialogueIndex: 1
+    choices:
+    - Sure!
+    - Eh, I'm kinda busy...
+    nextDialogueIndexes: 0200000003000000
+    givesQuest: 
+  questInProgressIndex: 4
+  questCompletedIndex: 5
+  quest: {fileID: 11400000, guid: 3e7a737dbc15fad4985384b506ec31c8, type: 2}
