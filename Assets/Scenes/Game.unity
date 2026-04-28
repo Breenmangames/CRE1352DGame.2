@@ -30962,7 +30962,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209191256}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -32621,7 +32621,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302440466}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17495733651279540bd9089dd8528a3f, type: 3}
   m_Name: 
@@ -32629,12 +32629,12 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 1404735163916392462, guid: 5dd37b36dd323694ba44b2aaf5a8840e, type: 3}
   _minimumSpawnTime: 1
   _maximumSpawnTime: 2
-  player: {fileID: 2053808201}
+  player: {fileID: 5617174879082239994, guid: 070fe2e64c3e63d4b88844da43235cc9, type: 3}
   detectionRadius: 5
   encounterChancePercent: 75
   grassLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 32768
   spawnPos: {x: 0, y: 0, z: 0}
 --- !u!212 &302440469
 SpriteRenderer:
@@ -157595,7 +157595,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133725438}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17495733651279540bd9089dd8528a3f, type: 3}
   m_Name: 
@@ -164509,7 +164509,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459792919}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
