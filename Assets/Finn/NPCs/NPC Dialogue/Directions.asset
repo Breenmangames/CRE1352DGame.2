@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7b6130db3c526479284c1adfa58972, type: 3}
+  m_Name: Directions
+  m_EditorClassIdentifier: 
+  npcName: Kind Old Man
+  npcPortrait: {fileID: -6435715130414583024, guid: 3cb794e002065d8458f4d924beb704bd, type: 3}
+  dialogueLines:
+  - Yoo hoo!!
+  - You lost on your way to graduation, young man?
+  - On your right is the way to the city, where the castle holding your graduation
+    is.
+  - On your left is the way to the forest, with the giant oak tree at the end.
+  - I've heard there's a dangerous Monster at the end of the trail though...
+  - Enjoy your travels!
+  autoProgressLines: 
+  endDialogueLines: 
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  choices: []
+  questInProgressIndex: 0
+  questCompletedIndex: 0
+  quest: {fileID: 0}
