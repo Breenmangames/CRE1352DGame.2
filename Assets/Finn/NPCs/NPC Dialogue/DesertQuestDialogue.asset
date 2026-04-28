@@ -21,7 +21,7 @@ MonoBehaviour:
   - Oh... If you won't help, how will I deal with the Fieyery...
   - Did you find my coins yet?
   - Yay! Thanks for getting the coins!
-  autoProgressLines: 0101
+  autoProgressLines: 010101
   endDialogueLines: 000001010101
   autoProgressDelay: 1.5
   typingSpeed: 0.025
@@ -33,7 +33,7 @@ MonoBehaviour:
     - No problem!
     - Get them yourself...
     nextDialogueIndexes: 0200000003000000
-    givesQuest: 
+    givesQuest: 000001000000
   questInProgressIndex: 4
   questCompletedIndex: 5
   quest: {fileID: 11400000, guid: 95ca0d25c237edf44b0e22e81e5a430d, type: 2}

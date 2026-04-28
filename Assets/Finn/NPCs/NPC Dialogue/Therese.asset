@@ -33,7 +33,11 @@ MonoBehaviour:
   typingSpeed: 0.025
   voiceSound: {fileID: 0}
   voicePitch: 1
-  choices: []
+  choices:
+  - dialogueIndex: 0
+    choices: []
+    nextDialogueIndexes: 
+    givesQuest: 0000000000000000000100
   questInProgressIndex: 0
   questCompletedIndex: 0
   quest: {fileID: 11400000, guid: 5585837c03a161f4797fa487c574f310, type: 2}
